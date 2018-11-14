@@ -1,0 +1,6 @@
+Alan, CSE, 0
+Bill, MAT, 1
+Cathy, HIS, 2
+David, PHI, 3
+Ellen, ENG, 4
+Frankie, CST, 5
