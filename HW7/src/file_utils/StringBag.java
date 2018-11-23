@@ -15,12 +15,12 @@ public class StringBag {
 		nElems = 0;
 		loadBag(fileName);
 	}
-	
+
 	public StringBag(int maxSize) {
 		strs = new String[maxSize];
 		nElems = 0;
 	}
-	
+
 	public int getNElems() {
 		return nElems;
 	}
@@ -42,14 +42,41 @@ public class StringBag {
 
 	private void loadBag(String fileName) {
 		Scanner scanner = openFile(fileName);
-		while (scanner.hasNextLine()) {
-			insert(scanner.nextLine());
+		if (fileName.equals("inputData/Course_Inventory.txt")) {
+			while (scanner.hasNextLine()) {
+				String line = scanner.nextLine();
+				if ((line.length() == 6 && Character.isDigit(line.charAt(3)) && Character.isDigit(line.charAt(4))
+						&& Character.isDigit(line.charAt(5))) || (FileFactory.isDouble(line))) {
+					insert(line);
+				}
+			}
+			scanner.close();
+		} else {
+			while (scanner.hasNextLine()) {
+				insert(scanner.nextLine());
+			}
+			scanner.close();
 		}
-		scanner.close();
 	}
+
+//	public void loadCourseBag(String fileName) {
+//		Scanner scanner = openFile(fileName);
+//		while (scanner.hasNextLine()) {
+//			String line = scanner.nextLine();
+//			if ((line.length() == 6 && Character.isDigit(line.charAt(3)) && Character.isDigit(line.charAt(4))
+//					&& Character.isDigit(line.charAt(5))) || (FileFactory.isDouble(line))) {
+//				insert(line);
+//			}
+//		}
+//		scanner.close();
+//	}
 
 	public String emitString() {
 		return strs[(new Random()).nextInt(nElems)];
+	}
+
+	public String emitStringAt(int value) {
+		return strs[value];
 	}
 
 	private int countLines(String fileName) {
