@@ -21,11 +21,19 @@ public class Course {
 	private static final int SIZE_OF_ISBN = 16;
 	private static final int ELMS_OF_ROOM = 4;
 
-	public Course() throws IOException {
+	public Course() {
 		courseNumber = generateCourseNumber();
-		courseTitle = Textbook.generateTitle();
+		try {
+			courseTitle = Textbook.generateTitle();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
 		numberOfCredits = generateCredits();
-		courseDescription = generateDescription();
+		try {
+			courseDescription = generateDescription();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		facultyID = generatefacultyID();
 		textbookISBN = getISBNFromFile();
 		classroom = getClassroomNumberFromFile();
@@ -62,8 +70,13 @@ public class Course {
 		return id;
 	}
 
-	public String getISBNFromFile() throws IOException {
-		String randomLine = Utilities.generateRandomWordFromFile("Textbooks.txt");
+	public String getISBNFromFile() {
+		String randomLine = "";
+		try {
+			randomLine = Utilities.generateRandomWordFromFile("Textbooks.txt");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		String ISBN = "";
 		for (int i = 0; i < randomLine.length(); i++) {
 			if (Character.isDigit(randomLine.charAt(i)) == true) {
@@ -76,8 +89,13 @@ public class Course {
 		return ISBN;
 	}
 
-	public String getClassroomNumberFromFile() throws IOException{
-		String randomLine = Utilities.generateRandomWordFromFile("Classrooms.txt");
+	public String getClassroomNumberFromFile() {
+		String randomLine = "";
+		try {
+			randomLine = Utilities.generateRandomWordFromFile("Classrooms.txt");
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
 		String classroom = "";
 		try {
 			for (int i = 0; i < ELMS_OF_ROOM; i++) {

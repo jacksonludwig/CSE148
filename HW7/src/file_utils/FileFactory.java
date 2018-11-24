@@ -24,7 +24,8 @@ public class FileFactory {
 	private final static int NUMBER_OF_COURSES_TO_TAKE = 16;
 	private final static int NUMBER_OF_COURSES_TAKING = 6;
 	private final static int NUMBER_OF_COURSES_TAKEN = 7;
-
+	private final static int NUMBER_OF_COURSES_TAUGHT = 3;
+	
 	private static String emit(Categories category) {
 		switch (category) {
 		case FIRST:
@@ -42,11 +43,13 @@ public class FileFactory {
 		case MAJOR:
 			return emitMajor(MAJOR_FILE);
 		case COURSES_TO_TAKE:
-			return emitCourses_To_Take((new Random()).nextInt(NUMBER_OF_COURSES_TO_TAKE + 1), MAJOR_FILE);
+			return emitCourses_To_Take((new Random()).nextInt(NUMBER_OF_COURSES_TO_TAKE + 1), COURSE_FILE);
 		case COURSES_TAKING:
-			return emitCourses_Taking((new Random()).nextInt(NUMBER_OF_COURSES_TAKING + 1), MAJOR_FILE);
+			return emitCourses_Taking((new Random()).nextInt(NUMBER_OF_COURSES_TAKING + 1), COURSE_FILE);
 		case COURSES_TAKEN:
 			return emitCourses_Taken((new Random()).nextInt(NUMBER_OF_COURSES_TAKEN + 1), COURSE_FILE);
+		case COURSES_TAUGHT:
+			return emitCourses_Taking((new Random()).nextInt(NUMBER_OF_COURSES_TAUGHT + 1), COURSE_FILE);
 		case SALARY:
 			return emitSalary();
 		case PRICE:
@@ -97,7 +100,7 @@ public class FileFactory {
 		PrintWriter pw = openFile(outputFileName);
 		for (int i = 0; i < numberOfItems; i++) {
 			pw.println(spew(Categories.FIRST, Categories.LAST, Categories.ID, Categories.MAJOR,
-					Categories.COURSES_TAKING, Categories.SALARY));
+					Categories.COURSES_TAUGHT, Categories.SALARY));
 			// pw.println(String.valueOf(generateDoubleInRange(10000.00, 100000.00)) + "*");
 
 		}
@@ -218,34 +221,70 @@ public class FileFactory {
 
 	}
 
+//	public static String emitCourses_To_Take(int numberOfCourses, String fileName) {
+//		Random rand = new Random();
+//		StringBag majorBag = new StringBag(fileName);
+//		StringBag courseNumberBag = new StringBag(majorBag.getNElems());
+//		for (int i = 0; i < majorBag.getNElems(); i++) {
+//			courseNumberBag.insert(majorBag.emitString() + String.valueOf(100 + rand.nextInt(100)));
+//		}
+//		String coursesToTake = "";
+//		int randomNumberOfCourses = (1 + new Random().nextInt(numberOfCourses + 1));
+//		for (int i = 0; i < randomNumberOfCourses; i++) {
+//			coursesToTake += courseNumberBag.emitString() + ",";
+//		}
+//
+//		return coursesToTake;
+//	}
+	
 	public static String emitCourses_To_Take(int numberOfCourses, String fileName) {
 		Random rand = new Random();
 		StringBag majorBag = new StringBag(fileName);
-		StringBag courseNumberBag = new StringBag(majorBag.getNElems());
-		for (int i = 0; i < majorBag.getNElems(); i++) {
-			courseNumberBag.insert(majorBag.emitString() + String.valueOf(100 + rand.nextInt(100)));
-		}
-		String coursesToTake = "";
+
+		String coursesTaking = "";
+		String course = "";
 		int randomNumberOfCourses = (1 + new Random().nextInt(numberOfCourses + 1));
 		for (int i = 0; i < randomNumberOfCourses; i++) {
-			coursesToTake += courseNumberBag.emitString() + ",";
+			do {
+				course = majorBag.emitString();
+			} while (!(course.length() == 6 && Character.isDigit(course.charAt(3))
+					&& Character.isDigit(course.charAt(4)) && Character.isDigit(course.charAt(5))));
+			coursesTaking += course + ",";
 		}
 
-		return coursesToTake;
+		return coursesTaking;
 	}
 
+//	public static String emitCourses_Taking(int numberOfCourses, String fileName) {
+//		Random rand = new Random();
+//		StringBag majorBag = new StringBag(fileName);
+//		StringBag courseNumberBag = new StringBag(majorBag.getNElems());
+//		for (int i = 0; i < majorBag.getNElems(); i++) {
+//			courseNumberBag.insert(majorBag.emitString() + String.valueOf(100 + rand.nextInt(100)));
+//		}
+//
+//		String coursesTaking = "";
+//		int randomNumberOfCourses = (1 + new Random().nextInt(numberOfCourses + 1));
+//		for (int i = 0; i < randomNumberOfCourses; i++) {
+//			coursesTaking += courseNumberBag.emitString() + ",";
+//		}
+//
+//		return coursesTaking;
+//	}
+	
 	public static String emitCourses_Taking(int numberOfCourses, String fileName) {
 		Random rand = new Random();
 		StringBag majorBag = new StringBag(fileName);
-		StringBag courseNumberBag = new StringBag(majorBag.getNElems());
-		for (int i = 0; i < majorBag.getNElems(); i++) {
-			courseNumberBag.insert(majorBag.emitString() + String.valueOf(100 + rand.nextInt(100)));
-		}
 
 		String coursesTaking = "";
+		String course = "";
 		int randomNumberOfCourses = (1 + new Random().nextInt(numberOfCourses + 1));
 		for (int i = 0; i < randomNumberOfCourses; i++) {
-			coursesTaking += courseNumberBag.emitString() + ",";
+			do {
+				course = majorBag.emitString();
+			} while (!(course.length() == 6 && Character.isDigit(course.charAt(3))
+					&& Character.isDigit(course.charAt(4)) && Character.isDigit(course.charAt(5))));
+			coursesTaking += course + ",";
 		}
 
 		return coursesTaking;
@@ -287,7 +326,7 @@ public class FileFactory {
 				creditsForCourse = "0.0";
 			}
 
-			coursesTaken += majorBag.emitStringAt(location) + " " + creditsForCourse + "," + grade + ",";
+			coursesTaken += majorBag.emitStringAt(location) + "," + grade + ",";
 
 			double credits = Double.parseDouble(creditsForCourse);
 
