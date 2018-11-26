@@ -59,18 +59,6 @@ public class StringBag {
 		}
 	}
 
-//	public void loadCourseBag(String fileName) {
-//		Scanner scanner = openFile(fileName);
-//		while (scanner.hasNextLine()) {
-//			String line = scanner.nextLine();
-//			if ((line.length() == 6 && Character.isDigit(line.charAt(3)) && Character.isDigit(line.charAt(4))
-//					&& Character.isDigit(line.charAt(5))) || (FileFactory.isDouble(line))) {
-//				insert(line);
-//			}
-//		}
-//		scanner.close();
-//	}
-
 	public String emitString() {
 		return strs[(new Random()).nextInt(nElems)];
 	}

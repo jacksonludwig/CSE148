@@ -358,9 +358,9 @@ public class FileFactory {
 
 		gpa = gpa / totalCredits;
 		if (gpa > 0.0) {
-			return coursesTaken + String.format("%.2f", gpa);
+			return coursesTaken + '*' + String.format("%.2f", gpa);
 		} else {
-			return coursesTaken + "0.0";
+			return coursesTaken + '*' + "0.0";
 		}
 
 	}
