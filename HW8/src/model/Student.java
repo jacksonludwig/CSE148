@@ -22,6 +22,17 @@ public class Student extends Person {
 		gpa = getGpaFromFile(dataLine);
 	}
 
+	public Student(String first, String last, String filename) {
+		super(first, last, filename);
+		String dataLine = super.getDataLine();
+		phoneNumber = getPhoneNumberFromFile(dataLine);
+		major = getMajorFromFile(dataLine);
+		coursesToTake = getCoursesToTakeFromFile(dataLine);
+		coursesTaking = getCoursesTakingFromFile(dataLine);
+		coursesTaken = getCoursesTakenFromFile(dataLine);
+		gpa = getGpaFromFile(dataLine);
+	}
+
 	public String getPhoneNumberFromFile(String line) {
 		int sectionCount = 0;
 		int count = 0;

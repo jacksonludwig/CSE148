@@ -5,12 +5,21 @@ public abstract class Person {
 	private String lastName;
 	private String id;
 	private String dataLine;
+	
+	private static int newPersonId = 2200;
 
 	public Person(String filename) {
 		dataLine = Utilities.generateRandomLineFromFile(filename);
 		firstName = getFirstNameFromFile(dataLine);
 		lastName = getLastNameFromFile(dataLine);
 		id = getIdFromFile(dataLine);
+	}
+	
+	public Person(String first, String last, String filename) {
+		dataLine = Utilities.generateRandomLineFromFile(filename);
+		firstName = first;
+		lastName = last;
+		id = String.valueOf(newPersonId++);
 	}
 
 	public String getFirstNameFromFile(String line) {
@@ -38,7 +47,7 @@ public abstract class Person {
 		return name;
 	}
 
-	public String getIdFromFile(String line) {
+	public static String getIdFromFile(String line) {
 		int sectionCount = 0;
 		int count = 0;
 		String id = "";

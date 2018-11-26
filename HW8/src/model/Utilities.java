@@ -70,57 +70,31 @@ public class Utilities {
 //	public static String formatRandomCourse(String filename) {
 //		String randomLine = "";
 //		do {
-//			randomLine = Utilities.generateRandomLineFromFile(filename);
+//			randomLine = Utilities.generateRandomLineFromFile(filename); // gets the course title
 //		} while (!(randomLine.length() == 6 && Character.isDigit(randomLine.charAt(3))
 //				&& Character.isDigit(randomLine.charAt(4)) && Character.isDigit(randomLine.charAt(5))));
-//
+//		File file = new File(filename);
 //		String formattedLine = randomLine + '*';
-//		BufferedReader br = null;
+//		String line = "";
+//	//	int count = 0;
 //		try {
-//			FileReader fr = new FileReader(filename);
-//			br = new BufferedReader(fr);
-//			while (!(br.readLine().equals(randomLine))) {
-//				br.readLine();
-//				System.out.println("yeet");
-//				for (int i = 0; i < 3; i++) {
-//					formattedLine += br.readLine() + "*";
+//			Scanner scanner = new Scanner(file);
+//			while (scanner.hasNextLine()) {
+//			//	count++;
+//				line = scanner.nextLine();
+//				if (line.equals(randomLine)) {
+//					for (int i = 0; i < 3; i++) { // adds the 3 other parts of a course to the course title
+//						line = scanner.nextLine();
+//						formattedLine += line + '*';
+//					}
+//					break;
 //				}
 //			}
-//			br.close();
-//		} catch (IOException e) {
+//			scanner.close();
+//		} catch (Exception e) {
 //			e.printStackTrace();
 //		}
+//	//	System.out.println(count);
 //		return formattedLine;
 //	}
-
-	public static String formatRandomCourse(String filename) {
-		String randomLine = "";
-		do {
-			randomLine = Utilities.generateRandomLineFromFile(filename); // gets the course title
-		} while (!(randomLine.length() == 6 && Character.isDigit(randomLine.charAt(3))
-				&& Character.isDigit(randomLine.charAt(4)) && Character.isDigit(randomLine.charAt(5))));
-		File file = new File(filename);
-		String formattedLine = randomLine + '*';
-		String line = "";
-	//	int count = 0;
-		try {
-			Scanner scanner = new Scanner(file);
-			while (scanner.hasNextLine()) {
-			//	count++;
-				line = scanner.nextLine();
-				if (line.equals(randomLine)) {
-					for (int i = 0; i < 3; i++) { // adds the 3 other parts of a course to the course title
-						line = scanner.nextLine();
-						formattedLine += line + '*';
-					}
-					break;
-				}
-			}
-			scanner.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	//	System.out.println(count);
-		return formattedLine;
-	}
 }

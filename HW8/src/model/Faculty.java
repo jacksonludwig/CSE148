@@ -5,9 +5,16 @@ import java.util.ArrayList;
 public class Faculty extends Person {
 	private String department;
 	private ArrayList<String> coursesTeaching;
-	
+
 	public Faculty(String filename) {
 		super(filename);
+		String dataLine = super.getDataLine();
+		department = getDepartmentFromFile(dataLine);
+		coursesTeaching = getCoursesTeachingFromFile(dataLine);
+	}
+
+	public Faculty(String first, String last, String filename) {
+		super(first, last, filename);
 		String dataLine = super.getDataLine();
 		department = getDepartmentFromFile(dataLine);
 		coursesTeaching = getCoursesTeachingFromFile(dataLine);
@@ -29,7 +36,7 @@ public class Faculty extends Person {
 		}
 		return department;
 	}
-	
+
 	public ArrayList<String> getCoursesTeachingFromFile(String line) {
 		int sectionCount = 0;
 		int count = 0;
@@ -74,6 +81,5 @@ public class Faculty extends Person {
 		return "Faculty [toString()=" + super.toString() + ", department=" + department + ", coursesTeaching="
 				+ coursesTeaching + "]";
 	}
-	
-	
+
 }
