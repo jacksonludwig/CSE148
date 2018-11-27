@@ -18,8 +18,8 @@ public class Classroom {
 	
 	public Classroom(String room, String filename) {
 		String dataLine = Utilities.generateRandomLineFromFile(filename);
-		roomNumber = buildingName.charAt(0) + room;
 		buildingName = getBuildingNameFromFile(dataLine);
+		roomNumber = buildingName.charAt(0) + room;
 		numberOfSeats = getNumberOfSeatsFromFile(dataLine);
 		numberOfComputers = getNumberOfComputersFromFile(dataLine);
 		projectorOrNot = getProjectorOrNotFromFile(dataLine);
