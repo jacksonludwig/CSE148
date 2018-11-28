@@ -1,6 +1,8 @@
 package file_utils;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -8,6 +10,7 @@ import java.io.RandomAccessFile;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 
 public class FileFactory {
 
@@ -17,6 +20,7 @@ public class FileFactory {
 	private final static String BOOK_ISBN_FILE = "inputData/BookIsbns.txt";
 	private final static String MAJOR_FILE = "inputData/Majors.txt";
 	private final static String COURSE_FILE = "inputData/Course_Inventory.txt";
+	private final static String FORMATTED_COURSE_FILE = "outputData/CourseInventoryReformatted.txt";
 	private static int personIDNumber = 0;
 	private static int room = 100;
 	private static final int MIN_SEATS_COMPUTERS = 12;
@@ -25,7 +29,7 @@ public class FileFactory {
 	private final static int NUMBER_OF_COURSES_TAKING = 6;
 	private final static int NUMBER_OF_COURSES_TAKEN = 7;
 	private final static int NUMBER_OF_COURSES_TAUGHT = 3;
-	
+
 	private static String emit(Categories category) {
 		switch (category) {
 		case FIRST:
@@ -75,6 +79,20 @@ public class FileFactory {
 			data += emit(categories[i]) + "*";
 		}
 		return data;
+	}
+
+	public static void completeCourseFile(int numberOfItems, String outputFilename) {
+		String building;
+		char buildingLetter;
+		building = spew(Categories.BUILDING_NAME);
+		buildingLetter = building.charAt(0);
+		PrintWriter pw = openFile(outputFilename);
+		for(int i = 0; i < numberOfItems; i++) {
+			String dataLine = Utilities.generateRandomLineFromFile(FORMATTED_COURSE_FILE);
+			pw.println(dataLine + "* " + emitPersonId() + "* " + buildingLetter + emitRoomNumber() + "* "
+					+ emitBookIsbn(BOOK_ISBN_FILE) + "* ");
+		}
+		pw.close();
 	}
 
 	public static void makeStudentFile(int numberOfItems, String outputFileName) {

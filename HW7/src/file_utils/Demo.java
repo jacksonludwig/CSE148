@@ -7,6 +7,7 @@ public class Demo {
 			FileFactory.makeTextbookFile(250, "outputData/Textbooks.txt");
 			FileFactory.makeFacultyFile(200, "outputData/Faculty.txt");
 			FileFactory.makeClassroomFile(100, "outputData/Classroom.txt");
+			FileFactory.completeCourseFile(300, "outputData/Courses.txt");
 	}
 
 }
