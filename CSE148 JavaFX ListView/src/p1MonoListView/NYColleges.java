@@ -1,4 +1,4 @@
-package p1ListView;
+package p1MonoListView;
 
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
@@ -18,7 +18,7 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class Demo extends Application{
+public class NYColleges extends Application{
 
 	public static void main(String[] args) {
 		launch(args);
@@ -35,14 +35,11 @@ public class Demo extends Application{
 		FlowPane root = new FlowPane(10, 10);
 		root.setAlignment(Pos.CENTER);
 		
-		// observableList will invoke an event when something is called from it, unlike arraylist.
 		ObservableList<String> colleges = FXCollections.observableArrayList("Stony Brook", "NYU",
-							"Nassau CCC",  "Columbia", "Binghamton", "Buffalo", "SCCC"); 
-		// put the list into the listView.
+							"Nassau CCC",  "Columbia", "Binghamton", "Buffalo", "St. Joe");
 		lvColleges = new ListView<String>(colleges);
 		lvColleges.setPrefSize(300, 150);
 		
-		// next two lines allows for multiple or only one selection at a time.
 		MultipleSelectionModel<String> lvSelModel = lvColleges.getSelectionModel();
 		lvSelModel.setSelectionMode(SelectionMode.MULTIPLE);
 		lvSelModel.selectedItemProperty().addListener(new ChangeListener<String>() {
@@ -55,15 +52,13 @@ public class Demo extends Application{
 			
 		});
 		
-		// order indicates order of how things are shown, at least in flowpane
+		
 		root.getChildren().add(title);
 		root.getChildren().add(lvColleges);
 		root.getChildren().add(response);
 		
-		// put flowpane in scene
 		Scene scene = new Scene(root, 350, 300);
 		
-		// make stage and put scene on it, then show stage.
 		primaryStage.setTitle("List View");
 		primaryStage.setScene(scene);
 		primaryStage.show();
