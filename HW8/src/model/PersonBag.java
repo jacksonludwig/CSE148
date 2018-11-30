@@ -45,6 +45,36 @@ public class PersonBag {
 		}
 	}
 
+	public Person findById(String id) {
+		for(int i = 0; i < nElems; i++) {
+			if(arr[i].getId().equals(id)) {
+				return arr[i];
+			}
+		}
+		return null;
+	}
+	
+	public Person deleteById(String id) {
+		Person temp;
+		int i = -1;
+		for(i = 0; i < nElems; i++) {
+			if(arr[i].getId().equals(id)) {
+				break;
+			}
+		}
+		if(i == nElems) {
+			return null;
+		} else {
+			temp = arr[i];
+			// the -1 prevents outofbounds if nElems=MaxSize
+			for(int j = i; j < nElems - 1; j++) {
+				arr[j] = arr[j + 1];
+			}
+			nElems--;
+		}
+		return temp;
+	}
+	
 	public Person[] getArr() {
 		return arr;
 	}

@@ -1,5 +1,7 @@
 package model;
 
+import utilities.Utilities;
+
 public class Classroom {
 	private String roomNumber;
 	private String buildingName;

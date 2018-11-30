@@ -1,5 +1,7 @@
 package model;
 
+import utilities.Utilities;
+
 public class Textbook {
 	private String title;
 	private String authorFirstName;

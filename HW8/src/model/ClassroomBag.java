@@ -30,6 +30,35 @@ public class ClassroomBag {
 			System.out.println(arr[i]);
 		}
 	}
+	
+	public Classroom findByRoom(String id) {
+		for(int i = 0; i < nElems; i++) {
+			if(arr[i].getRoomNumber().equals(id)) {
+				return arr[i];
+			}
+		}
+		return null;
+	}
+	
+	public Classroom deleteByRoom(String id) {
+		Classroom temp;
+		int i = -1;
+		for(i = 0; i < nElems; i++) {
+			if(arr[i].getRoomNumber().equals(id)) {
+				break;
+			}
+		}
+		if(i == nElems) {
+			return null;
+		} else {
+			temp = arr[i];
+			for(int j = i; j < nElems - 1; j++) {
+				arr[j] = arr[j + 1];
+			}
+			nElems--;
+		}
+		return temp;
+	}
 
 	public Classroom[] getArr() {
 		return arr;

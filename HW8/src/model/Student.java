@@ -1,7 +1,6 @@
 package model;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Student extends Person {
 	private String phoneNumber;

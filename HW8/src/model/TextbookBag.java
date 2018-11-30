@@ -25,6 +25,35 @@ public class TextbookBag {
 			System.out.println(arr[i]);
 		}
 	}
+	
+	public Textbook findByTitle(String id) {
+		for(int i = 0; i < nElems; i++) {
+			if(arr[i].getTitle().equals(id)) {
+				return arr[i];
+			}
+		}
+		return null;
+	}
+	
+	public Textbook deleteByTitle(String id) {
+		Textbook temp;
+		int i = -1;
+		for(i = 0; i < nElems; i++) {
+			if(arr[i].getTitle().equals(id)) {
+				break;
+			}
+		}
+		if(i == nElems) {
+			return null;
+		} else {
+			temp = arr[i];
+			for(int j = i; j < nElems - 1; j++) {
+				arr[j] = arr[j + 1];
+			}
+			nElems--;
+		}
+		return temp;
+	}
 
 	public Textbook[] getArr() {
 		return arr;

@@ -1,5 +1,7 @@
 package model;
 
+import utilities.Utilities;
+
 public abstract class Person {
 	private String firstName;
 	private String lastName;

@@ -26,6 +26,35 @@ public class CourseBag {
 		}
 	}
 
+	public Course findByCourseTitleShort(String id) {
+		for(int i = 0; i < nElems; i++) {
+			if(arr[i].getCourseTitleShort().equals(id)) {
+				return arr[i];
+			}
+		}
+		return null;
+	}
+	
+	public Course deleteByCourseTitleShort(String id) {
+		Course temp;
+		int i = -1;
+		for(i = 0; i < nElems; i++) {
+			if(arr[i].getCourseTitleShort().equals(id)) {
+				break;
+			}
+		}
+		if(i == nElems) {
+			return null;
+		} else {
+			temp = arr[i];
+			for(int j = i; j < nElems - 1; j++) {
+				arr[j] = arr[j + 1];
+			}
+			nElems--;
+		}
+		return temp;
+	}
+	
 	public Course[] getArr() {
 		return arr;
 	}

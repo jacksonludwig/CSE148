@@ -1,5 +1,7 @@
 package model;
 
+import utilities.Utilities;
+
 public class Course {
 	private String courseTitleShort;
 	private String courseTitleLong;

@@ -1,15 +1,19 @@
-package model;
+package utilities;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.ObjectInputStream;
 import java.io.RandomAccessFile;
 import java.util.Random;
-import java.util.Scanner;
+
+import model.ClassroomBag;
+import model.College;
+import model.CourseBag;
+import model.PersonBag;
+import model.TextbookBag;
 
 public class Utilities {
 	public static String generateRandomLineFromFile(String filename) {
@@ -23,11 +27,8 @@ public class Utilities {
 		int randomValue;
 		long randomByteNumber;
 		String randomWord = null;
-
 		try {
 			do {
-				// Makes sure that the random position of the pointer is set to is never the
-				// last line of the file
 				randomValue = rand.nextInt((int) randomFile.length() - (readLastLine(filename).length() * 2));
 				randomByteNumber = randomValue;
 				randomFile.seek(randomByteNumber);
@@ -37,7 +38,6 @@ public class Utilities {
 				randomFile.readLine();
 				randomWord = randomFile.readLine();
 			} while (randomByteNumber >= randomFile.length() || randomWord.equals("null"));
-
 			randomFile.close();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -54,11 +54,10 @@ public class Utilities {
 		}
 		BufferedReader input = new BufferedReader(fr);
 		String last = "";
-		String line = "";
-
+		String currentLine = "";
 		try {
-			while ((line = input.readLine()) != null) {
-				last = line;
+			while ((currentLine = input.readLine()) != null) {
+				last = currentLine;
 			}
 			input.close();
 		} catch (IOException e) {
@@ -66,35 +65,23 @@ public class Utilities {
 		}
 		return last;
 	}
-
-//	public static String formatRandomCourse(String filename) {
-//		String randomLine = "";
-//		do {
-//			randomLine = Utilities.generateRandomLineFromFile(filename); // gets the course title
-//		} while (!(randomLine.length() == 6 && Character.isDigit(randomLine.charAt(3))
-//				&& Character.isDigit(randomLine.charAt(4)) && Character.isDigit(randomLine.charAt(5))));
-//		File file = new File(filename);
-//		String formattedLine = randomLine + '*';
-//		String line = "";
-//	//	int count = 0;
-//		try {
-//			Scanner scanner = new Scanner(file);
-//			while (scanner.hasNextLine()) {
-//			//	count++;
-//				line = scanner.nextLine();
-//				if (line.equals(randomLine)) {
-//					for (int i = 0; i < 3; i++) { // adds the 3 other parts of a course to the course title
-//						line = scanner.nextLine();
-//						formattedLine += line + '*';
-//					}
-//					break;
-//				}
-//			}
-//			scanner.close();
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//	//	System.out.println(count);
-//		return formattedLine;
-//	}
+	
+	public static void load(College college) {
+		FileInputStream fis = null;
+		PersonBag personBag = college.getPersonBag();
+		ClassroomBag classroomBag = college.getClassroomBag();
+		TextbookBag textbookBag = college.getTextbookBag();
+		CourseBag courseBag = college.getCourseBag();
+		try {
+			fis = new FileInputStream("binaryData/allBags.dat");
+			ObjectInputStream ois = new ObjectInputStream(fis);
+			personBag = (PersonBag) ois.readObject();
+			classroomBag = (ClassroomBag) ois.readObject();
+			textbookBag = (TextbookBag) ois.readObject();
+			courseBag = (CourseBag) ois.readObject();
+			ois.close();
+		} catch (ClassNotFoundException | IOException e) {
+			e.printStackTrace();
+		}
+	}
 }
