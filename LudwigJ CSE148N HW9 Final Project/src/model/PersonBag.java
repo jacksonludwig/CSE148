@@ -1,8 +1,9 @@
 package model;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
-public class PersonBag {
+public class PersonBag implements Serializable{
 	private Person[] arr;
 	private int nElems;
 
@@ -11,11 +12,6 @@ public class PersonBag {
 		nElems = 0;
 	}
 
-	public void insertStudent(String first, String last) {
-		Person p = new Student(first, last, "outputData/Students.txt");
-		arr[nElems++] = p;
-	}
-	
 	public void insertStudent() {
 		Person p = new Student("outputData/Students.txt");
 		arr[nElems++] = p;
@@ -23,11 +19,6 @@ public class PersonBag {
 	
 	public void insert(Student s) {
 		arr[nElems++] = s;
-	}
-	
-	public void insertFaculty(String first, String last) {
-		Person p2 = new Faculty(first, last, "outputData/Faculty.txt");
-		arr[nElems++] = p2;
 	}
 
 	public void insertFaculty() {

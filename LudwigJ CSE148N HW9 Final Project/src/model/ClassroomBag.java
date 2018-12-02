@@ -1,8 +1,9 @@
 package model;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
-public class ClassroomBag {
+public class ClassroomBag implements Serializable{
 	private Classroom[] arr;
 	private int nElems;
 
@@ -20,39 +21,34 @@ public class ClassroomBag {
 		arr[nElems++] = c;
 	}
 
-	public void insert(String room) {
-		Classroom c = new Classroom(room, "outputData/Classroom.txt");
-		arr[nElems++] = c;
-	}
-
 	public void display() {
 		for (int i = 0; i < nElems; i++) {
 			System.out.println(arr[i]);
 		}
 	}
-	
+
 	public Classroom findByRoom(String id) {
-		for(int i = 0; i < nElems; i++) {
-			if(arr[i].getRoomNumber().equals(id)) {
+		for (int i = 0; i < nElems; i++) {
+			if (arr[i].getRoomNumber().equals(id)) {
 				return arr[i];
 			}
 		}
 		return null;
 	}
-	
+
 	public Classroom deleteByRoom(String id) {
 		Classroom temp;
 		int i = -1;
-		for(i = 0; i < nElems; i++) {
-			if(arr[i].getRoomNumber().equals(id)) {
+		for (i = 0; i < nElems; i++) {
+			if (arr[i].getRoomNumber().equals(id)) {
 				break;
 			}
 		}
-		if(i == nElems) {
+		if (i == nElems) {
 			return null;
 		} else {
 			temp = arr[i];
-			for(int j = i; j < nElems - 1; j++) {
+			for (int j = i; j < nElems - 1; j++) {
 				arr[j] = arr[j + 1];
 			}
 			nElems--;

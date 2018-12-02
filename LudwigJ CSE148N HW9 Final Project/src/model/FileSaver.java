@@ -53,7 +53,7 @@ public class FileSaver implements Serializable {
 		}
 
 	}
-	
+
 	public static void saveCollege(College college, String filename) {
 		try {
 			FileOutputStream fos = new FileOutputStream(filename);

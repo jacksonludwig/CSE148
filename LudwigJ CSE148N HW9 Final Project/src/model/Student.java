@@ -1,8 +1,9 @@
 package model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Student extends Person {
+public class Student extends Person implements Serializable{
 	private String phoneNumber;
 	private String major;
 	private ArrayList<String> coursesToTake;
@@ -10,9 +11,9 @@ public class Student extends Person {
 	private ArrayList<String> coursesTaken;
 	private double gpa;
 
-	public Student(String filename) {
-		super(filename);
-		String dataLine = super.getDataLine();
+	public Student(String dataLine) {
+		super(dataLine);
+//		String dataLine = super.getDataLine();
 		phoneNumber = getPhoneNumberFromFile(dataLine);
 		major = getMajorFromFile(dataLine);
 		coursesToTake = getCoursesToTakeFromFile(dataLine);
@@ -21,15 +22,14 @@ public class Student extends Person {
 		gpa = getGpaFromFile(dataLine);
 	}
 
-	public Student(String first, String last, String filename) {
-		super(first, last, filename);
-		String dataLine = super.getDataLine();
-		phoneNumber = getPhoneNumberFromFile(dataLine);
-		major = getMajorFromFile(dataLine);
-		coursesToTake = getCoursesToTakeFromFile(dataLine);
-		coursesTaking = getCoursesTakingFromFile(dataLine);
-		coursesTaken = getCoursesTakenFromFile(dataLine);
-		gpa = getGpaFromFile(dataLine);
+	public Student(String first, String last, String phoneNumber, String major, ArrayList<String> coursesToTake, ArrayList<String> coursesTaking, ArrayList<String> coursesTaken, String gpa) {
+		super(first, last);
+		this.phoneNumber = phoneNumber;
+		this.major = major;
+		this.coursesToTake = coursesToTake;
+		this.coursesTaking = coursesTaking;
+		this.coursesTaken = coursesTaken;
+		this.gpa = Double.parseDouble(gpa);
 	}
 
 	public String getPhoneNumberFromFile(String line) {

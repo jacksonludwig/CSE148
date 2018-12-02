@@ -1,21 +1,30 @@
 package model;
 
+import java.io.Serializable;
+
 import utilities.Utilities;
 
-public class Textbook {
+public class Textbook implements Serializable{
 	private String title;
 	private String authorFirstName;
 	private String authorLastName;
 	private String ISBN;
 	private double price;
 	
-	public Textbook(String filename) {
-		String dataLine = Utilities.generateRandomLineFromFile(filename);
+	public Textbook(String dataLine) {
 		title = generateTitleFromFile(dataLine);
 		authorFirstName = generateAuthorFirstNameFromFile(dataLine);
 		authorLastName = generateAuthorLastNameFromFile(dataLine);
 		ISBN = generateISBNFile(dataLine);
 		price = generatePriceFromFile(dataLine);
+	}
+	
+	public Textbook(String title, String first, String last, String ISBN, String price) {
+		this.title = title;
+		authorFirstName = first;
+		authorLastName = last;
+		this.ISBN = ISBN;
+		this.price = Double.parseDouble(price);
 	}
 	
 	public String generateTitleFromFile(String line) {
