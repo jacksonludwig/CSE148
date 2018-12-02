@@ -2,8 +2,6 @@ package model;
 
 import java.io.Serializable;
 
-import utilities.Utilities;
-
 public class Classroom implements Serializable{
 	private String roomNumber;
 	private String buildingName;

@@ -2,8 +2,6 @@ package model;
 
 import java.io.Serializable;
 
-import utilities.Utilities;
-
 public class Textbook implements Serializable{
 	private String title;
 	private String authorFirstName;

@@ -2,8 +2,6 @@ package model;
 
 import java.io.Serializable;
 
-import utilities.Utilities;
-
 public abstract class Person implements Serializable{
 	private String firstName;
 	private String lastName;

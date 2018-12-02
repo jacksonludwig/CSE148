@@ -1,16 +1,9 @@
 package file_utils;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.RandomAccessFile;
-import java.nio.charset.Charset;
-import java.util.ArrayList;
 import java.util.Random;
-import java.util.Scanner;
 
 public class FileFactory {
 
@@ -87,7 +80,7 @@ public class FileFactory {
 		building = spew(Categories.BUILDING_NAME);
 		buildingLetter = building.charAt(0);
 		PrintWriter pw = openFile(outputFilename);
-		for(int i = 0; i < numberOfItems; i++) {
+		for (int i = 0; i < numberOfItems; i++) {
 			building = spew(Categories.BUILDING_NAME);
 			buildingLetter = building.charAt(0);
 			String dataLine = Utilities.generateRandomLineFromFile(FORMATTED_COURSE_FILE);
@@ -293,30 +286,23 @@ public class FileFactory {
 		int location = 0;
 		double gpa = 0.0;
 		int totalCredits = 0;
-
 		for (int i = 0; i < randomNumberOfCourses; i++) {
 			do {
 				course = majorBag.emitString();
 			} while (!(course.length() == 6 && Character.isDigit(course.charAt(3))
 					&& Character.isDigit(course.charAt(4)) && Character.isDigit(course.charAt(5))));
-
 			for (int j = 0; j < majorBag.getNElems(); j++) {
 				if (majorBag.emitStringAt(j).equals(course)) {
 					location = j;
 				}
 			}
-
 			String grade = grades[(rand.nextInt(grades.length))];
 			String creditsForCourse = majorBag.emitStringAt(location + 1);
-
 			if (creditsForCourse == null) {
 				creditsForCourse = "0.0";
 			}
-
 			coursesTaken += majorBag.emitStringAt(location) + "," + grade + ",";
-
 			double credits = Double.parseDouble(creditsForCourse);
-
 			if (grade.equals("A")) {
 				gpa += (4.0 * credits);
 				totalCredits += credits;
@@ -342,14 +328,12 @@ public class FileFactory {
 				gpa += 0.0;
 			}
 		}
-
 		gpa = gpa / totalCredits;
 		if (gpa > 0.0) {
 			return coursesTaken + '*' + String.format("%.2f", gpa);
 		} else {
 			return coursesTaken + '*' + "0.0";
 		}
-
 	}
 
 	public static boolean isDouble(String number) {
