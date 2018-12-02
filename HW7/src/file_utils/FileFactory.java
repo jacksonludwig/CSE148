@@ -335,13 +335,4 @@ public class FileFactory {
 			return coursesTaken + '*' + "0.0";
 		}
 	}
-
-	public static boolean isDouble(String number) {
-		try {
-			Double.parseDouble(number);
-		} catch (NumberFormatException e) {
-			return false;
-		}
-		return true;
-	}
 }

@@ -66,4 +66,13 @@ public class Utilities {
 		}
 		return last;
 	}
+
+	public static boolean isDouble(String number) {
+		try {
+			Double.parseDouble(number);
+		} catch (NumberFormatException e) {
+			return false;
+		}
+		return true;
+	}
 }

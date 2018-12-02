@@ -45,7 +45,7 @@ public class StringBag {
 			while (scanner.hasNextLine()) {
 				String line = scanner.nextLine();
 				if ((line.length() == 6 && Character.isDigit(line.charAt(3)) && Character.isDigit(line.charAt(4))
-						&& Character.isDigit(line.charAt(5))) || (FileFactory.isDouble(line))) {
+						&& Character.isDigit(line.charAt(5))) || (Utilities.isDouble(line))) {
 					insert(line);
 				}
 			}
