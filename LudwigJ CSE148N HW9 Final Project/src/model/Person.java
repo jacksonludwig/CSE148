@@ -1,10 +1,8 @@
 package model;
 
-import java.io.Serializable;
-
 import utilities.Utilities;
 
-public abstract class Person implements Serializable{
+public abstract class Person {
 	private String firstName;
 	private String lastName;
 	private String id;
@@ -12,14 +10,15 @@ public abstract class Person implements Serializable{
 	
 	private static int newPersonId = 2200;
 
-	public Person(String dataLine) {
-//		dataLine = Utilities.generateRandomLineFromFile(filename);
+	public Person(String filename) {
+		dataLine = Utilities.generateRandomLineFromFile(filename);
 		firstName = getFirstNameFromFile(dataLine);
 		lastName = getLastNameFromFile(dataLine);
 		id = getIdFromFile(dataLine);
 	}
 	
-	public Person(String first, String last) {
+	public Person(String first, String last, String filename) {
+		dataLine = Utilities.generateRandomLineFromFile(filename);
 		firstName = first;
 		lastName = last;
 		id = String.valueOf(newPersonId++);

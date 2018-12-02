@@ -1,10 +1,8 @@
 package model;
 
-import java.io.Serializable;
-
 import utilities.Utilities;
 
-public class Course implements Serializable{
+public class Course {
 	private String courseTitleShort;
 	private String courseTitleLong;
 	private String courseDescription;
@@ -12,23 +10,25 @@ public class Course implements Serializable{
 	private String textbookISBN;
 	private String classroom;
 
-	public Course(String dataLine) {
+	public Course(String filename) {
+		String dataLine = Utilities.generateRandomLineFromFile(filename);
 		courseTitleShort = generateCourseTitleShortFromFile(dataLine);
 		courseTitleLong = generateCourseTitleLongFromFile(dataLine);
 		courseDescription = generateCourseDescriptionFromFile(dataLine);
-		facultyID = generateFacultyIdFromFile("outputData/Faculty.txt");
-		textbookISBN = generateTextbookISBNFromFile("outputData/Textbooks.txt");
-		classroom = generateClassroomFromFile("outputData/Classroom.txt");
+		facultyID = generateFacultyIdFromFile(dataLine);
+		textbookISBN = generateTextbookISBNFromFile(dataLine);
+		classroom = generateClassroomFromFile(dataLine);
 	}
 	
-	public Course(String courseShort, String courseLong, String courseDesc, String id, String isbn, String classroom) {
-		courseTitleShort = courseShort;
-		courseTitleLong = courseLong;
-		courseDescription = courseDesc;
-		facultyID = id;
-		textbookISBN = isbn;
-		this.classroom = classroom;
-	}
+//	public Course(String course, String filename) {
+//		String dataLine = Utilities.generateRandomLineFromFile(filename);
+//		courseTitleShort = course;
+//		courseTitleLong = generateCourseTitleLongFromFile(dataLine);
+//		courseDescription = generateCourseDescriptionFromFile(dataLine);
+//		facultyID = generateFacultyIdFromFile("outputData/Faculty.txt");
+//		textbookISBN = generateTextbookISBNFromFile("outputData/Textbooks.txt");
+//		classroom = generateClassroomFromFile("outputData/Classroom.txt");
+//	}
 
 	public String generateCourseTitleShortFromFile(String line) {
 		int count = 0;
@@ -76,39 +76,93 @@ public class Course implements Serializable{
 		return description;
 	}
 
-	public String generateFacultyIdFromFile(String file) {
-		String dataLine = Utilities.generateRandomLineFromFile(file);
-		return Person.getIdFromFile(dataLine);
-	}
-
-	public String generateTextbookISBNFromFile(String file) {
-		String dataLine = Utilities.generateRandomLineFromFile(file);
+//	public String generateFacultyIdFromFile(String file) {
+//		String dataLine = Utilities.generateRandomLineFromFile(file);
+//		return Person.getIdFromFile(dataLine);
+//	}
+//
+//	public String generateTextbookISBNFromFile(String file) {
+//		String dataLine = Utilities.generateRandomLineFromFile(file);
+//		int sectionCount = 0;
+//		int count = 0;
+//		String ISBN = "";
+//		while (sectionCount < 3) {
+//			if (dataLine.charAt(count) == '*') {
+//				sectionCount++;
+//			}
+//			count++;
+//		}
+//		count++;
+//		while (dataLine.charAt(count) != '*') {
+//			ISBN += dataLine.charAt(count);
+//			count++;
+//		}
+//		return ISBN;
+//	}
+//
+//	public String generateClassroomFromFile(String file) {
+//		String dataLine = Utilities.generateRandomLineFromFile(file);
+//		int count = 0;
+//		String title = "";
+//		while (dataLine.charAt(count) != '*') {
+//			title += dataLine.charAt(count);
+//			count++;
+//		}
+//		return title;
+//	}
+	
+	public String generateFacultyIdFromFile(String line) {
 		int sectionCount = 0;
 		int count = 0;
-		String ISBN = "";
+		String description = "";
 		while (sectionCount < 3) {
-			if (dataLine.charAt(count) == '*') {
+			if (line.charAt(count) == '*') {
 				sectionCount++;
 			}
 			count++;
 		}
 		count++;
-		while (dataLine.charAt(count) != '*') {
-			ISBN += dataLine.charAt(count);
+		while (line.charAt(count) != '*') {
+			description += line.charAt(count);
 			count++;
 		}
-		return ISBN;
+		return description;
 	}
 
-	public String generateClassroomFromFile(String file) {
-		String dataLine = Utilities.generateRandomLineFromFile(file);
+	public String generateTextbookISBNFromFile(String line) {
+		int sectionCount = 0;
 		int count = 0;
-		String title = "";
-		while (dataLine.charAt(count) != '*') {
-			title += dataLine.charAt(count);
+		String description = "";
+		while (sectionCount < 4) {
+			if (line.charAt(count) == '*') {
+				sectionCount++;
+			}
 			count++;
 		}
-		return title;
+		count++;
+		while (line.charAt(count) != '*') {
+			description += line.charAt(count);
+			count++;
+		}
+		return description;
+	}
+
+	public String generateClassroomFromFile(String line) {
+		int sectionCount = 0;
+		int count = 0;
+		String description = "";
+		while (sectionCount < 5) {
+			if (line.charAt(count) == '*') {
+				sectionCount++;
+			}
+			count++;
+		}
+		count++;
+		while (line.charAt(count) != '*') {
+			description += line.charAt(count);
+			count++;
+		}
+		return description;
 	}
 
 	public String getCourseTitleShort() {

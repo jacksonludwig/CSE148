@@ -88,6 +88,8 @@ public class FileFactory {
 		buildingLetter = building.charAt(0);
 		PrintWriter pw = openFile(outputFilename);
 		for(int i = 0; i < numberOfItems; i++) {
+			building = spew(Categories.BUILDING_NAME);
+			buildingLetter = building.charAt(0);
 			String dataLine = Utilities.generateRandomLineFromFile(FORMATTED_COURSE_FILE);
 			pw.println(dataLine + "* " + emitPersonId() + "* " + buildingLetter + emitRoomNumber() + "* "
 					+ emitBookIsbn(BOOK_ISBN_FILE) + "* ");

@@ -1,22 +1,23 @@
 package model;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Faculty extends Person implements Serializable{
+public class Faculty extends Person {
 	private String department;
 	private ArrayList<String> coursesTeaching;
 
-	public Faculty(String dataLine) {
-		super(dataLine);
+	public Faculty(String filename) {
+		super(filename);
+		String dataLine = super.getDataLine();
 		department = getDepartmentFromFile(dataLine);
 		coursesTeaching = getCoursesTeachingFromFile(dataLine);
 	}
 
-	public Faculty(String first, String last, String department, ArrayList<String> coursesTeaching) {
-		super(first, last);
-		this.department = department;
-		this.coursesTeaching = coursesTeaching;
+	public Faculty(String first, String last, String filename) {
+		super(first, last, filename);
+		String dataLine = super.getDataLine();
+		department = getDepartmentFromFile(dataLine);
+		coursesTeaching = getCoursesTeachingFromFile(dataLine);
 	}
 
 	public String getDepartmentFromFile(String line) {

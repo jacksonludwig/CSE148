@@ -1,24 +1,23 @@
 package model;
 
-import java.io.Serializable;
 import java.util.Arrays;
 
-public class TextbookBag implements Serializable{
-	private Textbook[] arr;
+public class CourseBag {
+	private Course[] arr;
 	private int nElems;
 
-	public TextbookBag(int maxSize) {
-		arr = new Textbook[maxSize];
+	public CourseBag(int maxSize) {
+		arr = new Course[maxSize];
 		nElems = 0;
 	}
 
 	public void insert() {
-		Textbook t = new Textbook("outputData/Textbooks.txt");
-		arr[nElems++] = t;
+		Course c = new Course("outputData/CourseInventoryReformatted.txt");
+		arr[nElems++] = c;
 	}
 
-	public void insert(Textbook t) {
-		arr[nElems++] = t;
+	public void insert(Course c) {
+		arr[nElems++] = c;
 	}
 
 	public void display() {
@@ -26,21 +25,21 @@ public class TextbookBag implements Serializable{
 			System.out.println(arr[i]);
 		}
 	}
-	
-	public Textbook findByTitle(String id) {
+
+	public Course findByCourseTitleShort(String id) {
 		for(int i = 0; i < nElems; i++) {
-			if(arr[i].getTitle().equals(id)) {
+			if(arr[i].getCourseTitleShort().equals(id)) {
 				return arr[i];
 			}
 		}
 		return null;
 	}
 	
-	public Textbook deleteByTitle(String id) {
-		Textbook temp;
+	public Course deleteByCourseTitleShort(String id) {
+		Course temp;
 		int i = -1;
 		for(i = 0; i < nElems; i++) {
-			if(arr[i].getTitle().equals(id)) {
+			if(arr[i].getCourseTitleShort().equals(id)) {
 				break;
 			}
 		}
@@ -55,8 +54,8 @@ public class TextbookBag implements Serializable{
 		}
 		return temp;
 	}
-
-	public Textbook[] getArr() {
+	
+	public Course[] getArr() {
 		return arr;
 	}
 
@@ -66,7 +65,7 @@ public class TextbookBag implements Serializable{
 
 	@Override
 	public String toString() {
-		return "TextbookBag [arr=" + Arrays.toString(arr) + ", nElems=" + nElems + "]";
+		return "CourseBag [arr=" + Arrays.toString(arr) + ", nElems=" + nElems + "]";
 	}
 
 }

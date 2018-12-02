@@ -1,30 +1,30 @@
 package model;
 
-import java.io.Serializable;
-
 import utilities.Utilities;
 
-public class Classroom implements Serializable{
+public class Classroom {
 	private String roomNumber;
 	private String buildingName;
 	private int numberOfSeats;
 	private int numberOfComputers;
 	private boolean projectorOrNot;
 
-	public Classroom(String dataLine) {
+	public Classroom(String filename) {
+		String dataLine = Utilities.generateRandomLineFromFile(filename);
 		roomNumber = getRoomNumberFromFile(dataLine);
 		buildingName = getBuildingNameFromFile(dataLine);
 		numberOfSeats = getNumberOfSeatsFromFile(dataLine);
 		numberOfComputers = getNumberOfComputersFromFile(dataLine);
 		projectorOrNot = getProjectorOrNotFromFile(dataLine);
 	}
-
-	public Classroom(String room, String building, String seats, String computers, String projector) {
-		buildingName = building;
+	
+	public Classroom(String room, String filename) {
+		String dataLine = Utilities.generateRandomLineFromFile(filename);
+		buildingName = getBuildingNameFromFile(dataLine);
 		roomNumber = buildingName.charAt(0) + room;
-		numberOfSeats = Integer.parseInt(seats);
-		numberOfComputers = Integer.parseInt(computers);
-		projectorOrNot = Boolean.parseBoolean(projector);
+		numberOfSeats = getNumberOfSeatsFromFile(dataLine);
+		numberOfComputers = getNumberOfComputersFromFile(dataLine);
+		projectorOrNot = getProjectorOrNotFromFile(dataLine);
 	}
 
 	public String getRoomNumberFromFile(String line) {

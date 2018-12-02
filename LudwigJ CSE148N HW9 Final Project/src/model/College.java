@@ -1,12 +1,8 @@
 package model;
 
-import java.io.Serializable;
-
 import utilities.Utilities;
 
-// TO BE FINISHED IN HW9
-
-public class College implements Serializable{
+public class College {
 	private PersonBag personBag;
 	private ClassroomBag classroomBag;
 	private TextbookBag textbookBag;
@@ -24,14 +20,6 @@ public class College implements Serializable{
 		this.textbookBag = new TextbookBag(TEXTBOOK_BAG_SIZE);
 		this.courseBag = new CourseBag(COURSE_BAG_SIZE);
 		Utilities.load(this);
-	}
-	
-	public College(PersonBag people, ClassroomBag classrooms, TextbookBag textbooks, CourseBag courses) {
-		super();
-		this.personBag = people;
-		this.classroomBag = classrooms;
-		this.textbookBag = textbooks;
-		this.courseBag = courses;
 	}
 
 	public PersonBag getPersonBag() {
