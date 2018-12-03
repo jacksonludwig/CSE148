@@ -13,7 +13,6 @@ public class Student extends Person implements Serializable{
 
 	public Student(String dataLine) {
 		super(dataLine);
-//		String dataLine = super.getDataLine();
 		phoneNumber = getPhoneNumberFromFile(dataLine);
 		major = getMajorFromFile(dataLine);
 		coursesToTake = getCoursesToTakeFromFile(dataLine);

@@ -2,21 +2,23 @@ package model;
 
 import java.io.Serializable;
 
-public abstract class Person implements Serializable{
+public abstract class Person implements Serializable {
 	private String firstName;
 	private String lastName;
 	private String id;
 	private String dataLine;
-	
+
 	private static int newPersonId = 2200;
 
 	public Person(String dataLine) {
-//		dataLine = Utilities.generateRandomLineFromFile(filename);
 		firstName = getFirstNameFromFile(dataLine);
 		lastName = getLastNameFromFile(dataLine);
 		id = getIdFromFile(dataLine);
+		if (Integer.parseInt(id) > newPersonId) {
+			newPersonId = Integer.parseInt(id) + 1;
+		}
 	}
-	
+
 	public Person(String first, String last) {
 		firstName = first;
 		lastName = last;
