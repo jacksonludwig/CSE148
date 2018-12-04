@@ -23,21 +23,20 @@ public class Utilities {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		Random rand = new Random();
-		int randomValue;
 		long randomByteNumber;
 		String randomWord = null;
 		try {
 			do {
-				randomValue = rand.nextInt((int) randomFile.length() - (readLastLine(filename).length() * 2));
-				randomByteNumber = randomValue;
+				randomByteNumber = new Random()
+						.nextInt((int) randomFile.length() - (readLastLine(filename).length() * 2));
 				randomFile.seek(randomByteNumber);
 				if (randomFile.readChar() == '\n') {
 					randomFile.seek(randomByteNumber + 2);
 				}
 				randomFile.readLine();
 				randomWord = randomFile.readLine();
-			} while (randomByteNumber >= randomFile.length() || randomWord.equals("null"));
+			} while (randomByteNumber >= randomFile.length());
+
 			randomFile.close();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -65,7 +64,7 @@ public class Utilities {
 		}
 		return last;
 	}
-	
+
 	public static void load(College college) {
 		FileInputStream fis = null;
 		PersonBag personBag = college.getPersonBag();

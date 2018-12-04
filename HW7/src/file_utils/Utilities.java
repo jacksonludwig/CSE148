@@ -1,15 +1,11 @@
 package file_utils;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.RandomAccessFile;
 import java.util.Random;
-import java.util.Scanner;
 
 public class Utilities {
 	public static String generateRandomLineFromFile(String filename) {
@@ -19,24 +15,19 @@ public class Utilities {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		Random rand = new Random();
-		int randomValue;
 		long randomByteNumber;
 		String randomWord = null;
-
 		try {
 			do {
-				// Makes sure that the random position of the pointer is set to is never the
-				// last line of the file
-				randomValue = rand.nextInt((int) randomFile.length() - (readLastLine(filename).length() * 2));
-				randomByteNumber = randomValue;
+				randomByteNumber = new Random()
+						.nextInt((int) randomFile.length() - (readLastLine(filename).length() * 2));
 				randomFile.seek(randomByteNumber);
 				if (randomFile.readChar() == '\n') {
 					randomFile.seek(randomByteNumber + 2);
 				}
 				randomFile.readLine();
 				randomWord = randomFile.readLine();
-			} while (randomByteNumber >= randomFile.length() || randomWord.equals("null"));
+			} while (randomByteNumber >= randomFile.length());
 
 			randomFile.close();
 		} catch (IOException e) {
@@ -54,11 +45,10 @@ public class Utilities {
 		}
 		BufferedReader input = new BufferedReader(fr);
 		String last = "";
-		String line = "";
-
+		String currentLine = "";
 		try {
-			while ((line = input.readLine()) != null) {
-				last = line;
+			while ((currentLine = input.readLine()) != null) {
+				last = currentLine;
 			}
 			input.close();
 		} catch (IOException e) {
