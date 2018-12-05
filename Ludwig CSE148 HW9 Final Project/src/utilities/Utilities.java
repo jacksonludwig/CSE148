@@ -100,7 +100,7 @@ public class Utilities {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
 		alert.setTitle("Data search complete");
 		alert.setHeaderText("Item found successfully");
-		alert.setContentText("Click OK to clear text fields or cancel to leave you data");
+		alert.setContentText("Click OK to clear text fields or Cancel to leave you data");
 		Optional<ButtonType> result = alert.showAndWait();
 		if (!result.isPresent()) {
 			return false;
@@ -113,7 +113,7 @@ public class Utilities {
 	}
 
 	public static boolean showItemNotFound() {
-		Alert alert = new Alert(AlertType.WARNING, "Click OK to clear text fields or cancel to leave your data",
+		Alert alert = new Alert(AlertType.WARNING, "Click OK to clear text fields or Cancel to leave your data",
 				ButtonType.OK, ButtonType.CANCEL);
 		alert.setTitle("Data search complete");
 		alert.setHeaderText("There was a problem finding your item.");
