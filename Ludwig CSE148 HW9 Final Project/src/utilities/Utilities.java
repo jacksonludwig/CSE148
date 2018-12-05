@@ -7,8 +7,12 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.RandomAccessFile;
+import java.util.Optional;
 import java.util.Random;
 
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ButtonType;
 import model.ClassroomBag;
 import model.College;
 import model.CourseBag;
@@ -90,5 +94,37 @@ public class Utilities {
 		} catch (ClassNotFoundException | IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public static boolean showItemFound() {
+		Alert alert = new Alert(AlertType.CONFIRMATION);
+		alert.setTitle("Data search complete");
+		alert.setHeaderText("Item found successfully");
+		alert.setContentText("Click OK to clear text fields or cancel to leave you data");
+		Optional<ButtonType> result = alert.showAndWait();
+		if (!result.isPresent()) {
+			return false;
+		} else if (result.get() == ButtonType.OK) {
+			return true;
+		} else if (result.get() == ButtonType.CANCEL) {
+			return false;
+		}
+		return false;
+	}
+
+	public static boolean showItemNotFound() {
+		Alert alert = new Alert(AlertType.WARNING, "Click OK to clear text fields or cancel to leave your data",
+				ButtonType.OK, ButtonType.CANCEL);
+		alert.setTitle("Data search complete");
+		alert.setHeaderText("There was a problem finding your item.");
+		Optional<ButtonType> result = alert.showAndWait();
+		if (!result.isPresent()) {
+			return false;
+		} else if (result.get() == ButtonType.OK) {
+			return true;
+		} else if (result.get() == ButtonType.CANCEL) {
+			return false;
+		}
+		return false;
 	}
 }

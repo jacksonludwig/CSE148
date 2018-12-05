@@ -17,12 +17,12 @@ public class Textbook implements Serializable{
 		price = generatePriceFromFile(dataLine);
 	}
 	
-	public Textbook(String title, String first, String last, String ISBN, String price) {
+	public Textbook(String title, String first, String last, String ISBN, double price) {
 		this.title = title;
 		authorFirstName = first;
 		authorLastName = last;
 		this.ISBN = ISBN;
-		this.price = Double.parseDouble(price);
+		this.price = price;
 	}
 	
 	public String generateTitleFromFile(String line) {
