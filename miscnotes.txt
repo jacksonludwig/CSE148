@@ -1,0 +1,17 @@
+Courses should be chosen from list, not typed. Same with major.
+
+user must enter grade for class, but dont need to show. if you fail, the course doesnt count.
+
+listviews on gridpanes, on gridpanes
+
+no text area
+
+top -> bottom:
+menu bar, textfields/comboboxes/lists, search bar, status bar
+
+justinmind
+
+scenegraph (review)
+
+add hw7/8 to file menu... save (binary), save as (binary), load (binary), import (text), export (text),...
+THEY SHOULD OPEN FILECHOOSER, which uses windows's built in ui (example incl).
