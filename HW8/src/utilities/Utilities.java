@@ -66,18 +66,27 @@ public class Utilities {
 	}
 
 	public static void load(College college) {
-		FileInputStream fis = null;
-		PersonBag personBag = college.getPersonBag();
-		ClassroomBag classroomBag = college.getClassroomBag();
-		TextbookBag textbookBag = college.getTextbookBag();
-		CourseBag courseBag = college.getCourseBag();
+		ObjectInputStream ois = null;
 		try {
-			fis = new FileInputStream("binaryData/allBags.dat");
-			ObjectInputStream ois = new ObjectInputStream(fis);
-			personBag = (PersonBag) ois.readObject();
-			classroomBag = (ClassroomBag) ois.readObject();
-			textbookBag = (TextbookBag) ois.readObject();
-			courseBag = (CourseBag) ois.readObject();
+			FileInputStream fis = new FileInputStream("savedFiles/allBags.dat");
+			ois = new ObjectInputStream(fis);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		try {
+			PersonBag personBag = (PersonBag) (ois.readObject());
+			college.setPersonBag(personBag);
+
+			ClassroomBag classroomBag = (ClassroomBag) (ois.readObject());
+			college.setClassroomBag(classroomBag);
+
+			TextbookBag textbookBag = (TextbookBag) (ois.readObject());
+			college.setTextbookBag(textbookBag);
+
+			CourseBag courseBag = (CourseBag) (ois.readObject());
+			college.setCourseBag(courseBag);
+
 			ois.close();
 		} catch (ClassNotFoundException | IOException e) {
 			e.printStackTrace();

@@ -38,6 +38,8 @@ public class Demo {
 		FileSaver.saveTextbooks(textImport, "savedFiles/textbooks.dat");
 		FileSaver.savePersons(people, "savedFiles/persons.dat");
 		FileSaver.saveCollege(college, "savedFiles/college.dat");
+		
+		FileSaver.saveAllBags(people, classImport, textImport, courseImport, "savedFiles/allBags.dat"); 
 	}
 
 }
