@@ -17,12 +17,16 @@ public class Classroom implements Serializable{
 		projectorOrNot = getProjectorOrNotFromFile(dataLine);
 	}
 
-	public Classroom(String room, String building, String seats, String computers, String projector) {
+	public Classroom(String room, String building, int seats, int computers, Boolean projector) {
 		buildingName = building;
-		roomNumber = buildingName.charAt(0) + room;
-		numberOfSeats = Integer.parseInt(seats);
-		numberOfComputers = Integer.parseInt(computers);
-		projectorOrNot = Boolean.parseBoolean(projector);
+		try {
+			roomNumber = buildingName.charAt(0) + room;
+		} catch (Exception e) {
+			roomNumber = "X" + room;
+		}
+		numberOfSeats = seats;
+		numberOfComputers = computers;
+		projectorOrNot = projector;
 	}
 
 	public String getRoomNumberFromFile(String line) {

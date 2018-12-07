@@ -27,9 +27,9 @@ public class ClassroomBag implements Serializable{
 		}
 	}
 
-	public Classroom findByRoom(String id) {
+	public Classroom findByRoom(String room) {
 		for (int i = 0; i < nElems; i++) {
-			if (arr[i].getRoomNumber().equals(id)) {
+			if (arr[i].getRoomNumber().equals(room)) {
 				return arr[i];
 			}
 		}

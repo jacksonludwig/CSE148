@@ -4,6 +4,7 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import controllers.ClassroomShop;
 import controllers.MenuBarShop;
 import controllers.TextbookShop;
 import javafx.application.Application;
@@ -37,6 +38,8 @@ public class Demo extends Application {
 
 		// textbook shop
 		TextbookShop textbookShop = new TextbookShop(college.getTextbookBag(), menuBarShop, root);
+		
+		ClassroomShop classroomShop = new ClassroomShop(college.getClassroomBag(), menuBarShop, root);
 
 		Scene scene = new Scene(root, 1080, 580);
 		primaryStage.setScene(scene);

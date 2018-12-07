@@ -19,7 +19,8 @@ public class ComboBoxDemo extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		ObservableList<String> list = FXCollections.observableArrayList("A", "B+", "B", "C+", "C", "D+", "D", "F");
+		ObservableList<String> list = FXCollections.observableArrayList("Smithtown", "Babylon", "Ammerman", "Riverhead",
+				"Southhamptoon", "Shea", "Kreiling", "Brookhaven");
 		ComboBox<String> box = new ComboBox<>();
 		box.setItems(list);
 
@@ -27,7 +28,7 @@ public class ComboBoxDemo extends Application {
 //			String item = (String) box.getValue();
 //			System.out.println(item + " is selected.");
 //		});
-		
+
 		box.valueProperty().addListener(new ChangeListener<String>() {
 
 			@Override

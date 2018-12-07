@@ -3,7 +3,7 @@ package model;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Student extends Person implements Serializable{
+public class Student extends Person implements Serializable {
 	private String phoneNumber;
 	private String major;
 	private ArrayList<String> coursesToTake;
@@ -21,7 +21,8 @@ public class Student extends Person implements Serializable{
 		gpa = getGpaFromFile(dataLine);
 	}
 
-	public Student(String first, String last, String phoneNumber, String major, ArrayList<String> coursesToTake, ArrayList<String> coursesTaking, ArrayList<String> coursesTaken, String gpa) {
+	public Student(String first, String last, String phoneNumber, String major, ArrayList<String> coursesToTake,
+			ArrayList<String> coursesTaking, ArrayList<String> coursesTaken, String gpa) {
 		super(first, last);
 		this.phoneNumber = phoneNumber;
 		this.major = major;

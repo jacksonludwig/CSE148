@@ -80,7 +80,11 @@ public class TextbookPane {
 	}
 
 	public double getPrice() {
-		return Double.parseDouble(priceField.getText());
+		try {
+			return Double.parseDouble(priceField.getText());
+		} catch (NumberFormatException e) {
+			return 0.0;
+		}
 	}
 
 	public Button getInsertBtn() {

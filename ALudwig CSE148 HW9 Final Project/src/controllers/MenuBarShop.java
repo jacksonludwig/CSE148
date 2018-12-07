@@ -7,7 +7,6 @@ import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
 
 public class MenuBarShop {
 
@@ -56,31 +55,31 @@ public class MenuBarShop {
 
 	private void buildStudentMenu() {
 		studentMenu = new Menu("STUDENT");
-		insertStudentMenuItem = new MenuItem("INSERT");
+		insertStudentMenuItem = new MenuItem("EDIT");
 		studentMenu.getItems().add(insertStudentMenuItem);
 	}
 
 	private void buildFacultyMenu() {
 		facultyMenu = new Menu("FACULTY");
-		insertFacultyMenuItem = new MenuItem("INSERT");
+		insertFacultyMenuItem = new MenuItem("EDIT");
 		facultyMenu.getItems().add(insertFacultyMenuItem);
 	}
 
 	private void buildClassroomMenu() {
 		classroomMenu = new Menu("CLASSROOM");
-		insertClassroomMenuItem = new MenuItem("INSERT");
+		insertClassroomMenuItem = new MenuItem("EDIT");
 		classroomMenu.getItems().add(insertClassroomMenuItem);
 	}
 
 	private void buildTextbookMenu() {
 		textbookMenu = new Menu("TEXTBOOK");
-		insertTextbookMenuItem = new MenuItem("INSERT");
+		insertTextbookMenuItem = new MenuItem("EDIT");
 		textbookMenu.getItems().add(insertTextbookMenuItem);
 	}
 
 	private void buildCourseMenu() {
 		courseMenu = new Menu("COURSE");
-		insertCourseMenuItem = new MenuItem("INSERT");
+		insertCourseMenuItem = new MenuItem("EDIT");
 		courseMenu.getItems().add(insertCourseMenuItem);
 	}
 
@@ -113,9 +112,9 @@ public class MenuBarShop {
 	}
 
 	private void setCallbacks() {
-		// Utilities.saveBags
 		// Save, show alerts, etc. here.
 		exitMenuItem.setOnAction(e -> {
+
 			Platform.exit();
 		});
 	}
