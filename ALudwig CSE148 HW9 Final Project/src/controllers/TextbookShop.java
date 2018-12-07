@@ -1,6 +1,5 @@
 package controllers;
 
-// controller package will effectively combine/connect the data from model with the view classes.
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import model.Textbook;
@@ -28,11 +27,10 @@ public class TextbookShop {
 
 	private void setCallbacks() {
 		menuBarShop.getInsertTextbookMenuItem().setOnAction(e -> {
-			// returns the gridpane into the center of the root/borderpane. Callback 1.
 			root.setCenter(textbookPane.getTextbookPane());
 		});
 
-		textbookPane.getInsertBtn().setOnAction(e -> { // Callback 2.
+		textbookPane.getInsertBtn().setOnAction(e -> {
 			String title = textbookPane.getTitle();
 			String isbn = textbookPane.getIsbn();
 			String authorFirst = textbookPane.getAuthorFirst();
@@ -48,12 +46,11 @@ public class TextbookShop {
 				if (Alerts.showItemInserted()) {
 					textbookPane.clearAllFields();
 				}
-				System.out.println("The book is added");
 			}
 
 		});
 
-		textbookPane.getSearchBtn().setOnAction(e -> { // Callback 2.
+		textbookPane.getSearchBtn().setOnAction(e -> { 
 			String title = textbookPane.getTitle();
 			if (textbookBag.findByTitle(title) != null) {
 				if (Alerts.showItemFound()) {
@@ -64,10 +61,9 @@ public class TextbookShop {
 					textbookPane.clearAllFields();
 				}
 			}
-			System.out.println("The book was searched for");
 		});
 
-		textbookPane.getUpdateBtn().setOnAction(e -> { // Callback 2.
+		textbookPane.getUpdateBtn().setOnAction(e -> { 
 			String title = textbookPane.getTitle();
 			String isbn = textbookPane.getIsbn();
 			String authorFirst = textbookPane.getAuthorFirst();
@@ -87,11 +83,9 @@ public class TextbookShop {
 					textbookPane.clearAllFields();
 				}
 			}
-
-			System.out.println("The book was updated");
 		});
 		
-		textbookPane.getDeleteBtn().setOnAction(e -> { // Callback 2.
+		textbookPane.getDeleteBtn().setOnAction(e -> { 
 			String title = textbookPane.getTitle();
 			if (textbookBag.findByTitle(title) != null) {
 				textbookBag.deleteByTitle(title);
@@ -103,16 +97,6 @@ public class TextbookShop {
 					textbookPane.clearAllFields();
 				}
 			}
-			System.out.println("The book was searched for");
 		});
 	}
-
-//	public static boolean checkForCompleteData(TextbookPane textbookPane) {
-//		if (textbookPane.getAuthorFirst() != null && textbookPane.getAuthorLast() != null
-//				&& textbookPane.getIsbn() != null && String.valueOf(textbookPane.getPrice()) != null) {
-//			return true;
-//		}
-//		return false;
-//	}
-
 }

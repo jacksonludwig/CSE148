@@ -2,7 +2,6 @@ package view;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -11,7 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
-//import model.TextbookBag;
+
 
 public class ClassroomPane {
 	private static final int BUTTON_WIDTH = 120;
@@ -29,7 +28,8 @@ public class ClassroomPane {
 
 	private ObservableList<String> buildings;
 	private ComboBox<String> buildingBox;
-	private HBox buttonBox;
+	private HBox buttonBox1;
+	private HBox buttonBox2;
 
 	public ClassroomPane() {
 		roomNumberField = new TextField();
@@ -58,12 +58,15 @@ public class ClassroomPane {
 
 		classroomPane = new GridPane();
 		classroomPane.setAlignment(Pos.CENTER);
-		classroomPane.setPadding(new Insets(20));
+		classroomPane.setPadding(new Insets(80));
 		classroomPane.setVgap(20);
-		classroomPane.setHgap(20);
-		buttonBox = new HBox(40);
-		buttonBox.setAlignment(Pos.CENTER);
-		buttonBox.getChildren().addAll(insertBtn, searchBtn, updateBtn, deleteBtn);
+		classroomPane.setHgap(10);
+		buttonBox1 = new HBox(40);
+		buttonBox1.setAlignment(Pos.CENTER);
+		buttonBox1.getChildren().addAll(insertBtn, searchBtn);
+		buttonBox2 = new HBox(40);
+		buttonBox2.setAlignment(Pos.CENTER);
+		buttonBox2.getChildren().addAll(updateBtn, deleteBtn);
 		buildPane();
 
 	}
@@ -121,7 +124,11 @@ public class ClassroomPane {
 	}
 
 	public HBox getButtonBox() {
-		return buttonBox;
+		return buttonBox1;
+	}
+	
+	public HBox getButtonBox2() {
+		return buttonBox2;
 	}
 
 	private void buildPane() {
@@ -134,7 +141,10 @@ public class ClassroomPane {
 		classroomPane.add(numberOfSeatsField, 0, 1);
 		classroomPane.add(numberOfComputersField, 0, 2);
 		classroomPane.add(projectorOrNotField, 1, 1);
-		classroomPane.add(buttonBox, 0, 3, 2, 1); // span; 4 buttons will span the 4 row. <column><row>...
+     	classroomPane.add(buttonBox1, 0, 3, 3, 2);
+     	classroomPane.add(buttonBox2, 0, 5, 3, 2);
+//		classroomPane.add(buttonBox1, 0, 3);
+//		classroomPane.add(buttonBox2, 0, 4);
 	}
 
 	public Pane getClassroomPane() {

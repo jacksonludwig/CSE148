@@ -7,7 +7,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
-//import model.TextbookBag;
 
 public class TextbookPane {
 	private static final int BUTTON_WIDTH = 120;
@@ -26,11 +25,7 @@ public class TextbookPane {
 
 	private HBox buttonBox;
 
-//	this class has no connection to any data classes: JUST GUI.
-//	private TextbookBag textbookBag;
-
 	public TextbookPane() {
-//		this.textbookBag = textbookBag;
 		titleField = new TextField();
 		titleField.setPromptText("Title");
 		isbnField = new TextField();
@@ -113,11 +108,9 @@ public class TextbookPane {
 		textbookPane.add(authorFirstField, 0, 1);
 		textbookPane.add(authorLastField, 0, 2);
 		textbookPane.add(priceField, 1, 1);
-		textbookPane.add(buttonBox, 0, 3, 2, 1); // span; 4 buttons will span the 4 row. <column><row>...
+		textbookPane.add(buttonBox, 0, 3, 2, 1);
 	}
 
-	// this gets the gridpane. This may be all is needed in other situations. Pane
-	// is superclass of gridpane, boxes, etc.
 	public Pane getTextbookPane() {
 		return textbookPane;
 	}

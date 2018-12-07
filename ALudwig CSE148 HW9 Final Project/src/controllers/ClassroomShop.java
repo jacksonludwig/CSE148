@@ -1,6 +1,5 @@
 package controllers;
 
-// controller package will effectively combine/connect the data from model with the view classes.
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import model.Classroom;
@@ -31,7 +30,7 @@ public class ClassroomShop {
 			root.setCenter(classroomPane.getClassroomPane());
 		});
 
-		classroomPane.getInsertBtn().setOnAction(e -> { // Callback 2.
+		classroomPane.getInsertBtn().setOnAction(e -> {
 			String buildingName = classroomPane.getBuildingName();
 			String roomNumber = classroomPane.getRoomNumber();
 			int numberOfSeats = 0;
@@ -56,7 +55,7 @@ public class ClassroomShop {
 
 		});
 
-		classroomPane.getSearchBtn().setOnAction(e -> { // Callback 2.
+		classroomPane.getSearchBtn().setOnAction(e -> {
 			String roomNumber;
 			try {
 				roomNumber = classroomPane.getBuildingName().charAt(0) + classroomPane.getRoomNumber();
@@ -74,7 +73,7 @@ public class ClassroomShop {
 			}
 		});
 
-		classroomPane.getUpdateBtn().setOnAction(e -> { // Callback 2.
+		classroomPane.getUpdateBtn().setOnAction(e -> {
 			String buildingName = classroomPane.getBuildingName();
 			String roomNumber = classroomPane.getRoomNumber();
 			int numberOfSeats = 0;
@@ -106,7 +105,7 @@ public class ClassroomShop {
 			}
 		});
 
-		classroomPane.getDeleteBtn().setOnAction(e -> { // Callback 2.
+		classroomPane.getDeleteBtn().setOnAction(e -> {
 			String roomNumber;
 			try {
 				roomNumber = classroomPane.getBuildingName().charAt(0) + classroomPane.getRoomNumber();
