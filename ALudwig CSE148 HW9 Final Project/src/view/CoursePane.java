@@ -1,8 +1,11 @@
 package view;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
@@ -17,6 +20,9 @@ public class CoursePane {
 	private TextField facultyIDField;
 	private TextField textbookISBNField;
 	private TextField classroomField;
+	
+	private ObservableList<String> buildings;
+	private ComboBox<String> buildingBox;
 
 	private GridPane coursePane;
 	private Button insertBtn;
@@ -39,6 +45,12 @@ public class CoursePane {
 		textbookISBNField.setPromptText("Textbook ISBN");
 		classroomField = new TextField();
 		classroomField.setPromptText("Classroom");
+		
+		buildings = FXCollections.observableArrayList("Smithtown", "Babylon", "Ammerman", "Riverhead", "Southhampton",
+				"Shea", "Kreiling", "Brookhaven");
+		buildingBox = new ComboBox<>();
+		buildingBox.setItems(buildings);
+		buildingBox.setPromptText("Building Name");
 
 		insertBtn = new Button("INSERT");
 		insertBtn.setPrefSize(BUTTON_WIDTH, BUTTON_HEIGHT);
@@ -85,6 +97,10 @@ public class CoursePane {
 		return classroomField.getText();
 	}
 	
+	public String getBuildingName() {
+		return buildingBox.getValue();
+	}
+	
 	public Button getInsertBtn() {
 		return insertBtn;
 	}
@@ -112,7 +128,8 @@ public class CoursePane {
 		coursePane.add(facultyIDField, 0, 2);
 		coursePane.add(textbookISBNField, 1, 1);
 		coursePane.add(classroomField, 1, 2);
-		coursePane.add(buttonBox, 0, 3, 2, 1);
+		coursePane.add(buildingBox, 0, 3);
+		coursePane.add(buttonBox, 0, 4, 2, 1);
 	}
 
 	public Pane getCoursePane() {

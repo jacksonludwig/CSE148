@@ -37,7 +37,8 @@ public class CourseShop {
 			String facId = coursePane.getFacultyID();
 			String textISBN = coursePane.getTextbookISBN();
 			String classroom = coursePane.getClassroom();
-			Course course = new Course(shortTitle, longTitle, courseDesc, facId, textISBN, classroom);
+			Course course = new Course(shortTitle, longTitle, courseDesc, facId, textISBN,
+					coursePane.getBuildingName().charAt(0) + classroom);
 			if (courseBag.findByCourseTitleShort(course.getCourseTitleShort()) != null) {
 				if (Alerts.showRepeatItem()) {
 					coursePane.clearAllFields();
@@ -51,7 +52,7 @@ public class CourseShop {
 
 		});
 
-		coursePane.getSearchBtn().setOnAction(e -> { 
+		coursePane.getSearchBtn().setOnAction(e -> {
 			String title = coursePane.getCourseTitleShort();
 			if (courseBag.findByCourseTitleShort(title) != null) {
 				if (Alerts.showItemFound()) {
@@ -64,14 +65,15 @@ public class CourseShop {
 			}
 		});
 
-		coursePane.getUpdateBtn().setOnAction(e -> { 
+		coursePane.getUpdateBtn().setOnAction(e -> {
 			String shortTitle = coursePane.getCourseTitleShort();
 			String longTitle = coursePane.getCourseTitleLong();
 			String courseDesc = coursePane.getCourseDescription();
 			String facId = coursePane.getFacultyID();
 			String textISBN = coursePane.getTextbookISBN();
 			String classroom = coursePane.getClassroom();
-			Course course = new Course(shortTitle, longTitle, courseDesc, facId, textISBN, classroom);
+			Course course = new Course(shortTitle, longTitle, courseDesc, facId, textISBN,
+					coursePane.getBuildingName().charAt(0) + classroom);
 
 			Course temp = courseBag.findByCourseTitleShort(shortTitle);
 			if (temp != null) {
@@ -86,8 +88,8 @@ public class CourseShop {
 				}
 			}
 		});
-		
-		coursePane.getDeleteBtn().setOnAction(e -> { 
+
+		coursePane.getDeleteBtn().setOnAction(e -> {
 			String title = coursePane.getCourseTitleShort();
 			if (courseBag.findByCourseTitleShort(title) != null) {
 				courseBag.deleteByCourseTitleShort(title);

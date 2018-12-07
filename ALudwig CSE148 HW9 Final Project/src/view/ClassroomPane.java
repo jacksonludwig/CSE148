@@ -143,8 +143,6 @@ public class ClassroomPane {
 		classroomPane.add(projectorOrNotField, 1, 1);
      	classroomPane.add(buttonBox1, 0, 3, 3, 2);
      	classroomPane.add(buttonBox2, 0, 5, 3, 2);
-//		classroomPane.add(buttonBox1, 0, 3);
-//		classroomPane.add(buttonBox2, 0, 4);
 	}
 
 	public Pane getClassroomPane() {
