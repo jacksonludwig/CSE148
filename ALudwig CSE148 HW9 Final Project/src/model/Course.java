@@ -2,10 +2,11 @@ package model;
 
 import java.io.Serializable;
 
-public class Course implements Serializable{
+public class Course implements Serializable {
 	private String courseTitleShort;
 	private String courseTitleLong;
 	private String courseDescription;
+	private double numberOfCredits;
 	private String facultyID;
 	private String textbookISBN;
 	private String classroom;
@@ -14,15 +15,18 @@ public class Course implements Serializable{
 		courseTitleShort = generateCourseTitleShortFromFile(dataLine);
 		courseTitleLong = generateCourseTitleLongFromFile(dataLine);
 		courseDescription = generateCourseDescriptionFromFile(dataLine);
+		numberOfCredits = generateNumberOfCreditsFromFile(dataLine);
 		facultyID = generateFacultyIdFromFile(dataLine);
 		textbookISBN = generateTextbookISBNFromFile(dataLine);
 		classroom = generateClassroomFromFile(dataLine);
 	}
-	
-	public Course(String courseShort, String courseLong, String courseDesc, String id, String isbn, String classroom) {
+
+	public Course(String courseShort, String courseLong, String courseDesc, double numberOfCredits, String id,
+			String isbn, String classroom) {
 		courseTitleShort = courseShort;
 		courseTitleLong = courseLong;
 		courseDescription = courseDesc;
+		this.numberOfCredits = numberOfCredits;
 		facultyID = id;
 		textbookISBN = isbn;
 		this.classroom = classroom;
@@ -72,6 +76,24 @@ public class Course implements Serializable{
 			count++;
 		}
 		return description;
+	}
+
+	public double generateNumberOfCreditsFromFile(String line) {
+		int sectionCount = 0;
+		int count = 0;
+		String description = "";
+		while (sectionCount < 3) {
+			if (line.charAt(count) == '*') {
+				sectionCount++;
+			}
+			count++;
+		}
+		count++;
+		while (line.charAt(count) != '*') {
+			description += line.charAt(count);
+			count++;
+		}
+		return Double.parseDouble(description);
 	}
 
 	public String generateFacultyIdFromFile(String line) {
@@ -146,6 +168,14 @@ public class Course implements Serializable{
 
 	public String getCourseDescription() {
 		return courseDescription;
+	}
+
+	public double getNumberOfCredits() {
+		return numberOfCredits;
+	}
+
+	public void setNumberOfCredits(double numberOfCredits) {
+		this.numberOfCredits = numberOfCredits;
 	}
 
 	public void setCourseDescription(String courseDescription) {

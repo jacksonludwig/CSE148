@@ -7,9 +7,12 @@ import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.BorderPane;
+import model.College;
+import model.FileSaver;
 
 public class MenuBarShop {
-
+	private College college;
+	
 	private Menu fileMenu;
 	private MenuItem exitMenuItem;
 
@@ -30,7 +33,8 @@ public class MenuBarShop {
 
 	private MenuBar menuBar;
 
-	public MenuBarShop(BorderPane root) {
+	public MenuBarShop(College college, BorderPane root) {
+		this.college = college;
 		buildMenuBar();
 		buildFileMenu();
 		buildStudentMenu();
@@ -114,7 +118,8 @@ public class MenuBarShop {
 	private void setCallbacks() {
 		// Save, show alerts, etc. here.
 		exitMenuItem.setOnAction(e -> {
-
+			FileSaver.saveAllBags(college.getPersonBag(), college.getClassroomBag(), college.getTextbookBag(),
+					college.getCourseBag(), "savedFiles/allBags.dat");
 			Platform.exit();
 		});
 	}

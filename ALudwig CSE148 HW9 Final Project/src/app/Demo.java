@@ -7,6 +7,7 @@ import java.net.URL;
 import controllers.ClassroomShop;
 import controllers.CourseShop;
 import controllers.MenuBarShop;
+import controllers.StudentShop;
 import controllers.TextbookShop;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -34,7 +35,7 @@ public class Demo extends Application {
 		root = new BorderPane();
 
 		// MenuBar shop
-		MenuBarShop menuBarShop = new MenuBarShop(root);
+		MenuBarShop menuBarShop = new MenuBarShop(college, root);
 		setWelcomeScreen();
 
 		// textbook shop
@@ -43,6 +44,8 @@ public class Demo extends Application {
 		ClassroomShop classroomShop = new ClassroomShop(college.getClassroomBag(), menuBarShop, root);
 		
 		CourseShop courseShop = new CourseShop(college.getCourseBag(), menuBarShop, root);
+		
+		StudentShop studentShop = new StudentShop(college.getPersonBag(), college.getCourseBag(), menuBarShop, root);
 
 		Scene scene = new Scene(root, 1080, 580);
 		primaryStage.setScene(scene);

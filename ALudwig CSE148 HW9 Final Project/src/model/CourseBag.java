@@ -56,6 +56,10 @@ public class CourseBag implements Serializable{
 		return temp;
 	}
 	
+	public Course getCourse(int num) {
+		return arr[num];
+	}
+	
 	public Course[] getArr() {
 		return arr;
 	}

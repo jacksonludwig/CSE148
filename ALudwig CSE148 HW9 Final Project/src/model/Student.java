@@ -22,14 +22,14 @@ public class Student extends Person implements Serializable {
 	}
 
 	public Student(String first, String last, String phoneNumber, String major, ArrayList<String> coursesToTake,
-			ArrayList<String> coursesTaking, ArrayList<String> coursesTaken, String gpa) {
+			ArrayList<String> coursesTaking, ArrayList<String> coursesTaken, double gpa) {
 		super(first, last);
 		this.phoneNumber = phoneNumber;
 		this.major = major;
 		this.coursesToTake = coursesToTake;
 		this.coursesTaking = coursesTaking;
 		this.coursesTaken = coursesTaken;
-		this.gpa = Double.parseDouble(gpa);
+		this.gpa = gpa;
 	}
 
 	public String getPhoneNumberFromFile(String line) {
@@ -155,6 +155,10 @@ public class Student extends Person implements Serializable {
 		}
 		return Double.parseDouble(gpa);
 	}
+	
+//	public double generateGpaFromCourses(ArrayList<String> courses) {
+//		
+//	}
 
 	public String getPhoneNumber() {
 		return phoneNumber;

@@ -133,9 +133,10 @@ public class ClassroomPane {
 
 	private void buildPane() {
 		roomNumberField.setMaxWidth(150);
-		projectorOrNotField.setMaxWidth(125);
+		projectorOrNotField.setMaxWidth(150);
 		numberOfSeatsField.setMaxWidth(150);
 		numberOfComputersField.setMaxWidth(150);
+		buildingBox.setPrefWidth(150);
 		classroomPane.add(roomNumberField, 0, 0);
 		classroomPane.add(buildingBox, 1, 0);
 		classroomPane.add(numberOfSeatsField, 0, 1);

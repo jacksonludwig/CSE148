@@ -17,6 +17,7 @@ public class CoursePane {
 	private TextField courseTitleShortField;
 	private TextField courseTitleLongField;
 	private TextField courseDescriptionField;
+	private TextField credits;
 	private TextField facultyIDField;
 	private TextField textbookISBNField;
 	private TextField classroomField;
@@ -39,6 +40,9 @@ public class CoursePane {
 		courseTitleLongField.setPromptText("Full Course Title");
 		courseDescriptionField = new TextField();
 		courseDescriptionField.setPromptText("Course Description");
+		credits = new TextField();
+		credits.setPromptText("Number of Credits for class");
+		credits.setMaxWidth(165);
 		facultyIDField = new TextField();
 		facultyIDField.setPromptText("Faculty ID");
 		textbookISBNField = new TextField();
@@ -129,6 +133,7 @@ public class CoursePane {
 		coursePane.add(textbookISBNField, 1, 1);
 		coursePane.add(classroomField, 1, 2);
 		coursePane.add(buildingBox, 0, 3);
+		coursePane.add(credits, 1, 3);
 		coursePane.add(buttonBox, 0, 4, 2, 1);
 	}
 
@@ -191,6 +196,14 @@ public class CoursePane {
 		facultyIDField.clear();
 		textbookISBNField.clear();
 		classroomField.clear();
+	}
+
+	public double getCredits() {
+		try {
+			return Double.parseDouble(credits.getText());
+		} catch (NumberFormatException e) {
+			return 0.0;
+		}
 	}
 
 }

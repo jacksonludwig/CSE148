@@ -37,7 +37,8 @@ public class CourseShop {
 			String facId = coursePane.getFacultyID();
 			String textISBN = coursePane.getTextbookISBN();
 			String classroom = coursePane.getClassroom();
-			Course course = new Course(shortTitle, longTitle, courseDesc, facId, textISBN,
+			double credits = coursePane.getCredits();
+			Course course = new Course(shortTitle, longTitle, courseDesc, credits, facId, textISBN,
 					coursePane.getBuildingName().charAt(0) + classroom);
 			if (courseBag.findByCourseTitleShort(course.getCourseTitleShort()) != null) {
 				if (Alerts.showRepeatItem()) {
@@ -72,7 +73,8 @@ public class CourseShop {
 			String facId = coursePane.getFacultyID();
 			String textISBN = coursePane.getTextbookISBN();
 			String classroom = coursePane.getClassroom();
-			Course course = new Course(shortTitle, longTitle, courseDesc, facId, textISBN,
+			double credits = coursePane.getCredits();
+			Course course = new Course(shortTitle, longTitle, courseDesc, credits, facId, textISBN,
 					coursePane.getBuildingName().charAt(0) + classroom);
 
 			Course temp = courseBag.findByCourseTitleShort(shortTitle);

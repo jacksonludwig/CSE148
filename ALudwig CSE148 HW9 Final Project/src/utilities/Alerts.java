@@ -1,9 +1,12 @@
 package utilities;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.ChoiceDialog;
 import javafx.scene.control.Alert.AlertType;
 
 public class Alerts {
@@ -133,5 +136,37 @@ public class Alerts {
 			return false;
 		}
 		return false;
+	}
+
+	public static double confirmClassGradeWeighted(double credits) {
+		String[] grades = { "A", "B+", "B", "C+", "C", "D+", "D", "F" };
+		ChoiceDialog<String> dialog = new ChoiceDialog<>("Letter Grade", grades);
+		dialog.setTitle("Grade Selection");
+		dialog.setHeaderText("The Grade For The Class Is Required");
+		dialog.setContentText("Choose your letter grade:");
+		Optional<String> result = dialog.showAndWait();
+		String grade = "";
+		if (result.isPresent()){
+		    grade = result.get();
+		    
+		    if (grade.equals("A")) {
+				return 4.0 * credits;
+			} else if (grade.equals("B+")) {
+				return 3.5 * credits;
+			} else if (grade.equals("B")) {
+				return 3.0 * credits;
+			} else if (grade.equals("C+")) {
+				return 2.5 * credits;
+			} else if (grade.equals("C")) {
+				return 2.0 * credits;
+			} else if (grade.equals("D+")) {
+				return 1.5 * credits;
+			} else if (grade.equals("D")) {
+				return 1.0 * credits;
+			} else {
+				return 0.0;
+			}
+		}
+		return -1;
 	}
 }
