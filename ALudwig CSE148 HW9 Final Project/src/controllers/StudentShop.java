@@ -1,7 +1,6 @@
 package controllers;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashSet;
 
 import javafx.collections.FXCollections;
@@ -24,8 +23,14 @@ public class StudentShop {
 	private ObservableList<String> coursesToTakeList;
 	private ObservableList<String> coursesTakingList;
 	private ObservableList<String> coursesTakenList;
+	private double weightedGpa;
+//	private int numberOfClassesTaken;
+	private int credits;
 
 	public StudentShop(PersonBag studentBag, CourseBag courseBag, MenuBarShop menuBarShop, BorderPane root) {
+		weightedGpa = 0;
+//		numberOfClassesTaken = 0;
+		credits = 0;
 		HashSet<String> coursesToTake = new HashSet<String>();
 		HashSet<String> coursesTaking = new HashSet<String>();
 		HashSet<String> coursesTaken = new HashSet<String>();
@@ -76,54 +81,70 @@ public class StudentShop {
 			String potential = studentPane.getCoursesTakingListView().getSelectionModel().getSelectedItem();
 			if (potential != null) {
 				Course course = courseBag.findByCourseTitleShort(potential);
-				if(Alerts.confirmClassGradeWeighted(course.getNumberOfCredits()) > 0) { 
+				double grade = Alerts.confirmClassGradeWeighted(course.getNumberOfCredits());
+				if (grade > 0) {
 					studentPane.getCoursesTakingListView().getSelectionModel().clearSelection();
 					coursesTakingList.remove(potential);
 					coursesTakenList.add(potential);
+					adjustGpaAdd(grade, course.getNumberOfCredits());
+					System.out.println(weightedGpa);
+				} else {
+					Alerts.showClassFailed();
 				}
 			}
 		});
 
 		studentPane.getMoveClassFarLeftButton().setOnAction(e -> {
 			String potential = studentPane.getCoursesTakenListView().getSelectionModel().getSelectedItem();
+			Course course = courseBag.findByCourseTitleShort(potential);
+			double grade = Alerts.confirmClassGradeForRemoval(course.getNumberOfCredits());
 			if (potential != null) {
-				studentPane.getCoursesTakenListView().getSelectionModel().clearSelection();
-				coursesTakenList.remove(potential);
-				coursesTakingList.add(potential);
+				if (grade > 0) {
+					studentPane.getCoursesTakenListView().getSelectionModel().clearSelection();
+					coursesTakenList.remove(potential);
+					coursesTakingList.add(potential);
+					adjustGpaRemove(grade, course.getNumberOfCredits());
+					System.out.println(weightedGpa);
+				} else {
+					Alerts.showClassWrongGradeEntered();
+				}
 			}
 		});
 
 		studentPane.getInsertBtn().setOnAction(e -> {
-//			String first = studentPane.getFirst();
-//			String last = studentPane.getLast();
-//			String phoneNumber = studentPane.getPhoneNumber();
-//			String major = studentPane.getMajor();
-//			ArrayList<String> coursesToTake = new ArrayList<>();
-//			for (int i = 0; i < coursesToTakeList.size(); i++) {
-//				coursesToTake.add(coursesToTakeList.get(i));
-//			}
-//			ArrayList<String> coursesTaking = new ArrayList<>();
-//			for (int i = 0; i < coursesTakingList.size(); i++) {
-//				coursesTaking.add(coursesTakingList.get(i));
-//			}
-//			ArrayList<String> coursesTaken = new ArrayList<>();
-//			for (int i = 0; i < coursesTakenList.size(); i++) {
-//				coursesTaken.add(coursesTakenList.get(i));
-//			}
-//			double gpa;
-//			Student student = new Student(first, last, phoneNumber, major, coursesToTake, coursesTaking, coursesTaken,
-//					gpa);
-//			if (studentBag.findById(student.getId()) != null) {
-//				if (Alerts.showRepeatItem()) {
-//					studentPane.clearAllFields();
-//				}
-//			} else {
-//				studentBag.insert(student);
-//				if (Alerts.showItemInserted()) {
-//					studentPane.clearAllFields();
-//				}
-//			}
+			String first = studentPane.getFirst();
+			String last = studentPane.getLast();
+			String phoneNumber = studentPane.getPhoneNumber();
+			String major = studentPane.getMajor();
+			
+			if(first.equals("") || last.equals("") || phoneNumber.equals("")) {
+				Alerts.showFillAllFields();
+			} else if(major == null) {
+				Alerts.showMajorNotChosen();
+			} else {
+				ArrayList<String> coursesToTake = new ArrayList<>();
+				for (int i = 0; i < coursesToTakeList.size(); i++) {
+					coursesToTake.add(coursesToTakeList.get(i));
+				}
+				ArrayList<String> coursesTaking = new ArrayList<>();
+				for (int i = 0; i < coursesTakingList.size(); i++) {
+					coursesTaking.add(coursesTakingList.get(i));
+				}
+				ArrayList<String> coursesTaken = new ArrayList<>();
+				for (int i = 0; i < coursesTakenList.size(); i++) {
+					coursesTaken.add(coursesTakenList.get(i));
+				}
+				Student student = null;
+				do {
+					student = new Student(first, last, phoneNumber, major, coursesToTake, coursesTaking, coursesTaken,
+							weightedGpa);
+				} while (studentBag.findById(student.getId()) != null);
 
+				studentBag.insert(student);
+				if (Alerts.showItemInsertedAndId(student.getId())) {
+					studentPane.clearAllFields();
+				}
+			}
 		});
 
 		studentPane.getSearchBtn().setOnAction(e -> {
@@ -174,5 +195,29 @@ public class StudentShop {
 //				}
 //			}
 		});
+	}
+
+	public void adjustGpaAdd(double weightedGrade, double credits) {
+		weightedGpa *= this.credits;
+		weightedGpa += weightedGrade;
+		this.credits += credits;
+		weightedGpa /= this.credits;
+		weightedGpa = Double.parseDouble(String.format("%.2f", weightedGpa));
+		studentPane.setDynamicGpa(weightedGpa);
+	}
+
+	public void adjustGpaRemove(double weightedGrade, double credits) {
+		weightedGpa *= this.credits;
+		weightedGpa -= weightedGrade;
+		this.credits -= credits;
+		weightedGpa /= this.credits;
+		weightedGpa = Double.parseDouble(String.format("%.2f", weightedGpa));
+		if (this.credits <= 0) {
+			weightedGpa = 0.0;
+		}
+		if (!(weightedGpa > 0)) {
+			weightedGpa = 0.0;
+		}
+		studentPane.setDynamicGpa(weightedGpa);
 	}
 }

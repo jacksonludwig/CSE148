@@ -8,15 +8,15 @@ public abstract class Person implements Serializable {
 	private String id;
 	private String dataLine;
 
-	private static int newPersonId = 2200;
+	private static int newPersonId = 2300;
 
 	public Person(String dataLine) {
 		firstName = getFirstNameFromFile(dataLine);
 		lastName = getLastNameFromFile(dataLine);
 		id = getIdFromFile(dataLine);
-		if (Integer.parseInt(id) > newPersonId) {
-			newPersonId = Integer.parseInt(id) + 1;
-		}
+//		if (Integer.parseInt(id) > newPersonId) {
+//			newPersonId = Integer.parseInt(id) + 1;
+//		}
 	}
 
 	public Person(String first, String last) {

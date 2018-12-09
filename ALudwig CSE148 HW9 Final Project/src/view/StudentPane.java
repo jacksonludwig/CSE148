@@ -46,6 +46,8 @@ public class StudentPane {
 	private Label coursesToTakeLbl;
 	private Label coursesTakingLbl;
 	private Label coursesTakenLbl;
+	private Label gpaLabel;
+	private Label dynamicGpa;
 
 	private GridPane coursesPane;
 
@@ -75,6 +77,7 @@ public class StudentPane {
 		coursesToTakeLbl = new Label("Courses To Take");
 		coursesTakingLbl = new Label("Courses Taking");
 		coursesTakenLbl = new Label("Courses Taken");
+		dynamicGpa = new Label("GPA: 0.0");
 
 		this.coursesToTakeList = coursesToTakeList;
 		this.coursesTakingList = coursesTakingList;
@@ -122,6 +125,26 @@ public class StudentPane {
 		buttonBox.getChildren().addAll(insertBtn, searchBtn, updateBtn, deleteBtn);
 		buildPane();
 
+	}
+
+	public void setDynamicGpa(double gpa) {
+		dynamicGpa.setText("GPA: " + String.valueOf(gpa));
+	}
+	
+	public Label getGpaLabel() {
+		return gpaLabel;
+	}
+
+	public void setGpaLabel(Label gpaLabel) {
+		this.gpaLabel = gpaLabel;
+	}
+
+	public Label getDynamicGpa() {
+		return dynamicGpa;
+	}
+
+	public void setDynamicGpa(Label dynamicGpa) {
+		this.dynamicGpa = dynamicGpa;
 	}
 
 	public String getPhoneNumber() {
@@ -177,6 +200,7 @@ public class StudentPane {
 
 		studentPane.add(phoneNumberField, 0, 2);
 		studentPane.add(majorBox, 1, 0);
+		studentPane.add(dynamicGpa, 1, 3);
 		studentPane.add(firstNameField, 0, 0);
 		studentPane.add(lastNameField, 0, 1);
 
@@ -319,6 +343,7 @@ public class StudentPane {
 //		majorField.clear();
 		firstNameField.clear();
 		lastNameField.clear();
+		setDynamicGpa(0.0);
 //		gpaField.clear();
 	}
 

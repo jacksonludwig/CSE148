@@ -41,7 +41,7 @@ public class CoursePane {
 		courseDescriptionField = new TextField();
 		courseDescriptionField.setPromptText("Course Description");
 		credits = new TextField();
-		credits.setPromptText("Number of Credits for class");
+		credits.setPromptText("Number of Credits For Class");
 		credits.setMaxWidth(165);
 		facultyIDField = new TextField();
 		facultyIDField.setPromptText("Faculty ID");
