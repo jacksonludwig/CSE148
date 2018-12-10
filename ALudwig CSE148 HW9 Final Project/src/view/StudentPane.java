@@ -26,6 +26,8 @@ public class StudentPane {
 
 	private ObservableList<String> majors;
 	private ComboBox<String> majorBox;
+	private ObservableList<String> coursesList; // put in shop
+	private ListView<String> coursesListView;
 	private ObservableList<String> coursesTakingList; // put in shop
 	private ListView<String> coursesTakingListView;
 	private ObservableList<String> coursesToTakeList; // put in shop
@@ -38,11 +40,14 @@ public class StudentPane {
 	private Button moveClassFarRightButton;
 	private Button moveClassLeftButton;
 	private Button moveClassFarLeftButton;
+	private Button moveClassNearRightButton;
+	private Button moveClassNearLeftButton;
 	private Button insertBtn;
 	private Button searchBtn;
 	private Button updateBtn;
 	private Button deleteBtn;
 
+	private Label allCoursesLbl;
 	private Label coursesToTakeLbl;
 	private Label coursesTakingLbl;
 	private Label coursesTakenLbl;
@@ -54,9 +59,10 @@ public class StudentPane {
 	private HBox buttonBox;
 	private VBox courseButtonBox;
 	private VBox courseFarButtonBox;
+	private VBox courseNearButtonBox;
 
-	public StudentPane(ObservableList<String> coursesToTakeList, ObservableList<String> coursesTakingList,
-			ObservableList<String> coursesTakenList) {
+	public StudentPane(ObservableList<String> allCoursesList, ObservableList<String> coursesToTakeList,
+			ObservableList<String> coursesTakingList, ObservableList<String> coursesTakenList) {
 		phoneNumberField = new TextField();
 		phoneNumberField.setPromptText("Phone Number");
 
@@ -74,14 +80,17 @@ public class StudentPane {
 		idField = new TextField();
 		idField.setPromptText("ID");
 
+		allCoursesLbl = new Label("Course Catalogue");
 		coursesToTakeLbl = new Label("Courses To Take");
 		coursesTakingLbl = new Label("Courses Taking");
 		coursesTakenLbl = new Label("Courses Taken");
 		dynamicGpa = new Label("GPA: 0.0");
 
+		coursesList = allCoursesList;
 		this.coursesToTakeList = coursesToTakeList;
 		this.coursesTakingList = coursesTakingList;
 		this.coursesTakenList = coursesTakenList;
+		coursesListView = new ListView<>(coursesList);
 		coursesTakingListView = new ListView<>(coursesTakingList);
 		coursesToTakeListView = new ListView<>(coursesToTakeList);
 		coursesTakenListView = new ListView<>(coursesTakenList);
@@ -94,6 +103,11 @@ public class StudentPane {
 		moveClassLeftButton.setPrefSize(30, 30);
 		moveClassFarLeftButton = new Button("<-");
 		moveClassFarLeftButton.setPrefSize(30, 30);
+		moveClassNearRightButton = new Button("->");
+		moveClassNearRightButton.setPrefSize(30, 30);
+		moveClassNearLeftButton = new Button("<-");
+		moveClassNearLeftButton.setPrefSize(30, 30);
+
 		insertBtn = new Button("INSERT");
 		insertBtn.setPrefSize(BUTTON_WIDTH, BUTTON_HEIGHT);
 		searchBtn = new Button("SEARCH");
@@ -108,6 +122,9 @@ public class StudentPane {
 		coursesPane.setPadding(new Insets(20));
 		coursesPane.setVgap(20);
 		coursesPane.setHgap(20);
+		courseNearButtonBox = new VBox(20);
+		courseNearButtonBox.setAlignment(Pos.CENTER);
+		courseNearButtonBox.getChildren().addAll(moveClassNearRightButton, moveClassNearLeftButton);
 		courseButtonBox = new VBox(20);
 		courseButtonBox.setAlignment(Pos.CENTER);
 		courseButtonBox.getChildren().addAll(moveClassRightButton, moveClassLeftButton);
@@ -130,7 +147,7 @@ public class StudentPane {
 	public void setDynamicGpa(double gpa) {
 		dynamicGpa.setText("GPA: " + String.valueOf(gpa));
 	}
-	
+
 	public Label getGpaLabel() {
 		return gpaLabel;
 	}
@@ -197,6 +214,8 @@ public class StudentPane {
 		ColumnConstraints column3 = new ColumnConstraints(150, 150, Double.MAX_VALUE);
 		ColumnConstraints column4 = new ColumnConstraints(50);
 		ColumnConstraints column5 = new ColumnConstraints(150, 150, Double.MAX_VALUE);
+		ColumnConstraints column6 = new ColumnConstraints(50);
+		ColumnConstraints column7 = new ColumnConstraints(150, 150, Double.MAX_VALUE);
 
 		studentPane.add(phoneNumberField, 0, 2);
 		studentPane.add(majorBox, 1, 0);
@@ -204,18 +223,22 @@ public class StudentPane {
 		studentPane.add(firstNameField, 0, 0);
 		studentPane.add(lastNameField, 0, 1);
 
-		coursesPane.add(coursesToTakeLbl, 0, 3);
-		coursesPane.add(coursesToTakeListView, 0, 4);
-		coursesPane.add(courseButtonBox, 1, 4);
+		coursesPane.add(allCoursesLbl, 0, 3);
+		coursesPane.add(coursesListView, 0, 4);
+		coursesPane.add(courseNearButtonBox, 1, 4);
 
-		coursesPane.add(coursesTakingLbl, 2, 3);
-		coursesPane.add(coursesTakingListView, 2, 4);
-		coursesPane.add(courseFarButtonBox, 3, 4);
+		coursesPane.add(coursesToTakeLbl, 2, 3);
+		coursesPane.add(coursesToTakeListView, 2, 4);
+		coursesPane.add(courseButtonBox, 3, 4);
 
-		coursesPane.add(coursesTakenLbl, 4, 3);
-		coursesPane.add(coursesTakenListView, 4, 4);
+		coursesPane.add(coursesTakingLbl, 4, 3);
+		coursesPane.add(coursesTakingListView, 4, 4);
+		coursesPane.add(courseFarButtonBox, 5, 4);
 
-		coursesPane.getColumnConstraints().addAll(column1, column2, column3, column4, column5);
+		coursesPane.add(coursesTakenLbl, 6, 3);
+		coursesPane.add(coursesTakenListView, 6, 4);
+
+		coursesPane.getColumnConstraints().addAll(column1, column2, column3, column4, column5, column6, column7);
 //		studentPane.add(gpaField, 1, 1);
 		studentPane.add(coursesPane, 0, 3);
 		studentPane.add(buttonBox, 0, 6, 1, 1);
@@ -228,6 +251,10 @@ public class StudentPane {
 
 	public TextField getPhoneNumberField() {
 		return phoneNumberField;
+	}
+	
+	public void setPhoneNumberField(String number) {
+		phoneNumberField.setText(number);
 	}
 
 	public void setPhoneNumberField(TextField phoneNumberField) {
@@ -242,21 +269,37 @@ public class StudentPane {
 		return lastNameField;
 	}
 
-	public void setAuthorFirst(TextField firstNameField) {
-		this.firstNameField = firstNameField;
+	public TextField getIdField() {
+		return idField;
 	}
 
-	public void setAuthorLast(TextField lastNameField) {
-		this.lastNameField = lastNameField;
+	public void setIdField(String id) {
+		idField.setText(id);
 	}
 
-//	public TextField getGpaField() {
-//		return gpaField;
-//	}
-//
-//	public void setGpaField(TextField gpaField) {
-//		this.gpaField = gpaField;
-//	}
+	public TextField getFirstNameField() {
+		return firstNameField;
+	}
+
+	public void setFirstNameField(String name) {
+		firstNameField.setText(name);
+	}
+
+	public TextField getLastNameField() {
+		return lastNameField;
+	}
+
+	public void setLastNameField(String name) {
+		lastNameField.setText(name);
+	}
+
+	public ComboBox<String> getMajorBox() {
+		return majorBox;
+	}
+
+	public void setMajorBox(String major) {
+		majorBox.setValue(major);
+	}
 
 	public ObservableList<String> getCoursesTakingList() {
 		return coursesTakingList;
@@ -336,6 +379,46 @@ public class StudentPane {
 
 	public void setCoursesTakenListView(ListView<String> coursesTakenListView) {
 		this.coursesTakenListView = coursesTakenListView;
+	}
+
+	public ObservableList<String> getCoursesList() {
+		return coursesList;
+	}
+
+	public void setCoursesList(ObservableList<String> coursesList) {
+		this.coursesList = coursesList;
+	}
+
+	public ListView<String> getCoursesListView() {
+		return coursesListView;
+	}
+
+	public void setCoursesListView(ListView<String> coursesListView) {
+		this.coursesListView = coursesListView;
+	}
+
+	public Button getMoveClassNearRightButton() {
+		return moveClassNearRightButton;
+	}
+
+	public void setMoveClassNearRightButton(Button moveClassNearRightButton) {
+		this.moveClassNearRightButton = moveClassNearRightButton;
+	}
+
+	public Button getMoveClassNearLeftButton() {
+		return moveClassNearLeftButton;
+	}
+
+	public void setMoveClassNearLeftButton(Button moveClassNearLeftButton) {
+		this.moveClassNearLeftButton = moveClassNearLeftButton;
+	}
+
+	public VBox getCourseNearButtonBox() {
+		return courseNearButtonBox;
+	}
+
+	public void setCourseNearButtonBox(VBox courseNearButtonBox) {
+		this.courseNearButtonBox = courseNearButtonBox;
 	}
 
 	public void clearAllFields() {

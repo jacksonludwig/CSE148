@@ -235,7 +235,6 @@ public class FileFactory {
 	}
 
 	public static String emitCourses_To_Take(int numberOfCourses, String fileName) {
-		Random rand = new Random();
 		StringBag majorBag = new StringBag(fileName);
 
 		String coursesTaking = "";
@@ -253,7 +252,6 @@ public class FileFactory {
 	}
 
 	public static String emitCourses_Taking(int numberOfCourses, String fileName) {
-		Random rand = new Random();
 		StringBag majorBag = new StringBag(fileName);
 
 		String coursesTaking = "";
