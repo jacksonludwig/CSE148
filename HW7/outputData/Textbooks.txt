@@ -1,250 +1,250 @@
-Microprocessor Interfacing*Jacques*Salinas*978-0-444-89191-4*9.52*
-Rhythm and Meter*Amber*Ashley*978-0-408-01553-0*127.32*
-3D Bioprinting and Nanotechnology in Tissue Engineering and Regenerative Medicine*Shola*Hartman*978-0-12-099975-0*167.55*
-Multicore and GPU Programming*Haleemah*Roy*978-0-444-52977-0*7.08*
-Advances in Agronomy*Ava-Mae*Osborne*978-0-08-045032-2*76.00*
-Control Systems Functions and Programming Approaches: Applications*Arissa*Knapp*978-0-12-407164-3*91.13*
-Optimization of Stochastic Systems: Topics in Discrete-Time Systems*Zoha*Schmidt*978-0-12-000727-1*120.54*
-Polylactide Foams*Finnian*Sharples*978-1-78548-103-1*3.14*
-Introduction to Optimum Design (Fourth Edition)*Kourtney*Huffman*978-3-437-21122-5*162.27*
-The Theory of Jets in an Ideal Fluid*Ailsa*Mcfarlane*978-0-444-81591-0*6.17*
-Smart Nanoparticles for Biomedicine*Dani*Alcock*978-0-9552512-1-4*40.73*
-Model-Based System and Architecture Engineering with the Arcadia Method*Kayne*Frost*978-0-444-41617-9*119.29*
-Decomposability*Georgie*Grant*978-1-4831-6753-4*119.98*
-Mammalian Protein Metabolism, Volume II*Ameera*Howard*978-0-12-068700-8*98.68*
-Advances in School Effectiveness Research and Practice*Iestyn*Fitzgerald*978-0-7204-2832-2*16.13*
-Microgrid Technology and Engineering Application*Gracie-Mai*Whitney*978-0-12-386983-8*24.97*
-Current Topics in Bioenergetics*Rogan*Moses*978-0-12-411570-5*35.85*
-Polyoxometalate Chemistry*Hammad*Matthams*978-0-444-51158-4*49.19*
-Wireless Public Safety Networks 2*Bridie*Cash*978-0-12-153176-8*92.83*
-Surface Coating and Modification of Metallic Biomaterials*Ivo*Robinson*978-0-444-88854-9*89.22*
-Current Topics in Cellular Regulation*Gage*Wilder*978-0-12-026117-8*12.90*
-Advances in Solar Heating and Cooling*Cain*Prentice*978-0-08-041847-6*30.41*
-Finite Permutation Groups*Harman*Juarez*978-0-12-385250-2*94.51*
-The Eye (Fourth Edition)*Euan*Combs*978-0-12-056753-9*28.93*
-Rapid Sensory Profiling Techniques*Melody*Welsh*978-1-4831-6824-1*42.91*
-Approximate Engineering Methods Design*Marwa*Farmer*978-0-12-101277-9*79.26*
-Acupuncture for IVF and Assisted Reproduction*Anniyah*Amos*978-0-7204-0322-0*1.81*
-Fälle Klinische Notfallmedizin*Cory*Mill*978-0-08-010251-1*79.17*
-Woman, Volume 3*Lucia*Cochran*978-0-240-51699-8*178.73*
-Nonlinear and Kalman Filtering Techniques, Part 2 of 3*Kendal*Palacios*978-0-7506-5799-0*65.13*
-Small Modular Reactors*Bernadette*Goodman*978-0-434-90187-6*11.08*
-Fractional Differential Equations*Ayva*Hutchings*978-0-08-102205-4*98.62*
-Reactive Species Detection in Biology*Khia*Miller*978-0-12-605070-7*144.00*
-Power Ultrasonics*Fahad*Haines*978-0-12-147850-6*71.69*
-Application of New Cybernetics in Physics*Betsy*Humphrey*978-0-12-000743-1*135.39*
-Refactoring for Software Design Smells*Neo*Juarez*978-1-59749-172-3*178.95*
-Industrial Biorefineries & White Biotechnology*Ruby-May*Mayo*978-0-08-044163-4*132.84*
-Belief and Rule Compliance*Ismaeel*Chadwick*978-0-12-812122-1*191.73*
-Intermediate Algebra (Third Edition)*Zi*Little*978-0-08-016544-8*158.98*
-Nanowires for Energy Applications*Sanah*Yang*978-1-84569-965-9*154.13*
-Scholarly Communication at the Crossroads in China*Maliha*Correa*978-0-12-238045-7*174.07*
-Profiles of Drug Substances, Excipients and Related Methodology*Jamaal*Tang*978-0-12-398389-3*51.41*
-A Generalized Framework of Linear Multivariable Control*Asim*Neville*978-0-08-099929-6*120.13*
-Computer System Organization*Danielle*Gough*978-1-4160-3618-0*1.89*
-Nonlinear Theory of Elastic Plates*Ifrah*Gilliam*978-0-7623-0283-3*14.85*
-French's Index of Differential Diagnosis (Seventh Edition)*Ayaz*Roth*978-0-12-193155-1*57.93*
-Performance Measurement and Management for Engineers*Ryan*Parkes*978-0-7506-7880-3*43.80*
-Praxishandbuch Sonografie*Hilary*Strickland*978-0-12-540070-1*124.35*
-Stability of Motion*Rocco*Mcdermott*978-0-409-90092-7*55.39*
-The Inflammatory Process (Second Edition), Volume 2*Brenden*Valencia*978-0-12-386492-5*194.03*
-Japan Society for Software Science and Technology*Shannon*Peck*978-2-84299-917-9*76.55*
-Neurobiology of the Placebo Effect Part I*Habib*Craft*978-0-12-380938-4*56.08*
-Handbook of Generation IV Nuclear Reactors*Benas*Ellis*978-0-12-804106-2*84.51*
-The Health of Populations*Rojin*Thatcher*978-1-895198-65-2*131.20*
-Signal Processing for Neuroscientists (Second Edition)*Codey*Koch*978-0-12-356881-6*114.62*
-Core Analysis*Malachy*Dickerson*978-0-08-010677-9*35.90*
-Adaptive User Interfaces*Carol*Coffey*978-0-12-811713-2*129.19*
-Actualización en neuroendocrinología*Charlize*Conrad*978-0-12-065301-0*167.23*
-Antimicrobial Resistance and Food Safety*Janice*Mcbride*978-0-12-587050-4*53.28*
-Introduction to Plastics Engineering*Davey*Tucker*978-0-12-408062-1*12.99*
-Integrated Design and Simulation of Chemical Processes*Kacey*Wyatt*978-0-12-027730-8*148.46*
-Hematopoietic Stem Cell Niche*Kieren*Carr*978-0-08-020979-1*109.89*
-The Theory of Positional Games with Applications in Economics*Arwa*Childs*978-0-08-042830-7*105.56*
-Service Science and the Information Professional*Amalie*Farmer*978-0-12-040522-0*46.06*
-You: for Sale*Shuaib*Sanderson*978-0-12-524160-1*71.93*
-Textbook of Veterinary Physiological Chemistry (Third Edition)*Tim*Colon*978-0-12-395680-4*179.29*
-Epigenetic Gene Expression and Regulation*Aryan*Richard*978-0-08-023426-7*44.59*
-Diversity and Functions of GABA Receptors: A Tribute to Hanns Möhler, Part B*Asa*Glover*978-0-444-81789-1*82.51*
-Success Strategies From Women in STEM (Second Edition)*Willard*Rich*978-0-12-084782-2*95.85*
-Servicing Personal Computers (Third Edition)*Manraj*Mata*978-0-12-374231-5*92.21*
-Teaching and Learning*Niamh*Valencia*978-0-240-81487-2*10.63*
-Single Neuron Computation*Alissa*Mckinney*978-0-7506-6950-4*171.70*
-Advances in Algorithms and Computational Techniques in Dynamic Systems Control, Part 3 of 3*Alexis*Hayes*978-0-08-012219-9*45.38*
-An Introduction to Bibliometrics*Sayed*Reese*978-0-444-82532-2*79.05*
-Biofuels for Aviation*Kendra*David*978-0-7204-2356-3*141.95*
-Decision Processes in Visual Perception*Rosina*Clements*978-0-12-690850-3*4.54*
-Forensic Odontology*Brenden*Searle*978-0-7506-6394-6*22.53*
-Immunobiology of the Macrophage*Ziva*Forster*978-0-08-042697-6*147.46*
-Nonparametric Functional Estimation*Iyla*Lugo*978-0-444-40746-7*34.15*
-Language Development and Neurological Theory*Ralphy*Becker*978-0-12-802921-3*59.29*
-La motilité en ostéopathie*Israr*Mcarthur*978-0-08-100213-1*135.99*
-Food Crop Production by Smallholder Farmers in Southern Africa*Sherri*Howe*978-0-409-90027-9*76.36*
-Smart Buildings*Aran*Schmitt*978-0-08-044527-4*105.51*
-Performance of Bio-based Building Materials*Tasnim*Bull*978-0-12-801763-0*191.57*
-Sleep Medicine Pearls (Third Edition)*Rima*Childs*978-0-240-81531-2*182.80*
-The Microwave Processing of Foods (Second Edition)*Bryn*Medina*978-0-08-100195-0*87.83*
-Huygens' Principle and Hyperbolic Equations*Don*Pike*978-1-4832-1313-2*62.78*
-Derivative with a New Parameter*Keely*Coombes*978-0-12-181961-3*110.28*
-Matemática Financeira (Segunda Edição)*Marianna*Huff*978-0-12-802247-4*4.62*
-The Art and Theory of Dynamic Programming*Alfie*Bassett*978-0-240-81305-9*116.47*
-A Machine-Learning Approach to Phishing Detection and Defense*Cristiano*Arnold*978-0-7506-6364-9*147.80*
-Food Security in the Developing World*Aled*Ponce*978-2-294-73893-7*7.23*
-Facharztprüfung Gastroenterologie (Zweite Ausgabe)*Zackary*Hartley*978-0-240-81237-3*143.36*
-A Primer in Financial Data Management*Bodhi*Devlin*978-0-8155-1573-9*148.51*
-Choroidal Disorders*Lily-Rose*Leal*978-0-12-804538-1*154.06*
-Design Sensitivity Analysis of Structural Systems*Karla*Mack*978-0-12-027908-1*12.73*
-Strategies and Tactics in Organic Synthesis*Elise*Valencia*978-0-12-450284-0*17.46*
-Traumatic Brain Injury, Part I*Cristiano*Davie*978-0-408-71054-1*11.37*
-Política Pública de Petróleo No Brasil: Da Liberalização Ao Pré-Sal*Mahamed*Valencia*978-1-85573-103-5*136.01*
-Membranes and Viruses in Immunopathology*Zarah*Mckenna*978-0-12-801982-5*96.10*
-Regulating Safety of Traditional and Ethnic Foods*Komal*Cannon*978-1-84569-664-1*59.53*
-Peanuts: Processing Technology and Product Development*Isobelle*Mcguire*978-0-12-387022-3*99.06*
-Mechanisms of DNA Recombination and Genome Rearrangements: Methods to Study Homologous Recombination*Allana*Andrade*978-1-55860-594-7*156.47*
-Extreme Events in Geospace*Susan*Cleveland*978-0-12-802682-3*116.88*
-Tsunamis in the European-Mediterranean Region*Laith*Kendall*978-0-12-024231-3*15.39*
-Medizinisches Aufbautraining*Kailum*Ortega*978-0-323-05905-3*18.88*
-Microbial Control of Insect and Mite Pests*Melissa*Lutz*978-0-12-006684-1*132.87*
-The Special Functions and their Approximations*Iman*Rhodes*978-0-08-018017-5*133.60*
-Nanoemulsions*Edie*Villalobos*978-0-12-396496-0*150.84*
-Statistical Postprocessing of Ensemble Forecasts*Angela*Smyth*978-1-78242-210-5*84.54*
-The Chemistry and Biology of Nitroxyl (HNO)*Teigan*Sears*978-1-4832-3227-0*109.59*
-Whisky (Second Edition)*Steve*Davila*978-0-08-034037-1*19.36*
-High Temperature Oxidation and Corrosion of Metals (Second Edition)*Simone*Hartman*978-0-12-803942-7*18.11*
-From Information Literacy to Social Epistemology*Nikodem*Lucas*978-0-08-011062-2*147.10*
-Handbook of Lipids in Human Function*Kieran*Forster*978-0-08-018767-9*8.08*
-Modern General Topology (Second Edition)*Sunil*Villegas*978-0-12-382028-0*3.33*
-Marine Geo-Hazards in China*Helen*Glass*978-0-12-394585-3*33.91*
-Databook of Green Solvents*Freddy*Sanchez*978-0-12-552455-1*48.94*
-Renewable Energy Forecasting*Mara*Wu*978-0-444-85215-1*24.34*
-Réflexothérapie occipito-podale*Seth*Jackson*978-0-08-100906-2*127.06*
-Advances in Theory and Applications*Jesse*Thomson*978-0-12-219803-8*173.70*
-Applied Time Series Analysis I*Zac*Cleveland*978-0-12-153323-6*115.90*
-Sustainability Science*Vinnie*Halliday*978-0-444-82555-1*196.10*
-Coal and Peat Fires: A Global Perspective*Humairaa*Hunter*978-0-12-032918-2*184.14*
-Manuel de Nutrition pour le Patient Diabetique*Danika*Blair*978-0-12-811487-2*105.52*
-Fed-Batch Fermentation*Zak*Stein*978-0-12-382038-9*140.30*
-Machine Vision*Jacob*Trujillo*978-0-12-012755-9*45.11*
-Ultraviolet Laser Technology and Applications*Lemar*Day*978-0-08-025683-2*122.21*
-Emerging Nanotechnologies for Manufacturing (Second Edition)*Caleb*Mcdermott*978-0-12-462431-3*33.93*
-Hematology, Immunology and Genetics (Third Edition)*Maxwell*Hale*978-0-444-51572-8*61.76*
-Mathematical Statistics with Applications in R (Second Edition)*Carlton*Gray*978-0-08-019605-3*44.75*
-Keys to Running Successful Research Projects*Niamh*Compton*978-1-4160-2613-6*162.60*
-Adapting High Hydrostatic Pressure (HPP) for Food Processing Operations*Piers*Farley*978-0-08-013263-1*196.66*
-Embedded Mechatronic Systems 1*Ralphie*Hunter*978-1-4160-2384-5*152.43*
-Semigroups*Favour*Davenport*978-0-08-017758-8*73.33*
-Fundamentals of Quorum Sensing, Analytical Methods and Applications in Membrane Bioreactors*Elleanor*Driscoll*978-0-12-809531-7*190.93*
-Hormones (Third Edition)*Ryan*Goldsmith*978-0-08-012277-9*5.61*
-Logical Design for Computers and Control*Ruby-Mae*Johns*978-0-444-59576-8*138.01*
-Neuropathology*Cole*Calvert*978-0-12-416686-8*157.65*
-Anästhesie-Fibel (Dritte Ausgabe)*Hannah*Fuller*978-0-12-373853-0*182.01*
-Urologische Chirurgie*Leonie*Hartman*978-0-12-039834-8*36.39*
-Stochastic Stability and Control*Marcus*Underwood*978-0-12-670370-2*51.66*
-Casing and Liners for Drilling and Completion (Second Edition)*Ellice*Hubbard*978-0-444-85084-3*108.95*
-Numerical Solution of Systems of Nonlinear Algebraic Equations*Emily-Jane*Farmer*978-0-12-373879-0*109.86*
-Mechanical Science for Technicians*Evie-Grace*Harrison*978-3-437-23315-9*181.00*
-Rehabilitación domiciliaria  (Segunda Edición)*Ritchie*Huber*978-0-12-627255-0*56.18*
-Gestão de Resíduos Eletroeletrônicos*Khaleesi*Vasquez*978-0-12-386471-0*32.60*
-Healthcare Emergency Incident Management Operations Guide*Rianna*Mercer*978-84-458-2066-7*93.67*
-Language Use and School Performance*Giacomo*Foreman*978-0-08-016080-1*151.22*
-Accidental Information Discovery*Nana*Hendricks*978-0-12-801498-1*141.80*
-Handbook of Borehole Acoustics and Rock Physics for Reservoir Characterization*Jessie*Mora*978-0-12-181885-2*3.24*
-Silicon-On-Insulator (SOI) Technology*Brenda*Howard*978-0-12-730050-4*42.13*
-VLSI Reliability*Claire*Wyatt*978-0-444-88975-1*69.42*
-Nanoarchitectonics for Smart Delivery and Drug Targeting*Elsie*Mejia*978-0-08-101914-6*22.31*
-Coulson and Richardson's Chemical Engineering*Ariya*Broadhurst*978-85-352-4490-8*28.87*
-Nonlinear Problems of Engineering*Elwood*Alfaro*978-0-12-374498-2*79.29*
-Metal-Containing Enzymes*Jaymee*Sargent*978-0-7020-3151-9*82.36*
-Geometric Measure Theory (Second Edition)*Francesco*Mac*978-0-85709-398-1*147.31*
-Hydrogen Economy*Jed*Powers*978-0-08-100214-8*18.57*
-Lanthanides Series Determination by Various Analytical Methods*Frazer*Cooper*978-0-7204-2370-9*140.76*
-Global Energy Interconnection*Riley*Haas*978-1-927885-21-5*93.84*
-Multilevel Inverters*Melody*Fenton*978-0-443-07941-2*147.90*
-Novel Materials for Carbon Dioxide Mitigation Technology*Ziva*Lacey*978-0-12-805344-7*89.45*
-Functional Atlas of the Human Fascial System*Eliott*Frost*978-0-12-804627-2*124.90*
-Material Selection for Thermoplastic Parts*Jasper*Riggs*978-0-08-044862-6*87.03*
-The Guide to Oilwell Fishing Operations (Second Edition)*Esmai*Mellor*978-3-437-23097-4*75.24*
-Education and Training for the Oil and Gas Industry*Viaan*Lambert*978-0-12-639881-6*44.33*
-Bloodstain Patterns*Ashanti*Sampson*978-1-55860-356-1*158.39*
-Advances in Organometallic Chemistry*Alivia*Sanderson*978-0-12-596552-1*169.44*
-Hazards, Risks, and Disasters in Society*Nada*Elliott*978-0-08-044111-5*10.57*
-Libraries and Key Performance Indicators*Domas*Alcock*978-0-240-80910-6*111.71*
-Glass Nanocomposites*Amanda*Holt*978-0-407-02400-7*184.40*
-Nonlinear Phenomena in Mathematical Sciences*Madeleine*Montgomery*978-0-12-800538-5*138.30*
-Elementary Algebra (Second Edition)*Carrie*Hahn*978-0-12-652750-6*1.82*
-Polymer-Based Multifunctional Nanocomposites and Their Applications*Izaan*Paine*978-0-08-023842-5*35.47*
-Fatigue of Textile Composites*Talhah*Salazar*978-0-08-024907-0*173.93*
-Kinésithérapie de la Face, du Crâne et du Cou*Farah*Andrews*978-0-08-016101-3*40.88*
-Project Finance for the International Petroleum Industry*Kirby*Cummings*978-0-408-70722-0*103.01*
-Gorilla Pathology and Health*Ellen*Wicks*978-1-4831-9931-3*166.38*
-DNA Repair Enzymes: Cell, Molecular, and Chemical Biology*Warwick*Armstrong*978-0-12-394436-8*100.44*
-Forensic Psychology of Spousal Violence*Oliwier*Espinosa*978-0-12-809379-5*48.98*
-Protides of the Biological Fluids*Nico*Gilmore*978-0-12-058575-5*26.53*
-Critical Aspects of Safety and Loss Prevention*Richie*Gross*978-1-78548-188-8*175.93*
-Wheeled Mobile Robotics*Paula*Buxton*978-0-12-020030-6*112.32*
-Vacuum Deposition onto Webs, Films and Foils (Third Edition)*Elisa*Burnett*978-0-12-800080-9*89.07*
-Case Studies in Public Health*Katy*Correa*978-0-444-86929-6*152.29*
-Perception of Pixelated Images*Mathilde*Clements*978-1-84334-647-0*6.44*
-High Temperature Thermal Storage Systems Using Phase Change Materials*Christos*Morley*978-0-444-41613-1*7.88*
-Practical Surgical Neuropathology: A Diagnostic Approach (Second Edition)*Joanne*Mccabe*978-0-7506-0268-6*103.37*
-Dynamic Deformation, Damage and Fracture in Composite Materials and Structures*Brent*Vega*978-0-240-52177-0*31.61*
-Technical Aspects of Data Communication (Third Edition)*Joao*Wood*978-1-84569-402-9*136.41*
-Basic Finite Element Method as Applied to Injury Biomechanics*Mahdi*Long*978-0-444-98957-4*44.53*
-Conférences D'enseignement 2015*Gwen*Dolan*978-0-12-669202-0*197.68*
-Genetic Control of Malaria and Dengue*Orla*Boone*978-0-12-031144-6*18.72*
-Milk Proteins (Second Edition)*Corrie*Novak*978-0-444-88535-7*50.48*
-The 21st Century Academic Library*Ellie-Louise*Spencer*978-0-444-98724-2*106.86*
-Learning from Failures*Borys*Moon*978-0-444-42957-5*74.35*
-Mitochondria and Longevity*Nur*Bautista*978-0-12-003104-7*138.06*
-Journeys in Science*Chelsy*Manning*978-0-12-374573-6*194.62*
-Material-Tissue Interfacial Phenomena*Evangeline*Wong*978-1-4832-2945-4*181.47*
-Aircraft Structures for Engineering Students (Sixth Edition)*Chelsy*Hendrix*978-0-12-816142-5*133.87*
-Advances in Computers*Cormac*Hyde*978-0-08-102074-6*37.85*
-Synthesis, Technology and Applications of Carbon Nanomaterials*Taylor*Wyatt*978-0-12-809214-9*124.43*
-HVAC Engineer's Handbook (Ninth Edition)*Philippa*Conrad*978-0-12-813471-9*44.30*
-A Programmer's Geometry*Berat*Galloway*978-0-8155-2035-1*140.90*
-The Scientist's Guide to Cardiac Metabolism*Jamelia*Frank*978-0-7506-5247-6*11.35*
-Up and Running with AutoCAD 2015*Bronwen*Clifford*978-0-444-89300-0*61.79*
-Three Dimensional Microanatomy of Cells and Tissue Surfaces*Markus*Conway*978-0-7506-8393-7*187.46*
-Prävention und Therapie durch Sport, Band 4 (Zweite Ausgabe)*Kenzie*Jackson*978-0-433-34705-7*41.23*
-Advances in Genetics*Sumayya*Mellor*978-1-85573-921-5*110.30*
-Innovation and Future Trends in Food Manufacturing and Supply Chain Technologies*Adrian*Tomlinson*978-0-12-023623-7*7.20*
-Algebraic Linguistics; Analytical Models*Kelsea*Page*978-0-12-384704-1*69.27*
-Computers and Informatics in Developing Countries*Bluebell*Nielsen*978-0-444-41805-0*67.55*
-Medecine de Montagne (Cinquième Édition)*Lillia*Wood*978-0-444-52225-2*163.23*
-Essentials of Medical Biochemistry (Second Edition)*Lucia*Reilly*978-0-12-639481-8*107.15*
-Epigenetic Principles of Evolution (Second Edition)*Corban*Chavez*978-0-444-53042-4*108.96*
-Control System Technology*Asif*Petty*978-0-08-013674-5*127.04*
-Neuropsychologie (Septième Édition)*Ryder*Parks*978-0-12-571134-0*132.32*
-Advances in Archaeological Method and Theory, Volume 8*Chardonnay*Alford*978-0-12-693015-3*161.67*
-Chemical Imaging Analysis*Lucille*Whitney*978-0-12-564148-7*80.81*
-Theory of Dispersed Multiphase Flow*Demi*Bright*978-0-08-019722-7*140.19*
-Reliability and Maintainability of In-Service Pipelines*Shahid*Browning*978-0-08-044534-2*18.49*
-Databook of Adhesion Promoters*Ishmael*Glass*978-0-12-803196-4*56.49*
-Advances in Heat Transfer*Landon*Lucero*978-0-12-127950-9*91.61*
-Empresas Na Sociedade (Segunda Edição)*Codie*Keeling*978-0-7506-7911-4*83.78*
-Rotating Shell Dynamics*Amanda*Cottrell*978-0-12-374989-5*69.63*
-Genes, Environment and Alzheimer's Disease*Erin*Estes*978-0-12-805151-1*127.78*
-The Intersection*Denise*Hulme*978-0-08-102238-2*125.54*
-Macsween's Pathology of the Liver (Seventh Edition)*Izabella*Schultz*978-0-444-63713-0*159.13*
-Current Developments in Biotechnology and Bioengineering*Luisa*Skinner*978-0-444-82322-9*198.75*
-Sunflower*Danika*Rollins*978-0-7236-0311-5*167.02*
-An Introduction to Organic Lasers*Ellesse*Duffy*978-0-08-024488-4*0.23*
-Mamíferos, Quelônios e Aves*Uzair*Conway*978-1-898563-97-6*134.38*
-Theory of Aerospace Propulsion (Second Edition)*Fannie*Bell*978-0-444-81713-6*14.29*
-Neuro-Otology*Jamelia*Lucero*978-0-12-544965-6*135.47*
-Fachpflege Beatmung (Siebte Ausgabe)*Umair*Corrigan*978-1-4832-2808-2*132.37*
-Graduate Study in Criminology and Criminal Justice*Rocco*Avery*978-0-12-106406-8*33.83*
-Human Sexuality and Its Problems (Third Edition)*Marcus*Andrew*978-1-85617-124-3*67.50*
-Finance Constraints and the Theory of Money*Zachariah*Simmons*978-0-12-809439-6*132.09*
-Palm Oil*Amelia-Mae*Bender*978-0-12-381522-4*43.66*
-Introduction to Emergency Management (Fifth Edition)*Elise*Parker*978-0-7506-5558-3*125.96*
-Manufacturing and Automation Systems: Techniques and Technologies*Amanda*Mathis*978-0-08-018313-8*39.33*
-Steamed Breads*Buddy*Cochran*978-0-12-370523-5*131.69*
-Drug Metabolism in Diseases*Aditi*Oakley*978-0-12-540001-5*97.14*
-Cell Separation, Volume 3*Billy*Kent*978-0-444-88824-2*26.71*
-Os Estados Unidos e O Século XXI*Charleigh*Bartlett*978-0-12-266850-0*102.18*
-Mechanisms in Bioenergetics*Philippa*Leon*978-0-444-50396-1*145.83*
-Programação Linear e Fluxos em Redes*Jules*Roman*978-0-12-031742-4*188.32*
-Disease-Modifying Targets in Neurodegenerative Disorders*Zakariya*Glover*978-0-12-262942-6*173.14*
-Building the Agile Enterprise (Second Edition)*Roshan*Duncan*978-0-08-015790-0*164.64*
+Cardiac MRI in Diagnosis, Clinical Management, and Prognosis of Arrhythmogenic Right Ventricular Cardiomyopathy/Dysplasia*Patrik*Fowler*978-0-12-395631-6*36.46*
+Computational Methods for Understanding Riboswitches*Khushi*Iles*978-0-12-182554-6*154.46*
+Oil Spill Studies*Ruby-Mae*Hough*978-0-08-017581-2*17.45*
+The Expected-Outcome Model of Two-Player Games*Yousef*Donnelly*978-0-12-801059-4*36.36*
+Fractional Evolution Equations and Inclusions*Haiden*Frame*978-0-12-799968-5*162.34*
+Transfusion sanguine*Jerry*Mcmanus*978-0-12-785047-4*62.05*
+Power Plant Instrumentation and Control Handbook*Esmay*Mills*978-0-08-016080-1*130.46*
+Discrete and Continuous Boundary Problems*Riyad*Hardy*978-0-12-397879-0*114.04*
+Food Safety in the 21st Century*Naseem*Serrano*978-0-444-88449-7*121.68*
+Reverse Osmosis*Francis*Frazier*978-0-12-428781-5*15.91*
+Current Topics in Cellular Regulation*Kayla*Sampson*978-0-12-804134-5*113.01*
+Law and Economics of Vertical Integration and Control*Nida*Mackie*978-0-12-177401-1*7.71*
+An Introduction to Probability and Statistical Inference (Second Edition)*Reis*Hoover*978-0-323-01354-3*145.95*
+Children's Active Transportation*Amanpreet*Southern*978-0-08-037952-4*138.23*
+Agro-Industrial Wastes as Feedstock for Enzyme Production*Tasha*Hunter*978-0-444-41091-7*38.99*
+The Science of Hormesis in Health and Longevity*Freddie*Tang*978-0-12-385544-2*121.55*
+Gestão de Resíduos Eletroeletrônicos*Rojin*Wolf*978-0-12-373925-4*52.61*
+Hematopathology (Third Edition)*Dylan*Howarth*978-0-12-605070-7*4.47*
+Handbook of Nanoceramic and Nanocomposite Coatings and Materials*Constance*Macdonald*978-0-444-59427-3*172.45*
+Current Developments in Biotechnology and Bioengineering*Jarvis*Hess*978-0-12-800182-0*28.50*
+Progress in Combinatorial Optimization*Kaydon*Hills*978-0-12-364569-2*179.88*
+Divided Solids Mechanics*Malia*Chavez*978-0-12-809388-7*13.33*
+Maxillofacial Surgery (Third Edition)*Ruqayyah*Bates*978-0-12-039231-5*21.76*
+Functionalised Cardiovascular Stents*Sarah*Hendricks*978-0-12-271350-7*35.62*
+Huntington Disease*Frazer*Pollard*978-0-12-804567-1*94.90*
+Earthquake Hazard, Risk and Disasters*Patryk*Mckenzie*978-0-08-023218-8*139.74*
+Clinical Engineering*Elis*Beltran*978-0-12-610506-3*187.47*
+Advances in Catalysis*Ava-Mae*Middleton*978-0-7020-3109-0*86.35*
+Relationship Inference with Familias and R*Olivier*Whitehouse*978-0-12-018844-4*155.55*
+From Information Literacy to Social Epistemology*Liyah*Ramos*978-0-444-42781-6*45.45*
+Cognitive Development and Acquisition of Language*Dan*Dawe*978-0-12-065201-3*29.97*
+Microsized and Nanosized Carriers for Nonsteroidal Anti-Inflammatory Drugs*Inaayah*Kendall*978-0-7506-6396-0*101.74*
+Technical Career Survival Handbook*Arnie*Tang*978-0-12-444760-8*19.01*
+Communication and Affect: Language and Thought*Bernice*Donald*978-0-12-781260-1*42.75*
+Applications in High Resolution Mass Spectrometry*Inaaya*Hoover*978-0-12-366816-5*117.62*
+Epigenetics in Human Disease (Second Edition)*Joao*Ramos*978-0-12-031719-6*35.10*
+Annual Reports on NMR Spectroscopy*Cassius*Mackie*978-0-12-803196-4*114.69*
+Fundamentals of Microwave Electronics*Kenny*Whitney*978-0-444-52074-6*45.82*
+Conducting Behavioral Consultation in Educational and Treatment Settings*Myron*Weiss*978-0-12-802855-1*3.43*
+Dynamic Analysis of High-Speed Railway Alignment*Hafsa*Dickinson*978-0-08-045010-0*183.43*
+Stevens & Lowe's Human Histology (Fourth Edition)*Rebecca*Spencer*978-0-12-333640-8*197.05*
+Fractography in Failure Analysis of Polymers*Billy*Bartlett*978-0-12-395549-4*178.77*
+Psychology of Learning and Motivation*Kaira*Mason*978-0-12-387032-2*39.27*
+Halophytes for Food Security in Dry Lands*Ayan*Powers*978-1-4832-2960-7*24.32*
+Staphylococcus aureus*Katerina*Craft*978-0-12-809558-4*166.11*
+Encyclopedia of Evolutionary Biology*Bernice*Meadows*978-1-55938-836-8*71.64*
+Pay Inequalities in the European Community*Lani*Hogg*978-0-12-812403-1*133.39*
+Evaluating Demand-Driven Acquisitions*Jenny*Kelley*978-0-7204-0419-7*30.13*
+Biocompatibility of Dental Biomaterials*Jadine*Riley*978-0-12-607736-0*178.72*
+Contributions to Logic and Methodology in Honor of J. M. Bochenski*Caris*Wolf*978-0-12-396968-2*5.55*
+Multivariate Analysis–III*Nada*Sims*978-0-08-097123-0*115.15*
+Nociceptin Opioid*Latoya*Hopkins*978-0-12-406250-4*187.60*
+Control of Complex Systems*Emily*Rosario*978-0-08-017867-7*82.58*
+Méga Guide STAGES IFSI*Khadeejah*Chandler*978-0-12-800540-8*114.63*
+Maritime Security (Second Edition)*Cameron*Mcguire*978-0-7506-4186-9*5.00*
+Windows Registry Forensics (Second Edition)*Zakariya*Aldred*978-0-9514171-7-1*87.64*
+Pneumologie für die Praxis*Dante*Wilder*978-0-12-023606-0*99.38*
+Coastal and Marine Hazards, Risks, and Disasters*Christiana*Potter*978-0-08-100367-1*76.08*
+Elementary Plane Rigid Dynamics*Teri*Gilmore*978-0-12-004507-5*140.42*
+Homéopathie en Polypathologie*Miya*Carroll*978-0-12-813243-2*192.35*
+High Performance Polymers (Second Edition)*Aadil*Coles*978-0-7204-1802-6*113.69*
+Whirl Flutter of Turboprop Aircraft Structures*Efe*Lake*978-1-4831-9836-1*167.32*
+Carbon Capture and Storage (Second Edition)*Clifford*Mejia*978-0-7506-5094-6*24.62*
+Metabolic Conjugation and Metabolic Hydrolysis, Volume I*Riley*Lennon*978-0-323-07738-5*186.42*
+Impact of Nanoscience in the Food Industry*Adnan*Frederick*978-1-4832-2754-2*181.41*
+Interventional Inflammatory Bowel Disease: Endoscopic Management and Treatment of Complications*Demi*Lacey*978-1-84569-050-2*123.23*
+Modelling and Mechanics of Carbon-Based Nanostructured Materials*Iestyn*Hess*978-0-08-040182-9*117.66*
+Building an Intelligence-Led Security Program*Ellesse*Emery*978-0-12-355040-8*198.02*
+Mechanics and Chemistry of Solid Propellants*Jamelia*Bartlett*978-0-12-491220-5*47.03*
+Advances in Geophysics*Carina*Mcbride*978-0-7506-0268-6*199.97*
+Palladium-Catalyzed Modification of Nucleosides, Nucleotides and Oligonucleotides*Rhea*Derrick*978-0-12-234116-8*10.60*
+Silicon Carbide Biotechnology (Second Edition)*Fannie*Frame*978-0-408-19600-0*78.44*
+Immunhämatologie und Klinische Transfusionsmedizin  (Siebte Ausgabe)*Zachariah*Mcbride*978-0-08-025042-7*105.13*
+DNS Security*Peter*Martinez*978-0-12-410422-8*56.20*
+Bone Substitute Biomaterials*Milan*Cottrell*978-0-12-417231-9*2.34*
+Surgical Management of the Transgender Patient*Collette*Day*978-0-12-278008-0*193.60*
+Molecular Biology of Placental Development and Disease*Tracy*Merritt*978-0-12-159390-2*160.09*
+Personality and Disease*Ignacy*Watt*978-0-444-88135-9*184.31*
+Business Espionage*Grover*Corona*978-0-12-369485-0*142.63*
+Advanced Modelling Techniques Studying Global Changes in Environmental Sciences*Hania*Cleveland*978-0-12-800108-0*189.07*
+The Cell: Biochemistry, Physiology, Morphology, Volume II*Elleanor*Greenwood*978-0-12-388419-0*193.32*
+Occupancy Estimation and Modeling (Second Edition)*Enzo*Neville*978-0-444-88676-7*151.22*
+Studies in Natural Products Chemistry*Atticus*Ashley*978-0-12-364305-6*76.11*
+Machine Learning*Zoha*Deacon*978-0-240-80969-4*134.18*
+Algae Based Polymers, Blends, and Composites*Hussain*Downs*978-1-85573-406-7*85.11*
+Game Theory and Applications*Manon*Byers*978-1-4832-8440-8*71.18*
+Prodrug Design*Keaton*Sloan*978-0-08-051628-8*73.89*
+Stochastic Models of Financial Mathematics*Claude*Walsh*978-0-444-50229-2*79.52*
+Forensic Toxicology*Kaci*Wiley*978-1-84569-599-6*61.42*
+Nonlinear Systems in Heat Transfer*Alexandre*Jordan*978-0-08-054583-7*42.71*
+Nunn's Applied Respiratory Physiology (Eighth Edition)*Ayan*Fry*978-0-08-025428-9*171.23*
+Space Safety and Human Performance*Natalya*Sheridan*978-0-12-101280-9*118.88*
+Introduction to Data Compression (Fifth Edition)*Riley-James*Hagan*978-0-444-42468-6*79.49*
+Bioprocess Engineering (Second Edition)*Aliesha*Roy*978-0-08-015659-0*168.18*
+Leitfaden Lymphologie*Scarlett*Frame*978-0-88415-382-5*131.32*
+Soil Magnetism*Markus*Combs*978-0-12-469529-0*148.62*
+Functional Occlusion in Restorative Dentistry and Prosthodontics*Mason*Clemons*978-0-12-040808-5*176.43*
+A Practical Guide for Informationists*Mahamed*Giles*978-0-12-809749-6*1.89*
+A Text-Book of Bacteriology (Ninth Edition)*Jevon*Sargent*978-0-08-028118-6*58.03*
+Molecular Basis of Olfaction*Anja*Santana*978-0-12-083980-3*157.59*
+Algorithmically Specialized Parallel Computers*Zaid*Saunders*978-0-12-415917-4*128.83*
+Diagnostic and Surgical Arthroscopy in the Horse (Fourth Edition)*Erika*Williams*978-1-4160-4721-6*23.12*
+Pharmacie Clinique et Thérapeutique (Cinquième Édition)*Isma*Reid*978-2-8101-0087-3*21.84*
+Méga-Guide Pratique des Urgences*Richie*Mathews*978-0-12-811458-2*32.59*
+Understanding Intuition*Soren*Long*978-0-7506-5925-3*146.00*
+Advances in Virus Research*Mariella*Connor*978-0-08-031144-9*160.30*
+Development of the Nervous System (Third Edition)*Suzanne*Nelson*978-0-444-51979-5*98.01*
+Transforming Teen Behavior*Lynsey*Barnes*978-0-12-398451-7*192.43*
+Additives for Polyolefins (Second Edition)*Olivia-Rose*Wu*978-0-12-408607-4*165.05*
+Gum Arabic*Kiya*Boone*978-2-294-73838-8*132.23*
+Neuropathology of Drug Addictions and Substance Misuse*Shahid*Bloom*978-0-240-80876-5*179.40*
+International Review of Cell and Molecular Biology*Hussain*North*978-0-12-386457-4*84.28*
+L'adulte Hospitalisé : Travailler Avec la Famille et L'entourage (Deuxième Édition)*Kristi*French*978-0-444-53408-8*36.00*
+Advances in Parasitology*Fahad*Duke*978-0-08-100041-0*18.49*
+Regression Estimators*Ptolemy*Holder*978-0-12-505322-8*38.12*
+Introduction to Genetics*Hamid*Larson*978-0-12-576970-9*92.38*
+Nonlinear Partial Differential Equations in Engineering*Darcy*Medrano*978-0-12-800001-4*173.80*
+Irradiation Embrittlement of Reactor Pressure Vessels (RPVs) in Nuclear Power Plants*Rojin*Melendez*978-85-352-1574-8*132.63*
+The Future of the Academic Journal (Second Edition)*Clinton*Atherton*978-3-437-24730-9*109.06*
+Enzymes in Human and Animal Nutrition*Stefanie*Wong*978-0-7216-9347-7*62.34*
+Theory of Microeconomics*Jules*Villalobos*978-0-240-80458-3*9.40*
+Nonmotor Parkinson's: The Hidden Face*Kaylen*Aguirre*978-0-408-00479-4*2.66*
+Cannabinoids in Neurologic and Mental Disease*Duane*Powers*978-0-444-50108-0*86.68*
+Voids in Materials*Gina*Hall*978-0-7506-6272-7*100.91*
+Business Continuity from Preparedness to Recovery*Myron*Kaufman*978-2-294-70799-5*77.38*
+Wheeled Mobile Robotics*Milo*Mcmanus*978-0-444-59525-6*130.54*
+Atlas of Material Damage (Second Edition)*Tabitha*Allan*978-0-12-034253-2*132.85*
+Psychology of Learning and Motivation*Piers*Frazier*978-0-12-492602-8*121.29*
+Thermal Inertia in Energy Efficient Building Envelopes*Loki*Roy*978-0-12-754405-2*185.42*
+Diabetes and the Nervous System*Melissa*Yu*978-0-08-009504-2*121.38*
+Chromatin Signaling and Diseases*Mindy*Andersen*978-0-12-801535-3*111.04*
+e-Government in Asia: Origins, Politics, Impacts, Geographies*Rishi*Hendricks*978-0-240-81084-3*3.20*
+International Review of Cell and Molecular Biology*Jesse*Firth*978-0-12-486260-9*54.28*
+The Coercive Social Worker*Maliha*Doherty*978-0-08-016322-2*132.88*
+Passive & Active RF-Microwave Circuits*Amaan*Haigh*978-0-444-63326-2*66.35*
+Alcohol and the Nervous System*Shauna*Mccarty*978-0-7506-3450-2*99.34*
+Alkaloids (Second Edition)*Cristiano*Metcalfe*978-0-12-380102-9*36.87*
+Socializing Children through Language*Rome*Dawe*978-0-12-801371-7*125.38*
+Local Fractional Integral Transforms and their Applications*Mindy*Cummings*978-0-12-395629-3*173.64*
+Transfusion Medicine and Hemostasis (Third Edition)*Samara*Contreras*978-0-08-100033-5*113.30*
+Numerical Solution of Systems of Nonlinear Algebraic Equations*Montague*Fellows*978-0-12-408609-8*133.32*
+Surdités*Lennie*Hendricks*978-0-12-281280-4*192.79*
+Techniques of Functional Analysis for Differential and Integral Equations*Aisling*Cole*978-0-12-002003-4*107.23*
+Klinikleitfaden Anästhesie (Achte Ausgabe)*Jeff*Cottrell*978-0-12-022469-2*81.36*
+Development of Biodiesel-Resistant Nitrile Rubber Compositions*Farzana*Carr*978-0-12-410396-2*70.83*
+Economics of Insurance*Carla*Medina*978-0-12-010307-2*57.42*
+Allergies Alimentaires*Saniya*Alford*978-0-7506-8446-0*65.62*
+Swaiman's Pediatric Neurology (Sixth Edition)*Nihal*Dotson*978-0-12-811727-9*44.69*
+Comprehensive Composite Materials II*Ignacy*Sargent*978-0-12-014741-0*25.92*
+Biotechnology of Metals*Md*Devlin*978-0-7204-0650-4*83.42*
+Computer-Guided Applications for Dental Implants, Bone Grafting, and Reconstructive Surgery (Adapted Translation)*Wendy*Koch*978-0-08-101877-4*26.52*
+Neuropsychiatric Disorders and Epigenetics*Celia*Halliday*978-0-12-416039-2*61.21*
+Praxis der Anästhesiologischen Sonografie  (Zweite Ausgabe)*Farrah*Herbert*978-0-12-809278-1*50.94*
+The Alkaloids: Chemistry and Biology*Dottie*French*978-0-08-103690-7*151.74*
+Piperidine-Based Drug Discovery*Maria*Chan*978-0-12-374496-8*131.48*
+Pratiques en Posturologie*Hamid*Lutz*978-0-12-508780-3*187.58*
+Malaria Control and Elimination Program in the People’s Republic of China*Quentin*Allen*978-0-12-586250-9*28.24*
+The Computer Graphics Metafile*Darien*Roach*978-0-444-51792-0*141.67*
+Immunology*Borys*Clarkson*978-0-12-384911-3*135.33*
+Mémento de la Sage-Femme (Troisième Édition)*Nathanael*Bond*978-1-4160-2882-6*148.55*
+Ion Transport in Prokaryotes*Kristin*Jackson*978-0-12-018845-1*127.31*
+The Future Rice Strategy for India*Darin*Parks*978-0-12-381258-2*99.95*
+Solar Photovoltaic Technology Production*Carrie*Neale*978-0-444-82107-2*143.98*
+Experimental Methods and Instrumentation for Chemical Engineers (Second Edition)*Elleanor*Robson*978-0-08-025969-7*171.61*
+Symplectic Geometry*Rojin*Thorne*978-2-294-70815-2*12.12*
+Advances in Imaging and Electron Physics*Ottilie*Firth*978-0-408-03060-1*199.15*
+Systemic Risk Tomography*Sannah*Mellor*978-0-408-70177-8*1.27*
+Young Tableaux in Combinatorics, Invariant Theory, and Algebra*Mattie*Simpson*978-0-12-014770-0*51.59*
+Biomechanics and Related Bio-Engineering Topics*Jae*Portillo*978-1-4831-9808-8*182.41*
+Computational and Statistical Methods for Analysing Big Data with Applications*Ruby-Mae*Davie*978-0-12-355575-5*71.68*
+Optimization of Manufacturing Systems Using the Internet of Things*Nida*Leal*978-1-55860-906-8*101.50*
+A Manual of Orthopaedic Terminology (Eighth Edition)*Suranne*Hunter*978-0-12-709848-7*10.82*
+Nonlinear Partial Differential Equations*Katy*Huber*978-0-240-81305-9*94.27*
+Applications of Finite Groups*Bentley*Griffin*978-0-12-007840-0*59.99*
+Instructor's Manual to Accompany Calculus with Analytic Geometry*Francesco*Browning*978-0-323-39276-1*44.85*
+Shaping Knowledge*Shana*Vega*978-0-12-809835-6*57.25*
+Data Protection and Security for Personal Computers*Harman*Mcgowan*978-0-08-011577-1*194.55*
+Bioprinting*Kianna*Lane*978-0-12-768350-8*57.06*
+Experimental Organic Chemistry*Ayub*Kidd*978-0-12-417002-5*90.91*
+Handbook of Magnetic Materials*Habib*Donald*978-0-08-055741-0*73.05*
+Civil Appellate Practice in the Minnesota Court of Appeals*Kya*Orozco*978-0-12-034211-2*50.38*
+Landslide Hazards, Risks, and Disasters*Clinton*Hendrix*978-0-08-022930-0*196.25*
+Begutachtung chronischer Schmerzen*Davey*Beltran*978-0-12-564110-4*19.97*
+Flash Memory Integration*Dafydd*Mooney*978-0-7506-7934-3*125.72*
+Modelling and Control of Biotechnological Processes*Gianni*Fritz*978-0-12-374514-9*12.52*
+Local Area Networks*Mehdi*Daniel*978-0-12-805193-1*16.32*
+Progress and Challenges in Precision Medicine*Siena*Howard*978-0-12-805190-0*108.80*
+Integrating Disaster Science and Management*Bilaal*Colon*978-1-84569-784-6*36.30*
+Eco-efficient Materials for Mitigating Building Cooling Needs*Jonathon*Brook*978-0-12-040515-2*93.24*
+Biodiversity and Climate Change Adaptation in Tropical Islands*Lulu*Austin*978-0-12-350429-6*101.18*
+Introduction to Quantitative Macroeconomics Using Julia*Farah*Nairn*978-0-12-182058-9*184.72*
+Adolescence*Iwan*Rojas*978-0-08-099386-7*86.65*
+Basic Real and Abstract Analysis*Fatimah*Benton*978-0-08-091623-1*18.64*
+Channel Coding: Theory, Algorithms, and Applications*Luna*Clay*978-0-7506-1015-5*63.32*
+The Resolution Revolution: Recent Advances In cryoEM*Adnan*Hess*978-0-12-533013-8*30.87*
+Freshwater Algae of North America (Second Edition)*Mahamed*Jarvis*978-0-08-028931-1*196.90*
+The Protective Arm of the Renin Angiotensin System (RAS)*Cian*Cleveland*978-1-4831-6665-0*139.78*
+Personalized Cancer Chemotherapy*Nico*Beltran*978-0-444-41549-3*0.19*
+Position Sensing*Hammad*Dale*978-0-08-040953-5*7.53*
+Numerical Models for Submerged Breakwaters*Amanpreet*Hills*978-0-7506-7826-1*45.90*
+Klinikleitfaden Rheumatologie (Vierte Ausgabe)*Layla-Mae*Morales*978-0-08-021552-5*190.62*
+Microbiology in Clinical Practice (Second Edition)*Caden*Barton*978-0-12-546090-3*102.68*
+Arithmetic for the Mature Student*Dominick*Mclean*978-0-444-51251-2*126.56*
+Microbiology in Clinical Practice (Second Edition)*Alyx*Sloan*978-0-444-50524-8*43.76*
+The Parathyroids (Third Edition)*Haaris*Huff*978-0-408-70924-8*96.92*
+Avery's Diseases of the Newborn (Tenth Edition)*Andrei*Kidd*978-0-12-407191-9*56.38*
+Cost Management in Plastics Processing (Fourth Edition)*Erin*Thorne*978-0-12-364650-7*28.32*
+Signal Transduction (Third Edition)*Neelam*Powers*978-0-12-319503-6*175.56*
+Time-Lag Control Systems*Kaylee*Gates*978-0-12-020032-0*139.69*
+Handbook of Nanomaterials for Industrial Applications*Jazmyn*Hope*978-0-12-003850-3*4.75*
+Mathematical Theory of Probability and Statistics*Gracie-Mai*Church*978-0-444-62696-7*174.31*
+Practical Guide to Clinical Computing Systems (Second Edition)*Jayda*Braun*978-0-12-385975-4*42.19*
+Generalized Van der Waals Theory of Molecular Fluids in Bulk and At Surfaces*Olivia-Rose*Colon*978-0-12-085565-0*134.08*
+Redes Ópticas de Acesso em Telecomunicações*Kaci*Robson*978-0-08-020381-2*52.10*
+Sustainable Energy from Salinity Gradients*Dominick*Burris*978-1-85573-962-8*134.83*
+First Course in Algebra and Number Theory*Lilia*Andersen*978-0-12-804312-7*65.86*
+The Manager's Handbook for Corporate Security (Second Edition)*Reginald*Donald*978-0-12-037104-4*50.92*
+De la Biomécanique à la Manipulation Ostéo-Articulaire. Thorax et Rachis Cervical*Elysia*Sweeney*978-0-08-025037-3*67.42*
+Fossil Fungi*Kaydan*Dillard*978-0-12-394600-3*22.87*
+Food, Energy, and Water*Eadie*Hendricks*978-0-12-053203-2*41.97*
+Advanced CMOS Process Technology*Rose*Peel*978-0-08-020941-8*50.62*
+Dynamic Plasma Membranes*Carina*Noel*978-0-408-00891-4*102.09*
+Physical-Chemical Properties of Foods*Howard*Dunlop*978-0-12-134740-6*193.51*
+A Laboratory Manual for Forensic Anthropology*Philippa*Coles*978-0-7506-4678-9*83.60*
+Graphical Representation of Multivariate Data*Kirby*Finnegan*978-0-12-026143-7*150.82*
+Advances in Child Development and Behavior*Laura*Ellis*978-1-4160-5642-3*175.35*
+Monetary Integration in Western Europe*Eleanor*Arroyo*978-0-12-815103-7*197.97*
+Controlled Drug Delivery*Rojin*Tait*978-0-12-364318-6*87.16*
+Transportation Planning and Public Participation*Akeem*Salinas*978-0-12-417040-7*37.12*
+Securing the Outdoor Construction Site*Aniyah*Brooks*978-0-444-88452-7*132.76*
+Immunological Methods, Volume IV*Karis*Carson*978-0-08-027550-5*24.03*
+Applications of NMR Spectroscopy*Ozan*Yang*978-0-444-89959-0*183.71*
+Materials for a Healthy, Ecological and Sustainable Built Environment*Ruby-May*Alfaro*978-0-12-122716-6*156.28*
+Inspection and Monitoring Technologies of Transmission Lines with Remote Sensing*Marwa*Villa*978-0-444-43019-9*119.49*
+Negócios Internacionais*Belle*Tucker*978-0-12-355575-5*190.69*
+Multiscale Wavelet Methods for Partial Differential Equations*Dominick*Gardner*978-0-12-372573-8*132.57*
+Current Topics in Cellular Regulation*Humza*O'Connor*978-0-444-50196-7*121.97*
+Current Trends and Future Developments on (Bio-) Membranes*Katelin*Donald*978-0-12-058785-8*103.96*
+Medical Biochemistry*Manon*Sadler*978-0-08-011650-1*55.29*
+Mathematical Techniques of Applied Probability*Faiz*Leon*978-0-7216-7494-0*120.52*
+Pediatrics in Systemic Autoimmune Diseases*Kirk*Norris*978-1-55938-804-7*83.36*
+Human–Computer Interaction–INTERACT '87*Leonie*Robbins*978-0-12-802936-7*184.96*
+Haematology Case Studies with Blood Cell Morphology and Pathophysiology*Corben*Griffin*978-0-08-091283-7*118.82*
+Biodiversity and Health*Kwame*Cruz*978-0-08-025898-0*13.58*
+Fundamentals of Advanced Mathematics 2*Tiah*Kaiser*978-0-323-52357-8*53.09*
+Antimicrobial Resistance and Food Safety*Yolanda*Sanderson*978-0-08-201608-3*174.09*
+Batch and Semi-batch Reactors*Zuzanna*Ahmad*978-0-12-034245-7*190.61*
+Understanding Polymer Processing (Second Edition)*Maison*Nielsen*978-0-08-041893-3*5.40*
+Reference Module in Biomedical Sciences*Margaret*Jarvis*978-0-12-025508-5*199.69*
+Rational Politics*Moesha*Wyatt*978-0-12-382196-6*105.16*

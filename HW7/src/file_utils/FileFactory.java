@@ -1,9 +1,12 @@
 package file_utils;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Random;
+import java.util.Scanner;
 
 public class FileFactory {
 
@@ -74,16 +77,39 @@ public class FileFactory {
 		return data;
 	}
 
-	public static void completeCourseFile(int numberOfItems, String outputFilename) {
+//	public static void completeCourseFile(int numberOfItems, String outputFilename) {
+//		String building;
+//		char buildingLetter;
+//		building = spew(Categories.BUILDING_NAME);
+//		buildingLetter = building.charAt(0);
+//		PrintWriter pw = openFile(outputFilename);
+//		for (int i = 0; i < numberOfItems; i++) {
+//			building = spew(Categories.BUILDING_NAME);
+//			buildingLetter = building.charAt(0);
+//			String dataLine = Utilities.generateRandomLineFromFile(FORMATTED_COURSE_FILE);
+//			pw.println(dataLine + "* " + emitPersonId() + "* " + buildingLetter + emitRoomNumber() + "* "
+//					+ emitBookIsbn(BOOK_ISBN_FILE) + "* ");
+//		}
+//		pw.close();
+//	}
+	
+	public static void completeCourseFile(String outputFilename) {
 		String building;
 		char buildingLetter;
 		building = spew(Categories.BUILDING_NAME);
 		buildingLetter = building.charAt(0);
 		PrintWriter pw = openFile(outputFilename);
-		for (int i = 0; i < numberOfItems; i++) {
+//		File file = new File(FORMATTED_COURSE_FILE, "UTF-8");
+		Scanner scanner = null;
+		try {
+			scanner = new Scanner(new File(FORMATTED_COURSE_FILE),"UTF-8");
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		while(scanner.hasNextLine()) {
 			building = spew(Categories.BUILDING_NAME);
 			buildingLetter = building.charAt(0);
-			String dataLine = Utilities.generateRandomLineFromFile(FORMATTED_COURSE_FILE);
+			String dataLine = scanner.nextLine();
 			pw.println(dataLine + "* " + emitPersonId() + "* " + buildingLetter + emitRoomNumber() + "* "
 					+ emitBookIsbn(BOOK_ISBN_FILE) + "* ");
 		}

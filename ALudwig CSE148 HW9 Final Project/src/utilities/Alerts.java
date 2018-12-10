@@ -327,7 +327,7 @@ public class Alerts {
 		TextInputDialog dialog = new TextInputDialog();
 		dialog.setTitle("Person Search Window");
 		dialog.setHeaderText("Use Identification Number to Search Here");
-		dialog.setContentText("Enter ID number: ");
+		dialog.setContentText("Enter ID number (Student ID's begin at 1345): ");
 		Optional<String> result = dialog.showAndWait();
 		return result.get();
 	}

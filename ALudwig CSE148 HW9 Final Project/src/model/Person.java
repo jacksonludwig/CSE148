@@ -95,6 +95,14 @@ public abstract class Person implements Serializable {
 		this.dataLine = dataLine;
 	}
 
+	public static int getNewPersonId() {
+		return newPersonId;
+	}
+
+	public static void setNewPersonId(int newPersonId) {
+		Person.newPersonId = newPersonId;
+	}
+
 	@Override
 	public String toString() {
 		return "Person [firstName=" + firstName + ", lastName=" + lastName + ", id=" + id + "]";

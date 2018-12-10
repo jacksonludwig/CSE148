@@ -1,4 +1,4 @@
-ACC101
+﻿ACC101
 Financial Accounting I
 Computer lab-enhanced instruction examines nature and purposes of financial accounting theory, procedures and reporting for economic entities including financial statements and valuation. This course develops foundation knowledge for additional learning in subsequent courses. (2 hrs. lecture, 2 hrs. laboratory) No prerequisite. Offered on: A-E-G / 3 cr. hrs. 
 3.0
@@ -7292,25 +7292,3 @@ XSH133
 A Meditation Class
 Today more than ever before, people from every walk of life are using meditation, with its tremendous health and social benefits, to enhance their personal or professional lives. The course explores Eastern and Western philosophy and meditative approaches. (1 meeting). Campus locations vary by semester. 
 0.0
-
-XSH134
-
-This class offers a better understanding of how adults, children (and even animals) can bnefit from Reiki. This ancient art is now offered in hospitals and healthcare facilities around the world. Recongizing the mind, body, spirit connection you will learn how reiki can assist you and those you love. 
-0.0
-
-XSH141
-
-This course provides safe and effective strategies for reversing the postural changes that often occur as one ages. Concepts, exercises and strategies for safe movement, treatment and prevention of fractures are included. 
-0.0
-
-XSH142
-
-This course introduces participants to state-of-the-art coaching practices and wellness concepts, the use of positive support and accountability, and personal empowerment to enhance a state of well-being. Whether you are dealing with a health challenge or are looking to incorporate disease prevention and wellness practices into your current lifestyle, this course is for you. De-stressing activities are provided in every session. 
-0.0
-
-XSH143
-
-Applying Functional Assessment Concepts to Consumer Care (4 hours) I. Understanding Functional Assessment II. Observing Behavior III. Documenting Capability IV. Developing Assessment and Implementing Behavioral Plan 
-0.0
-
-[ACC, ANT, ART, ASL, AST, AUT, BIO, BNR, BUS, CDC, CHE, CHI, CIN, COL, COM, COT, CRJ, CRS, CSE, CST, CUL, CYB, DEW, DNC, DRF, DTE, EAP, ECO, EDU, ELL, ELT, ELW, ENG, ENS, ENV, EPO, ESC, ESL, FLE, FPT, FRE, GEO, GER, GRD, HIS, HIT, HRM, HSC, HUM, HUS, HVA, IEP, IND, INT, ITL, JPN, LAT, LAW, LDR, LIB, MAR, MAT, MEC, MED, MET, MFT, MKT, MTR, MUS, NUR, OFT, OTA, PAR, PED, PFS, PHL, PHY, PNU, POA, POL, PSY, PTA, RDG, RET, RTV, SOC, SPN, THR, TYT, VST, WST, XAH, XAP, XAU, XAV, XBC, XBM, XBO, XBS, XCA, XCC, XCF, XCG, XCH, XCN, XCO, XCP, XCU, XCW, XDT, XEA, XED, XEG, XEP, XFA, XFL, XFN, XFT, XHB, XHI, XHO, XLP, XMB, XMU, XNE, XNR, XOS, XOT, XPD, XPR, XRE, XSC, XSH]

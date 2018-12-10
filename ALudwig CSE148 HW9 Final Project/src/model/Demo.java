@@ -21,7 +21,7 @@ public class Demo {
 		System.out.println(t1);
 		
 		PersonBag people = new PersonBag(3000);
-		CourseBag courseImport = new CourseBag(500);
+		CourseBag courseImport = new CourseBag(5000);
 		ClassroomBag classImport = new ClassroomBag(400);
 		TextbookBag textImport = new TextbookBag(500); 
 		
