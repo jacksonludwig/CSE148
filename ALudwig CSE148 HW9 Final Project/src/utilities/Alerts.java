@@ -139,7 +139,7 @@ public class Alerts {
 		return false;
 	}
 
-	public static String confirmClassGradeWeighted(double credits) {
+	public static String confirmClassGrade() {
 		String[] grades = { "A", "B+", "B", "C+", "C", "D+", "D", "F" };
 		ChoiceDialog<String> dialog = new ChoiceDialog<>("Grade", grades);
 		dialog.setTitle("Grade Selection");
@@ -151,129 +151,25 @@ public class Alerts {
 			grade = result.get();
 
 			if (grade.equals("A")) {
-				return 4.0 * credits + ",A";
+				return ",A";
 			} else if (grade.equals("B+")) {
-				return 3.5 * credits + ",B+";
+				return ",B+";
 			} else if (grade.equals("B")) {
-				return 3.0 * credits + ",B";
+				return ",B";
 			} else if (grade.equals("C+")) {
-				return 2.5 * credits + ",C+";
+				return ",C+";
 			} else if (grade.equals("C")) {
-				return 2.0 * credits + ",C";
+				return ",C";
 			} else if (grade.equals("D+")) {
-				return 1.5 * credits + ",D+";
+				return ",D+";
 			} else if (grade.equals("D")) {
-				return 1.0 * credits + ",D";
+				return ",D";
 			} else {
-				return 0.0 + ",F";
+				return ",F";
 			}
 		}
-		return -1 + ",F";
+		return ",F";
 	}
-
-	public static double fillClassGradeWeighted(String grade, double credits) {
-		if (grade.equals("A")) {
-			return 4.0 * credits;
-		} else if (grade.equals("B+")) {
-			return 3.5 * credits;
-		} else if (grade.equals("B")) {
-			return 3.0 * credits;
-		} else if (grade.equals("C+")) {
-			return 2.5 * credits;
-		} else if (grade.equals("C")) {
-			return 2.0 * credits;
-		} else if (grade.equals("D+")) {
-			return 1.5 * credits;
-		} else if (grade.equals("D")) {
-			return 1.0 * credits;
-		} else {
-			return 0.0;
-		}
-	}
-
-//	public static double confirmClassGradeWeighted(double credits) {
-//		String[] grades = { "A", "B+", "B", "C+", "C", "D+", "D", "F" };
-//		ChoiceDialog<String> dialog = new ChoiceDialog<>("Grade", grades);
-//		dialog.setTitle("Grade Selection");
-//		dialog.setHeaderText("The Grade For The Class Is Required");
-//		dialog.setContentText("Choose your letter grade:");
-//		Optional<String> result = dialog.showAndWait();
-//		String grade = "";
-//		if (result.isPresent()){
-//		    grade = result.get();
-//		    
-//		    if (grade.equals("A")) {
-//				return 4.0 * credits;
-//			} else if (grade.equals("B+")) {
-//				return 3.5 * credits;
-//			} else if (grade.equals("B")) {
-//				return 3.0 * credits;
-//			} else if (grade.equals("C+")) {
-//				return 2.5 * credits;
-//			} else if (grade.equals("C")) {
-//				return 2.0 * credits;
-//			} else if (grade.equals("D+")) {
-//				return 1.5 * credits;
-//			} else if (grade.equals("D")) {
-//				return 1.0 * credits;
-//			} else {
-//				return 0.0;
-//			}
-//		}
-//		return -1;
-//	}
-
-	public static double confirmClassGradeForRemoval(String grade, double credits) {
-		if (grade.equals("A")) {
-			return 4.0 * credits;
-		} else if (grade.equals("B+")) {
-			return 3.5 * credits;
-		} else if (grade.equals("B")) {
-			return 3.0 * credits;
-		} else if (grade.equals("C+")) {
-			return 2.5 * credits;
-		} else if (grade.equals("C")) {
-			return 2.0 * credits;
-		} else if (grade.equals("D+")) {
-			return 1.5 * credits;
-		} else if (grade.equals("D")) {
-			return 1.0 * credits;
-		} else {
-			return 0.0;
-		}
-	}
-
-//	public static String confirmClassGradeForRemoval(double credits) {
-//		String[] grades = { "A", "B+", "B", "C+", "C", "D+", "D", "F" };
-//		ChoiceDialog<String> dialog = new ChoiceDialog<>("Grade", grades);
-//		dialog.setTitle("Student GPA Adjustment");
-//		dialog.setHeaderText("Please Enter the Grade The Student Earned In This Class");
-//		dialog.setContentText("Choose the student's letter grade:");
-//		Optional<String> result = dialog.showAndWait();
-//		String grade = "";
-//		if (result.isPresent()){
-//		    grade = result.get();
-//		    
-//		    if (grade.equals("A")) {
-//				return 4.0 * credits + ", A";
-//			} else if (grade.equals("B+")) {
-//				return 3.5 * credits + ", B+";
-//			} else if (grade.equals("B")) {
-//				return 3.0 * credits + ", B";
-//			} else if (grade.equals("C+")) {
-//				return 2.5 * credits + ", C+";
-//			} else if (grade.equals("C")) {
-//				return 2.0 * credits + ", C";
-//			} else if (grade.equals("D+")) {
-//				return 1.5 * credits + ", D+";
-//			} else if (grade.equals("D")) {
-//				return 1.0 * credits + ", D";
-//			} else {
-//				return 0.0 + ", F";
-//			}
-//		}
-//		return -1 + ", F";
-//	}
 
 	public static void showClassFailed() {
 		Alert alert = new Alert(AlertType.ERROR);
@@ -343,14 +239,14 @@ public class Alerts {
 	public static boolean showPersonFound() {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
 		alert.setTitle("Data search complete");
-		alert.setHeaderText("Item Found Successfully");
-		alert.setContentText("Click OK to load the person's data or Cancel to leave your data");
+		alert.setHeaderText("Person Found Successfully");
+		alert.setContentText("Click OK to load the person's data or Cancel to leave data fields as they are");
 		Optional<ButtonType> result = alert.showAndWait();
 		if (!result.isPresent()) {
 			return false;
-		} else if (result.get() == ButtonType.OK) {
-			return true;
 		} else if (result.get() == ButtonType.CANCEL) {
+			return true;
+		} else if (result.get() == ButtonType.OK) {
 			return false;
 		}
 		return false;
@@ -363,4 +259,20 @@ public class Alerts {
 		alert.setHeaderText("Please Use the Faculty Tab to Search For This Person");
 		alert.showAndWait();
 	}
+	
+	public static void showFailedCourseAutoMoved(int coursesFailed) {
+		Alert alert = new Alert(AlertType.INFORMATION);
+		alert.setTitle("This student did not pass all of his/her classes");
+		alert.setContentText("The failed classes were moved to the \"Courses To Take\" column");
+		alert.setHeaderText("Failed Classes: " + coursesFailed);
+		alert.showAndWait();
+	}
+	
+//	public static void showPersonFound() {
+//		Alert alert = new Alert(AlertType.INFORMATION);
+//		alert.setTitle("Person search completed");
+//		alert.setContentText("The person's information will now be loaded");
+//		alert.setHeaderText("A Person With This ID Was Found");
+//		alert.showAndWait();
+//	}
 }

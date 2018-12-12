@@ -110,20 +110,37 @@ public class StudentShop {
 			}
 		});
 
+//		studentPane.getMoveClassFarRightButton().setOnAction(e -> {
+//			String potential = studentPane.getCoursesTakingListView().getSelectionModel().getSelectedItem();
+//			if (potential != null) {
+//				Course course = courseBag.findByCourseTitleShort(potential);
+//				String grade = Alerts.confirmClassGradeWeighted(course.getNumberOfCredits());
+//				if (Double.parseDouble(grade.substring(0, 3)) > 0) {
+//					studentPane.getCoursesTakingListView().getSelectionModel().clearSelection();
+//					coursesTakingList.remove(potential);
+//					if (grade.substring(4).charAt(0) == ',') {
+//						coursesTakenList.add(potential + grade.substring(4));
+//					} else {
+//						coursesTakenList.add(potential + ',' + grade.substring(4));
+//					}
+//					adjustGpa(coursesTakenList);
+//					sortLists();
+//					System.out.println(weightedGpa);
+//				} else {
+//					Alerts.showClassFailed();
+//				}
+//			}
+//		});
+
 		studentPane.getMoveClassFarRightButton().setOnAction(e -> {
 			String potential = studentPane.getCoursesTakingListView().getSelectionModel().getSelectedItem();
 			if (potential != null) {
-				Course course = courseBag.findByCourseTitleShort(potential);
-				String grade = Alerts.confirmClassGradeWeighted(course.getNumberOfCredits());
-				if (Double.parseDouble(grade.substring(0, 3)) > 0) {
+				String grade = Alerts.confirmClassGrade();
+				if (!(grade.equals("F"))) {
 					studentPane.getCoursesTakingListView().getSelectionModel().clearSelection();
 					coursesTakingList.remove(potential);
-					if (grade.substring(4).charAt(0) == ',') {
-						coursesTakenList.add(potential + grade.substring(4));
-					} else {
-						coursesTakenList.add(potential + ',' + grade.substring(4));
-					}
-					adjustGpaAdd(Double.parseDouble(grade.substring(0, 3)), course.getNumberOfCredits());
+					coursesTakenList.add(potential + grade);
+					adjustGpa(coursesTakenList);
 					sortLists();
 					System.out.println(weightedGpa);
 				} else {
@@ -134,20 +151,12 @@ public class StudentShop {
 
 		studentPane.getMoveClassFarLeftButton().setOnAction(e -> {
 			String potential = studentPane.getCoursesTakenListView().getSelectionModel().getSelectedItem();
-			Course course = courseBag.findByCourseTitleShort(potential.substring(0, 6));
-			double grade = Alerts.confirmClassGradeForRemoval(potential.substring(7), course.getNumberOfCredits());
-
 			if (potential != null) {
-				if (grade > 0) {
-					studentPane.getCoursesTakenListView().getSelectionModel().clearSelection();
-					coursesTakenList.remove(potential);
-					coursesTakingList.add(potential.substring(0, 6));
-					adjustGpaRemove(grade, course.getNumberOfCredits());
-					sortLists();
-					System.out.println(weightedGpa);
-				} else {
-					Alerts.showClassWrongGradeEntered();
-				}
+				studentPane.getCoursesTakenListView().getSelectionModel().clearSelection();
+				coursesTakenList.remove(potential);
+				coursesTakingList.add(potential.substring(0, 6));
+				adjustGpa(coursesTakenList);
+				sortLists();
 			}
 		});
 
@@ -201,7 +210,7 @@ public class StudentShop {
 				coursesToTakeList.clear();
 				coursesTakingList.clear();
 				coursesTakenList.clear();
-				if (Alerts.showItemFound()) {
+				if (Alerts.showPersonFound()) {
 					studentPane.clearAllFields();
 				} else {
 					studentPane.setFirstNameField(searchedStudent.getFirstName());
@@ -219,20 +228,21 @@ public class StudentShop {
 						String course = searchedStudent.getCoursesTaking().get(i);
 						coursesTakingList.add(course);
 					}
+					int failedCourseCount = 0;
 					for (int i = 0; i < searchedStudent.getCoursesTaken().size(); i++) {
 						String course = searchedStudent.getCoursesTaken().get(i);
-						coursesTakenList.add(course);
-					}
-					for (int i = 0; i < coursesTakenList.size(); i++) {
-						// System.out.println(coursesTakenList.get(i).substring(0, 6));
-						String grade = coursesTakenList.get(i).substring(7);
-						Course searchedCourse = courseBag
-								.findByCourseTitleShort(coursesTakenList.get(i).substring(0, 6));
-						// System.out.println(searchedCourse);
-						adjustGpaAdd(Alerts.fillClassGradeWeighted(grade, searchedCourse.getNumberOfCredits()),
-								searchedCourse.getNumberOfCredits());
-					}
+						if (course.substring(7).equals("F")) {
+							coursesToTakeList.add(course.substring(0, 6));
+							failedCourseCount++;
+						} else {
+							coursesTakenList.add(course);
+						}
 
+					}
+					adjustGpa(coursesTakenList);
+					if (failedCourseCount > 0) {
+						Alerts.showFailedCourseAutoMoved(failedCourseCount);
+					}
 					sortLists();
 				}
 			} else {
@@ -277,28 +287,49 @@ public class StudentShop {
 		});
 	}
 
-	public void adjustGpaAdd(double weightedGrade, double credits) {
-		weightedGpa *= this.credits;
-		weightedGpa += weightedGrade;
-		this.credits += credits;
-		weightedGpa /= this.credits;
-		weightedGpa = Double.parseDouble(String.format("%.2f", weightedGpa));
-		studentPane.setDynamicGpa(weightedGpa);
-	}
-
-	public void adjustGpaRemove(double weightedGrade, double credits) {
-		weightedGpa *= this.credits;
-		weightedGpa -= weightedGrade;
-		this.credits -= credits;
-		weightedGpa /= this.credits;
-		weightedGpa = Double.parseDouble(String.format("%.2f", weightedGpa));
-		if (this.credits <= 0) {
-			weightedGpa = 0.0;
+	public void adjustGpa(ObservableList<String> coursesWithGrades) {
+		double totalPoints = 0;
+		int totalCredits = 0;
+		for (int i = 0; i < coursesWithGrades.size(); i++) {
+			String courseAndGrade = coursesWithGrades.get(i);
+			double classCredits;
+			try {
+				classCredits = courseBag.findByCourseTitleShort(courseAndGrade.substring(0, 6)).getNumberOfCredits();
+			} catch (NullPointerException e) {
+				classCredits = 0;
+			}
+			if (courseAndGrade.substring(7).equals("A")) {
+				totalPoints += (4.0 * classCredits);
+				totalCredits += classCredits;
+			} else if (courseAndGrade.substring(7).equals("B+")) {
+				totalPoints += (3.5 * classCredits);
+				totalCredits += classCredits;
+			} else if (courseAndGrade.substring(7).equals("B")) {
+				totalPoints += (3.0 * classCredits);
+				totalCredits += classCredits;
+			} else if (courseAndGrade.substring(7).equals("C+")) {
+				totalPoints += (2.5 * classCredits);
+				totalCredits += classCredits;
+			} else if (courseAndGrade.substring(7).equals("C")) {
+				totalPoints += (2.0 * classCredits);
+				totalCredits += classCredits;
+			} else if (courseAndGrade.substring(7).equals("D+")) {
+				totalPoints += (1.5 * classCredits);
+				totalCredits += classCredits;
+			} else if (courseAndGrade.substring(7).equals("D")) {
+				totalPoints += (1.0 * classCredits);
+				totalCredits += classCredits;
+			} else {
+				totalPoints += (0.0 * classCredits);
+				totalCredits += classCredits;
+			}
 		}
-		if (!(weightedGpa > 0)) {
-			weightedGpa = 0.0;
+		weightedGpa = (totalPoints / totalCredits);
+		String gpa = String.format("%.2f", weightedGpa);
+		studentPane.setDynamicGpa(Double.parseDouble(gpa));
+		if (totalCredits <= 0 || totalPoints <= 0) {
+			studentPane.setDynamicGpa(0.0);
 		}
-		studentPane.setDynamicGpa(weightedGpa);
 	}
 
 	public void sortLists() {
