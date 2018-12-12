@@ -7,6 +7,8 @@ import model.TextbookBag;
 import utilities.Alerts;
 import view.TextbookPane;
 
+// Searches by book TITLE.
+
 public class TextbookShop {
 	private TextbookPane textbookPane;
 	private MenuBarShop menuBarShop;

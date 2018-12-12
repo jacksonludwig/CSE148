@@ -331,6 +331,14 @@ public class Alerts {
 		Optional<String> result = dialog.showAndWait();
 		return result.get();
 	}
+	
+	public static void showPersonNotFound() {
+		Alert alert = new Alert(AlertType.ERROR);
+		alert.setTitle("Data search complete");
+		alert.setHeaderText("There Was a Problem Finding Your Item.");
+		alert.setContentText("The ID either does not exist or is from a faculty member");
+		alert.showAndWait();
+	}
 
 	public static boolean showPersonFound() {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
@@ -346,5 +354,13 @@ public class Alerts {
 			return false;
 		}
 		return false;
+	}
+	
+	public static void showWrongPerson() {
+		Alert alert = new Alert(AlertType.ERROR);
+		alert.setTitle("Person search completed");
+		alert.setContentText("This ID was found, but it was not applicable for a student.");
+		alert.setHeaderText("Please Use the Faculty Tab to Search For This Person");
+		alert.showAndWait();
 	}
 }

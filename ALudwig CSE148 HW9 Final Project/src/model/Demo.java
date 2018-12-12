@@ -20,10 +20,10 @@ public class Demo {
 		System.out.println(b1);
 		System.out.println(t1);
 		
-		PersonBag people = new PersonBag(3000);
+		PersonBag people = new PersonBag(6000);
 		CourseBag courseImport = new CourseBag(5000);
-		ClassroomBag classImport = new ClassroomBag(400);
-		TextbookBag textImport = new TextbookBag(500); 
+		ClassroomBag classImport = new ClassroomBag(1000);
+		TextbookBag textImport = new TextbookBag(1000); 
 		
 		DataImporter.importStudents(people);
 		DataImporter.importFaculty(people);

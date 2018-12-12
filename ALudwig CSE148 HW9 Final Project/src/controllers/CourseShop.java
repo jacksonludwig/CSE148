@@ -7,6 +7,8 @@ import model.CourseBag;
 import utilities.Alerts;
 import view.CoursePane;
 
+// Searches by course number (WITH LETTERS; e.g. CSE148).
+
 public class CourseShop {
 	private CoursePane coursePane;
 	private MenuBarShop menuBarShop;

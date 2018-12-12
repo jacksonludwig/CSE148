@@ -26,13 +26,13 @@ public class StudentPane {
 
 	private ObservableList<String> majors;
 	private ComboBox<String> majorBox;
-	private ObservableList<String> coursesList; // put in shop
+	private ObservableList<String> coursesList;
 	private ListView<String> coursesListView;
-	private ObservableList<String> coursesTakingList; // put in shop
+	private ObservableList<String> coursesTakingList;
 	private ListView<String> coursesTakingListView;
-	private ObservableList<String> coursesToTakeList; // put in shop
+	private ObservableList<String> coursesToTakeList;
 	private ListView<String> coursesToTakeListView;
-	private ObservableList<String> coursesTakenList; // put in shop
+	private ObservableList<String> coursesTakenList;
 	private ListView<String> coursesTakenListView;
 
 	private GridPane studentPane;
@@ -252,7 +252,7 @@ public class StudentPane {
 	public TextField getPhoneNumberField() {
 		return phoneNumberField;
 	}
-	
+
 	public void setPhoneNumberField(String number) {
 		phoneNumberField.setText(number);
 	}

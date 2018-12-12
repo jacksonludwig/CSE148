@@ -2,7 +2,6 @@ package controllers;
 
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.NoSuchElementException;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -10,11 +9,21 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import model.Course;
 import model.CourseBag;
-import model.Person;
 import model.PersonBag;
 import model.Student;
 import utilities.Alerts;
 import view.StudentPane;
+
+// What needs to happen:
+// Classes taken with Fs in search need to be auto moved back to "to take."
+
+// Math regarding GPA must be fixed (most important): 
+// have GPA be completely redone when something is moved; now that all classes have a grade with them,
+// it can be easily done by reading each class under the taken category, searching for them to get their credits, and using the total credits
+// and total gpa to get the overall gpa. 
+
+// Search/filter menu for listview must be added
+// Also all other tabs must be corrected search so that it fills in data fields (to be done last).
 
 public class StudentShop {
 	private StudentPane studentPane;
@@ -180,8 +189,14 @@ public class StudentShop {
 
 		studentPane.getSearchBtn().setOnAction(e -> {
 			String id = Alerts.searchForPerson();
-			Student searchedStudent = (Student) studentBag.findById(id);
-			// ArrayList<String> includedCourses = new ArrayList<>();
+			Student searchedStudent = null;
+			try {
+				searchedStudent = (Student) studentBag.findById(id);
+			} catch (ClassCastException e1) {
+				Alerts.showWrongPerson();
+
+			}
+
 			if (searchedStudent != null) {
 				coursesToTakeList.clear();
 				coursesTakingList.clear();
@@ -197,8 +212,8 @@ public class StudentShop {
 
 					for (int i = 0; i < searchedStudent.getCoursesToTake().size(); i++) {
 						String course = searchedStudent.getCoursesToTake().get(i);
-							allCoursesList.remove(course);
-							coursesToTakeList.add(course);
+						allCoursesList.remove(course);
+						coursesToTakeList.add(course);
 					}
 					for (int i = 0; i < searchedStudent.getCoursesTaking().size(); i++) {
 						String course = searchedStudent.getCoursesTaking().get(i);
@@ -209,11 +224,11 @@ public class StudentShop {
 						coursesTakenList.add(course);
 					}
 					for (int i = 0; i < coursesTakenList.size(); i++) {
-					//	System.out.println(coursesTakenList.get(i).substring(0, 6));
+						// System.out.println(coursesTakenList.get(i).substring(0, 6));
 						String grade = coursesTakenList.get(i).substring(7);
 						Course searchedCourse = courseBag
 								.findByCourseTitleShort(coursesTakenList.get(i).substring(0, 6));
-				//		System.out.println(searchedCourse);
+						// System.out.println(searchedCourse);
 						adjustGpaAdd(Alerts.fillClassGradeWeighted(grade, searchedCourse.getNumberOfCredits()),
 								searchedCourse.getNumberOfCredits());
 					}
@@ -221,9 +236,7 @@ public class StudentShop {
 					sortLists();
 				}
 			} else {
-				if (Alerts.showItemNotFound()) {
-					studentPane.clearAllFields();
-				}
+				Alerts.showPersonNotFound();
 			}
 		});
 

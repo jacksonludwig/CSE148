@@ -7,6 +7,8 @@ import model.ClassroomBag;
 import utilities.Alerts;
 import view.ClassroomPane;
 
+// Searches by ROOM NUMBER (without letter).
+
 public class ClassroomShop {
 	private ClassroomPane classroomPane;
 	private MenuBarShop menuBarShop;
