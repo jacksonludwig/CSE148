@@ -89,6 +89,7 @@ public class FacultyShop {
 				facultyBag.insert(faculty);
 				if (Alerts.showItemInsertedAndId(faculty.getId())) {
 					facultyPane.clearAllFields();
+					resetCourseLists();
 				}
 			}
 		});
@@ -112,6 +113,7 @@ public class FacultyShop {
 					coursesTakingList.clear();
 					if (Alerts.showPersonFound()) {
 						facultyPane.clearAllFields();
+						resetCourseLists();
 					} else {
 						facultyPane.setFirstNameField(searchedFaculty.getFirstName());
 						facultyPane.setLastNameField(searchedFaculty.getLastName());
@@ -165,6 +167,7 @@ public class FacultyShop {
 				facultyBag.insert(faculty);
 				if (Alerts.showPersonUpdatedWithID(faculty.getId())) {
 					facultyPane.clearAllFields();
+					resetCourseLists();
 				}
 			}
 		});
@@ -212,6 +215,16 @@ public class FacultyShop {
 				facultyPane.getCoursesList().setPredicate(l -> l.contains(filter));
 			}
 		});
+	}
+	
+	public void resetCourseLists() {
+		if (coursesTakingList.size() > 0) {
+			for(int i = 0; i < coursesTakingList.size(); i++) {
+				allCoursesList.add(coursesTakingList.get(i));
+				coursesTakingList.remove(i);
+				i--;
+			}
+		}
 	}
 
 	public void sortLists() {

@@ -96,7 +96,7 @@ public class StudentShop {
 				sortLists();
 			}
 		});
-		
+
 		studentPane.getMoveClassFarRightButton().setOnAction(e -> {
 			String potential = studentPane.getCoursesTakingListView().getSelectionModel().getSelectedItem();
 			if (potential != null) {
@@ -157,6 +157,7 @@ public class StudentShop {
 				studentBag.insert(student);
 				if (Alerts.showItemInsertedAndId(student.getId())) {
 					studentPane.clearAllFields();
+					resetCourseLists();
 				}
 			}
 		});
@@ -182,6 +183,7 @@ public class StudentShop {
 					coursesTakenList.clear();
 					if (Alerts.showPersonFound()) {
 						studentPane.clearAllFields();
+						resetCourseLists();
 					} else {
 						studentPane.setFirstNameField(searchedStudent.getFirstName());
 						studentPane.setLastNameField(searchedStudent.getLastName());
@@ -273,6 +275,7 @@ public class StudentShop {
 				studentBag.insert(student);
 				if (Alerts.showPersonUpdatedWithID(student.getId())) {
 					studentPane.clearAllFields();
+					resetCourseLists();
 				}
 			} else {
 				Alerts.showPersonNotFound();
@@ -332,19 +335,18 @@ public class StudentShop {
 				} else {
 					Alerts.showPersonNotFound();
 				}
-			} 
-			
+			}
+
 		});
-		
-		studentPane.getFilterInput().textProperty().addListener(e ->{
-	        String filter = studentPane.getFilterInput().getText();
-	        if(filter == null || filter.length() == 0) {
-	            studentPane.getCoursesList().setPredicate(l -> true);
-	        }
-	        else {
-	            studentPane.getCoursesList().setPredicate(l -> l.contains(filter));
-	        }
-	    });
+
+		studentPane.getFilterInput().textProperty().addListener(e -> {
+			String filter = studentPane.getFilterInput().getText();
+			if (filter == null || filter.length() == 0) {
+				studentPane.getCoursesList().setPredicate(l -> true);
+			} else {
+				studentPane.getCoursesList().setPredicate(l -> l.contains(filter));
+			}
+		});
 	}
 
 	public void adjustGpa(ObservableList<String> coursesWithGrades) {
@@ -396,6 +398,31 @@ public class StudentShop {
 			studentPane.setDynamicGpa(Double.parseDouble(gpa));
 		}
 
+	}
+
+	public void resetCourseLists() {
+		if (coursesToTakeList.size() > 0) {
+			for(int i = 0; i < coursesToTakeList.size(); i++) {
+				allCoursesList.add(coursesToTakeList.get(i));
+				coursesToTakeList.remove(i);
+				i--;
+			}
+		}
+		if (coursesTakingList.size() > 0) {
+			for(int i = 0; i < coursesTakingList.size(); i++) {
+				allCoursesList.add(coursesTakingList.get(i));
+				coursesTakingList.remove(i);
+				i--;
+			}
+		}
+		if (coursesTakenList.size() > 0) {
+			for(int i = 0; i < coursesTakenList.size(); i++) {
+				allCoursesList.add(coursesTakenList.get(i).substring(0, 6));
+				coursesTakenList.remove(i);
+				i--;
+			}
+		}
+		weightedGpa = 0.0;
 	}
 
 	public void sortLists() {

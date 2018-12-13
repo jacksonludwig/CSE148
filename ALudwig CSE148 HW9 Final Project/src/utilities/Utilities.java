@@ -95,8 +95,4 @@ public class Utilities {
 			e.printStackTrace();
 		}
 	}
-	
-//	public static boolean checkForCompleteData() {
-//		must be in each controller
-//	}
 }

@@ -1,7 +1,5 @@
 package utilities;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 import javafx.scene.control.Alert;
@@ -336,7 +334,7 @@ public class Alerts {
 	
 	public static void showPersonNotFoundFaculty() {
 		Alert alert = new Alert(AlertType.ERROR);
-		alert.setTitle("Data search complete");
+		alert.setTitle("Person search complete");
 		alert.setHeaderText("There Was a Problem Finding Your Item.");
 		alert.setContentText("The ID either does not exist or is from a student.");
 		alert.showAndWait();
@@ -347,6 +345,22 @@ public class Alerts {
 		alert.setTitle("Person search completed");
 		alert.setContentText("This ID was found, but it was not applicable for a faculty.");
 		alert.setHeaderText("Please Use the Student Tab to Search For This Person");
+		alert.showAndWait();
+	}
+	
+	public static void showAllSaved() {
+		Alert alert = new Alert(AlertType.INFORMATION);
+		alert.setTitle("File Save Completed");
+		alert.setContentText("Your changes have been saved.");
+		alert.setHeaderText("The Binary Files Have Been Updated");
+		alert.showAndWait();
+	}
+	
+	public static void showAllLoaded() {
+		Alert alert = new Alert(AlertType.INFORMATION);
+		alert.setTitle("File Load Completed");
+		alert.setContentText("Your changes have been loaded.");
+		alert.setHeaderText("The Binary Files Have Been Updated");
 		alert.showAndWait();
 	}
 }
