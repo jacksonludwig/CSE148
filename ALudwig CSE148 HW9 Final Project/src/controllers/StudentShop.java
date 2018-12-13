@@ -15,17 +15,6 @@ import model.Student;
 import utilities.Alerts;
 import view.StudentPane;
 
-// What needs to happen:
-// Classes taken with Fs in search need to be auto moved back to "to take."
-
-// Math regarding GPA must be fixed (most important): 
-// have GPA be completely redone when something is moved; now that all classes have a grade with them,
-// it can be easily done by reading each class under the taken category, searching for them to get their credits, and using the total credits
-// and total gpa to get the overall gpa. 
-
-// Search/filter menu for listview must be added
-// Also all other tabs must be corrected search so that it fills in data fields (to be done last).
-
 public class StudentShop {
 	private StudentPane studentPane;
 	private MenuBarShop menuBarShop;
@@ -110,29 +99,7 @@ public class StudentShop {
 				sortLists();
 			}
 		});
-
-//		studentPane.getMoveClassFarRightButton().setOnAction(e -> {
-//			String potential = studentPane.getCoursesTakingListView().getSelectionModel().getSelectedItem();
-//			if (potential != null) {
-//				Course course = courseBag.findByCourseTitleShort(potential);
-//				String grade = Alerts.confirmClassGradeWeighted(course.getNumberOfCredits());
-//				if (Double.parseDouble(grade.substring(0, 3)) > 0) {
-//					studentPane.getCoursesTakingListView().getSelectionModel().clearSelection();
-//					coursesTakingList.remove(potential);
-//					if (grade.substring(4).charAt(0) == ',') {
-//						coursesTakenList.add(potential + grade.substring(4));
-//					} else {
-//						coursesTakenList.add(potential + ',' + grade.substring(4));
-//					}
-//					adjustGpa(coursesTakenList);
-//					sortLists();
-//					System.out.println(weightedGpa);
-//				} else {
-//					Alerts.showClassFailed();
-//				}
-//			}
-//		});
-
+		
 		studentPane.getMoveClassFarRightButton().setOnAction(e -> {
 			String potential = studentPane.getCoursesTakingListView().getSelectionModel().getSelectedItem();
 			if (potential != null) {
