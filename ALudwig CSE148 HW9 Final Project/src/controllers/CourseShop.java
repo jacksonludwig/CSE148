@@ -57,9 +57,16 @@ public class CourseShop {
 
 		coursePane.getSearchBtn().setOnAction(e -> {
 			String title = coursePane.getCourseTitleShort();
-			if (courseBag.findByCourseTitleShort(title) != null) {
+			Course course = courseBag.findByCourseTitleShort(title);
+			if (course != null) {
 				if (Alerts.showItemFound()) {
-					coursePane.clearAllFields();
+					coursePane.setBuildingBox(String.valueOf(course.getClassroom().charAt(0)));
+					coursePane.setClassroomField(course.getClassroom().substring(1));
+					coursePane.setCourseDescriptionField(course.getCourseDescription());
+					coursePane.setCourseTitleLongField(course.getCourseTitleLong());
+					coursePane.setTextbookISBNField(course.getTextbookISBN());
+					coursePane.setFacultyIDField(course.getFacultyID());
+					coursePane.setNumberOfCredits(String.valueOf(course.getNumberOfCredits()));
 				}
 			} else {
 				if (Alerts.showItemNotFound()) {
@@ -96,9 +103,15 @@ public class CourseShop {
 		coursePane.getDeleteBtn().setOnAction(e -> {
 			String title = coursePane.getCourseTitleShort();
 			if (courseBag.findByCourseTitleShort(title) != null) {
-				courseBag.deleteByCourseTitleShort(title);
+				Course course = courseBag.deleteByCourseTitleShort(title);
 				if (Alerts.showItemDeleted()) {
-					coursePane.clearAllFields();
+					coursePane.setBuildingBox(String.valueOf(course.getClassroom().charAt(0)));
+					coursePane.setClassroomField(course.getClassroom().substring(1));
+					coursePane.setCourseDescriptionField(course.getCourseDescription());
+					coursePane.setCourseTitleLongField(course.getCourseTitleLong());
+					coursePane.setTextbookISBNField(course.getTextbookISBN());
+					coursePane.setFacultyIDField(course.getFacultyID());
+					coursePane.setNumberOfCredits(String.valueOf(course.getNumberOfCredits()));
 				}
 			} else {
 				if (Alerts.showItemNotDeleted()) {

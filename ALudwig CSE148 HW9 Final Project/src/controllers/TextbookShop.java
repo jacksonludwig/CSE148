@@ -54,9 +54,18 @@ public class TextbookShop {
 
 		textbookPane.getSearchBtn().setOnAction(e -> { 
 			String title = textbookPane.getTitle();
+			
 			if (textbookBag.findByTitle(title) != null) {
 				if (Alerts.showItemFound()) {
-					textbookPane.clearAllFields();
+					Textbook textbook = textbookBag.findByTitle(title);
+					String first = textbook.getAuthorFirstName();
+					String last = textbook.getAuthorLastName();
+					String isbn = textbook.getISBN();
+					String price = String.valueOf(textbook.getPrice());
+					textbookPane.setAuthorFirst(first);
+					textbookPane.setAuthorLast(last);
+					textbookPane.setIsbnField(isbn);
+					textbookPane.setPriceField(price);
 				}
 			} else {
 				if (Alerts.showItemNotFound()) {
@@ -90,9 +99,16 @@ public class TextbookShop {
 		textbookPane.getDeleteBtn().setOnAction(e -> { 
 			String title = textbookPane.getTitle();
 			if (textbookBag.findByTitle(title) != null) {
-				textbookBag.deleteByTitle(title);
+				Textbook textbook = textbookBag.deleteByTitle(title);
 				if (Alerts.showItemDeleted()) {
-					textbookPane.clearAllFields();
+					String first = textbook.getAuthorFirstName();
+					String last = textbook.getAuthorLastName();
+					String isbn = textbook.getISBN();
+					String price = String.valueOf(textbook.getPrice());
+					textbookPane.setAuthorFirst(first);
+					textbookPane.setAuthorLast(last);
+					textbookPane.setIsbnField(isbn);
+					textbookPane.setPriceField(price);
 				}
 			} else {
 				if (Alerts.showItemNotDeleted()) {

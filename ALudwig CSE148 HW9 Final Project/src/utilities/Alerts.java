@@ -15,7 +15,7 @@ public class Alerts {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
 		alert.setTitle("Data search complete");
 		alert.setHeaderText("Item Found Successfully");
-		alert.setContentText("Click OK to clear text fields or Cancel to leave your data");
+		alert.setContentText("Click OK to load the data or Cancel to leave text fields as they are");
 		Optional<ButtonType> result = alert.showAndWait();
 		if (!result.isPresent()) {
 			return false;
@@ -111,7 +111,7 @@ public class Alerts {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
 		alert.setTitle("Data delete completed");
 		alert.setHeaderText("The Item Was Deleted From The Database");
-		alert.setContentText("Click OK to clear text fields or Cancel to leave you data");
+		alert.setContentText("Click OK to load the deleted data or Cancel to leave you the text fields as they are");
 		Optional<ButtonType> result = alert.showAndWait();
 		if (!result.isPresent()) {
 			return false;
@@ -223,7 +223,7 @@ public class Alerts {
 		TextInputDialog dialog = new TextInputDialog();
 		dialog.setTitle("Person Search Window");
 		dialog.setHeaderText("Use Identification Number to Search Here");
-		dialog.setContentText("Enter ID number (Student ID's begin at 1345): ");
+		dialog.setContentText("Enter ID number: ");
 		Optional<String> result = dialog.showAndWait();
 		return result.get();
 	}
@@ -266,6 +266,56 @@ public class Alerts {
 		alert.setContentText("The failed classes were moved to the \"Courses To Take\" column");
 		alert.setHeaderText("Failed Classes: " + coursesFailed);
 		alert.showAndWait();
+	}
+	
+	public static String searchForPersonUpdate() {
+		TextInputDialog dialog = new TextInputDialog();
+		dialog.setTitle("Person Update Window");
+		dialog.setHeaderText("Use Identification Number to Search Here.\nAny Filled Data Fields Will Be Used In Place Of The Original Data.");
+		dialog.setContentText("Replace information of person with ID: ");
+		Optional<String> result = dialog.showAndWait();
+		return result.get();
+	}
+	
+	public static String searchForPersonDelete() {
+		TextInputDialog dialog = new TextInputDialog();
+		dialog.setTitle("Person Delete Window");
+		dialog.setHeaderText("Use Identification Number to Search Here.\nIf a Person Is Found, He/She Will Be Deleted.");
+		dialog.setContentText("Delete person with ID: ");
+		Optional<String> result = dialog.showAndWait();
+		return result.get();
+	}
+	
+	public static boolean keepDeletedDataOrNot() {
+		Alert alert = new Alert(AlertType.CONFIRMATION);
+		alert.setTitle("Data delete complete");
+		alert.setHeaderText("Person Deleted Successfully");
+		alert.setContentText("Click OK to load the deleted data or Cancel to leave data fields as they are");
+		Optional<ButtonType> result = alert.showAndWait();
+		if (!result.isPresent()) {
+			return false;
+		} else if (result.get() == ButtonType.OK) {
+			return true;
+		} else if (result.get() == ButtonType.CANCEL) {
+			return false;
+		}
+		return false;
+	}
+	
+	public static boolean showPersonUpdatedWithID(String id) {
+		Alert alert = new Alert(AlertType.CONFIRMATION);
+		alert.setTitle("Person Update Complete");
+		alert.setHeaderText("ID " + id + " Has Been Updated.");
+		alert.setContentText("The database has been successfuly updated");
+		Optional<ButtonType> result = alert.showAndWait();
+		if (!result.isPresent()) {
+			return false;
+		} else if (result.get() == ButtonType.OK) {
+			return true;
+		} else if (result.get() == ButtonType.CANCEL) {
+			return false;
+		}
+		return false;
 	}
 	
 //	public static void showPersonFound() {

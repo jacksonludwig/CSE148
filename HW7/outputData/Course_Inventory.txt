@@ -1598,16 +1598,6 @@ Cybersecurity Internship
 This course supports the competency-based Cybersecurity program. It requires the field work in cybersecurity. Student obligations agreed upon in an internship contract. Supervising faculty hold periodic meetings with student interns and their supervisors to evaluate intern performance. In addition to eight to ten hours per week of field work, students attend a 50-minute weekly seminar. Students enrolling in this course are automatically charged the liability insurance fee. (3 hrs. lecture) Prerequisite: a total of 16 CYB credits need to be completed. Offered on: A / 3 cr. hr. 
 3.0
 
-DEW005
-
-Module 1: Introduction to Pedagogy Online Learning In order for online learning to be successful, teachers as well as learners must take on new roles in the teaching-learning relationship, and faculty must be willing to release control of learning to the students. Online learning environments permit a full range of interactive methodologies, and instructors have found that in adapting their courses to online models, they are paying more attention to the instructional design of their courses. We will review the steps for best practice as they design their course(s). 2 hour block 
-0.0
-
-DNC195
-
-Special and current topics in Dance may be available. See "Class Schedule Search" for a complete listing each term. 
-3.0
-
 DNC295
 Special Topics: Dance
 Special and current topics in Dance may be available. See "Class Schedule Search" for a complete listing each term. 
@@ -2503,11 +2493,6 @@ Graphic Design Portfolio Preparation and Assessment
 Concentrates on completion of student's portfolio of work suitable for entry into the graphic design profession. Instructors work with individual students as both mentor and advisor. Students must be in their final semester of Graphic Design curriculum. (Offered spring semester only.) Prerequisites: GRD201 and GRD203. Corequisites: GRD202 and GRD204. Offered on: E / 1 cr. hr. 
 1.0
 
-GRD207
-
-Survey of history and technology used to make visual communication from prehistoric times to the present. Lectures, presentations, written research and studio projects introduce students to important creative designers and innovations that have shaped visual communication. Note: Fulfills SUNY General Education Requirement for The Arts. Prerequisite: ENG 101. Offered on: E / 3 cr. hrs. 
-3.0
-
 GRD211
 Graphic Design II
 Emphasis on creative theme development of strong concepts to communicate persuasively, effectively integrating color, type and image in multi-faceted projects. (offered fall semester only) (1 hr. lecture, 4 hrs. studio) Prerequisites: ART130 and GRD103 with a grade of C or better. Offered on: E / 3 cr. hrs. 
@@ -3183,11 +3168,6 @@ Estates, Trusts and Wills
 Study of wills and trusts and survey of fundamental principles of law applicable to each. Also, a study of organization and jurisdiction of surrogate's court, detailed analysis of administration of estates and review of estate and inheritance taxes applicable to such estates. Prerequisite: LAW101 and LAW103 or permission of Chair/Academic Dean. Offered on: A-G / 3 cr. hrs. 
 3.0
 
-LAW251
-
-The study of International Law as the normative representation of the system of values common to all societies. The framework of this course will recognize that states are the principal actors in the legal system. The topics addressed will include human rights, group rights, the treatment of aliens, and international crimes. Important areas of comparative law in the traditions of Romano-Germanic civil law and Anglo-American common law will be presented. The course examines recurring problems caused by private cross-border disputes and current emerging solutions for solving such disputes. Class direction may include treatment regarding laws and policies behind business practices of the European Union. Prerequisite: LAW101 and LAW103 or permission of Chair/Academic Dean. Offered on: A / 3 cr. hrs. 
-3.0
-
 LAW295
 Special Topics: Business: Law
 Special and current topics in Business: Law may be available. See "Class Schedule Search" for a complete listing each term. Offered on: A-E-G / 3-4 cr. hrs. 
@@ -3197,21 +3177,6 @@ LAW297
 Independent Study: Bus: Law
 Independent study courses in business may be available. See the online catalog for a complete listing or contact academic chair. Offered on: A-E-G / 1-4 cr. hrs. 
 1.0
-
-LDR001
-
-For students interested in applying leadership theory and practices to current experiences. 
-0.0
-
-LDR002
-
-Leadership training for Federal Work Study students.
-0.0
-
-LDR003
-
-Companion for students participating in the LEAP program on caqmpus.
-0.0
 
 LIB101
 Introduction to College Research
@@ -3426,86 +3391,6 @@ Independent study courses in mathematics may be available. See the online catalo
 MEC105
 Module 5 Mechatronics
 Provides the students with the knowledge advanced manufacturing concepts, including automated assembly processes, LEAN manufacturing and Quality Control. 
-0.0
-
-MEC115
-
-G-code Programming students will learn to use language to operate CNC Mill machinery. HAAS simulators will be utilized to learn and perform the programming tasks. Basic shop math knowledge rerquired. $400.00 
-0.0
-
-MEC120
-
-In this 30 hour course students will learn to use the language to operate CNC lathe machines. In addition to these dates, an aditional Saturday will be needed to compleate review and final. 
-0.0
-
-MEC126
-
-National Institute of Metalworking Skills (NIMS) Certification Test for CNC Lathe Machine Operator. $75.00 
-0.0
-
-MEC129
-
-National Institute of Metalworking Skills (NIMS) Certification Test for CNC Mill Machine Operator - $75.00 
-0.0
-
-MEC130
-
-American Welding Society (AWS) Certification testing - $500.00
-0.0
-
-MEC133
-
-This course provides the student the opportunity to become certified in IPC Rework and Repair. Learning the procedures common to rework, repair, and modification, offers companies money saving alternatives. 
-0.0
-
-MEC136
-
-A computer aid design software most commonly used by machine technology professionals. This course will cover creating 2D drawings and part programming using Mastercam to create CNC code for Machining Centers. $400.00 
-0.0
-
-MEC138
-
-Requirements for Soldered Electrical and Electronic Assemblies. Recertification is necessary every 2 years to keep certification current. 
-0.0
-
-MEC139
-
-Acceptability of Electronic Assemblies. Recertification is necessary every 2 years to keep certification current. 
-0.0
-
-MEC140
-
-Requirements for Soldered Electrical and Electronic Assemblies. Students will learn the requirements of J-STD-001 and related standards as they apply to operators and inspectors involved in the assembly of products. 
-0.0
-
-MEC141
-
-This course provides the student the introduction and overview of the rework and repair procedures of printed boards and electronic assemblies. Students will be given a compleation certificate, testing for IPC is not included in this class. 
-0.0
-
-MEC146
-
-This Course will cover 3D Solids creation from 2D wireframe geometry, 2D High Speed Dynamic toolpaths and its uses, Basic plane creation and manipulation. This is an advanced Mastercam course for students who already have taken Mastercam (MEC136) or who have previous Mastercam Experience. $400.00 
-0.0
-
-MEC211
-
-Participants will learn the basics of SMAW in accordance with the AWS (American Welding Society) D1.1 standard. Topics covered include weld terminology, Oxyfuel welding setup, Arc welding processes and safety, OSHA standards, visual inspection as well as several types of welds. Participants will also be introduced to GMAW and GTAW. AWS certification is offered to those students who pass qualification. Passing of the AWS 3G and 4G 1" testing also qualifies the student for the New York City welding license. Training is taught in a blended format of 180 hours of classroom and lab, with an additional online learning component. All books and materials included. Each student will be given a jacket, and gloves. Certification fee not included. 
-0.0
-
-MEC212
-
-This course will cover the overall operation of a CNC machine. Topics include safety, measurement tools, processes, production, setup, loading tools, offsets, developing and loading a program, and inspecting a part. Training is taught in a blended format of 180 hours of classroom and lab, with an additional online learning component. Additionally, after successful completion of all class testing, the student will receive NIMS Mill Operator 1 and CNC Lathe Operator 1 certificate, the nationally recognized certification, National Institute for Metalworking Skills certification. All necessary books and materials are included. 
-0.0
-
-MEC213
-
-Partcipants will learn GTAW in accordance with the American Welding Society (AWS) standard. Topics covered include welding terminology, welding setup, welding processes, safety, and visual inspection. Students should have welding experience or have taken MEC211. 
-0.0
-
-MEC214
-
-This introductory course is designed for individuals responsible for the upkeep of automated production/assembly lines. It provides the technician with basic tools for the analysis and diagnosis phases of the troubleshooting process thus reducing costs associated with prolonged downtime. Specifically designed for career paths such as entry-level Mechatronics Technicians, Matintenance Mechanics (with little to no experience with programmable logic controllers), and Engineers ( with little to no experience with programmable logic controllers). 
 0.0
 
 MED111
@@ -3902,11 +3787,6 @@ NUR275
 Nursing: Past, Present & Future
 Explores the historical development of professional nursing and impact of past, current, and future trends in nursing practice. Study of the legal, ethical, political, and leadership roles in nursing are included as is the empowerment of professional nursing practice. Activities are carried out to support employment and further nursing education. No prerequisite. Offered on: A-G / 1 cr. hr. 
 1.0
-
-NURTRC
-
-Upon completion of NUR125, students are awarded an additional 8.5 credits for advanced placement as LPN. 
-8.5
 
 OFT101
 Basic Keyboarding
@@ -5423,11 +5303,6 @@ Infection Control Workshop
 Meets the training requirements of Chapter 786 of the Education Laws of 1992, as amended, which established a new requirement for all dentists, dental hygienists, licensed practical and registered nurses, optometrists, and podiatrists. The law states that these professionals who completed course work or training in infection control on or before July 1, 1994, must update this information every four years thereafter, and attest compliance to the State Education Department with every application. All physicians, physician assistants and special assistants must attest compliance to the Department of Health. The required documentation will be supplied to all participants. Please bring your license/ permit/control or certificate number to the workshop. (3 hours). Campus locations vary by semester. 
 0.3
 
-XAH160
-
-What messages do your actions and words send to your child? Actions speak louder than words. Learn the facts about harmful effects of drugs. Teach different ways to say no. 
-0.0
-
 XAH200
 Community CPR Recertification
 Community CPR is a review course for students who are already certified and wish to certification. A lab fee of $15.00 will be collected. (1 meeting). Campus locations vary by semester. 
@@ -5483,56 +5358,6 @@ Pharmacy Observation
 This 27-hour course provides students with an authentic view of the pharmacy technician's role in a retail setting. 
 0.0
 
-XAP102
-
-Introduce yourself to Apple’s tablet technology. Learn how to use the basic features, download apps, and set up e-mail and fill your bookshelf. 
-0.0
-
-XAP103
-
-Imovie makes it easy to turn your home movies into your favorite films. Simple video editing, add music, transitions and type, create movie trailers or news segments. Share your movie anywhere. 
-0.0
-
-XAP104
-
-This course is designed the VIP (visual illiterate person) how to create professionally designed forms of visual communication using the 4 principles of graphic design. In this class we will explore simple techniques to create eye catching postcards, newsletters, posters, websites, invitations, stationary, business cards, logos and more. 
-0.0
-
-XAU110
-
-With ever more complex diagnostic problems facing the advanced diagnostic technician, a tool to get to the real cause of the problem has never been more valuable. Only with an oscilloscope do you have the ability to diagnose these complex faults. This one-day blended classroom and hands-on course will cover the theory and operation of automotive oscilloscopes. The hadns-on portion of this class will include performing oscilloscope test functions including relative compression testing, current ramping, ignition system testing, cam-crank correlation, MAF testing and more. This class is designed around the Pico Scope platform but applies to Sanp-on, Autel and other automotive oscilloscopes. Scope owners are encouraged to bring their own scope. All tools and equipment will be supplied. 
-0.0
-
-XAU111
-
-Hybrid Electric Vehicles are here to stay. Making Hybrid vehicles a part of your business is essential. This course will cover what you need to service, diagnose and repair these vehicles and ultimately add a new stream of revenue to your business. This class is blended theory and hands-on course. 
-0.0
-
-XAU150
-
-Automotive Service Excellence (ASE) exams offer the automotive service technician the ability to achieve a credential thiat is nationally recognized. The ASE exam is a stackable and transferrable certification that offers the opportunity for higher earning potential within the automotive industry. This course will offer test taking strategies, resources and preparation for taking any of the ASE automotive certification tests. 
-0.0
-
-XAU160
-
-A great follow-up to the part one class (intro to specialized automotive electronics) for the person looking to take their automotive electrical troubleshooting skills further. This blended coursewith lecture/lab components, will cover reading of wiring diagrams (schematics) and diagnostic strategy of various electrical accessories found on the car. Students will practice using the skills covered in the part one class, building on that class by testing and diagnosing electrical circuits on shop cars, using on-line service informtin and test equipment. All equipment will be provided, but students are encouraged to bring their own digital test meters and tes lights if they like. 
-0.0
-
-XAU170
-
-This is a blended lecture/lab course for anyone wanting to learn how electrical circuits in an automobile work. A great class for the beginner just starting out in the field, or for current technicians looking to branch out into electrical diagnosis. Emphasis will be learning circuit behavior and use of digital test meter. Students will practice building cirucuits on project boards for testing. Series and parallel circuitry will be covered as well as beginning diagnostic strategy. Stiudents may bring their own meters, but class will provide one if needed. 
-0.0
-
-XAU180
-
-A great follow-up to the part one class (intro to specialized automotive electronics) for the person looking to take their automotive electrical troubleshooting skills further. This blended coursewith lecture/lab components, will cover reading of wiring diagrams (schematics) and diagnostic strategy of various electrical accessories found on the car. Students will practice using the skills covered in the part one class, building on that class by testing and diagnosing electrical circuits on shop cars, using on-line service informtin and test equipment. All equipment will be provided, but students are encouraged to bring their own digital test meters and tes lights if they like. 
-0.0
-
-XAV101
-
-Basic understanding of safety equipment and current regulations. Job opportunities drones create. New technology and what the future holds with drones. Keeping up with local and federal laws and regulations. 
-0.0
-
 XBC101
 Blueprint Read: Const Trade
 This course will introduce trades peole to the fundamentals of understanding the information provided on construction drawings. This course will cover interpretation of architectural, mechanical, electrical, and site plans and the coordination between them. Students will dissect a working set of commercial plans as well as be encouraged to bring their own plans for the class to analyze as a group. The differences between schematic drawings, construction drawings, shop drawings and as-built drawings will be discussed. 
@@ -5552,11 +5377,6 @@ XBM107
 Management & Leadership Skills
 Leadership in the workplace refers to the ability to guide others toward institutional goals. Learn why leadership is important; how to identify various leadership strategies; how to employ motivational strategies; problem solving techniques; and the importance of team building 
 0.9
-
-XBM108
-
-Learn to develop and maintain positive relationships. You will learn the skills of listening, demonstrating sensitivity, setting priorities, asking questions, and responding tactfully. 
-0.0
 
 XBM109
 Customer Service
@@ -5583,21 +5403,6 @@ Virtual interviewing skills
 Interviewing is no longer solely an in-person experience; many employers are using the Web to conduct interviews at a distance. Learn how to respond effectively to questions and modify behaviors that may detract from your candidacy. (2 meetings). Campus locations vary by semester. 
 0.0
 
-XBM132
-
-Are you interested in working with animals? Learn what it takes and how to prepare to work in a veterinary office or hospital. 
-0.0
-
-XBM133
-
-Warehousing • Receiving • Shipping • Inventory Movement and traceability • FIFO • Streamlining the picking process • Best practice in measurement • Warehouse safety 
-0.0
-
-XBM139
-
-Are you interested in working in health care or energy-related industries? Professionals working in some of the most high-demand fields today will help you match your interests and skills to jobs in these fields. 
-0.0
-
 XBM140
 The Dov S-S Simens Hollywood Film Sch
 Want to produce, write, finance, direct and/or distribute a feature film? Then this is the course! Will Smith and Guy Ritchie attended, as did Oscar nominees Queen Latifah and Quentin Tarantino. In one intensive weekend, with Dov S-S Simens, discover how on day 1 (Saturday: Filmmaking) to take your idea, procure a script, budget and schedule it, hire talent and crew, rent equipment, shoot, edit and obtain your final print. On day 2 (Sunday: Film Business) learn how to attend film festivals, win awards, distribute and generate revenues from theatrical, foreign, video and cable industries. All attendees receive a Filmmaker's Workbook, a Producer's Diploma, and Certificate of Completion. Film budgets from $500 to $5,000,000 are covered. Launch your career today! Transportation to New York City not included. Call 451-4114 for additional information. Campus locations vary by semester. 
@@ -5616,41 +5421,6 @@ Learn how to develop and deliver effective presentations. Public speaking and pr
 XBM144
 Managing Disagreement
 Learn how to manage conflict productively using role plays, small group exercises and class discussions. After this workshop, you will be able to: (1) recognize and define conflict; (2) compare and contrast the four major conflict styles; (3) recognize personality types with which you may clash; (4) develop specific strategies for managing conflict; and (5) develop communication skills for managing conflict. 
-0.0
-
-XBM150
-
-This is a group of shorter communication courses put together for a full skills package. Included in the course is: Communicatino in Action Persuasive Communications Effective Communication 
-0.0
-
-XBM152
-
-This course will cover: Business to Business Sales Building partnering relationships with potential customers Theories of human motivation and their relationship to buying behavior Techniques involved in selling Technologies that facilitate and support salespeople and the functions within an organization Customer service and sales 
-0.0
-
-XBM156
-
-Persuasive Communication • Introduction to Effective Communication • Creating a Powerful First Impression • Developing and Maintaining Rapport • Listening Skills • Displaying Sensitivity • Asking Questions • Demonstrating Confidence and Control at Anytime • Providing Tactful Feedback • Overcoming Roadblocks • Persuasive Communication Exercise 
-0.0
-
-XBM160
-
-This course consists of four seminars. Purchasing management is becoming an increasingly critical component of any growing organization. This class teaches the necessary skill sets to master this responsibility, negotiate better deals and reduce risk and spend within their organization on an enterprise basis. The student will be able to perform the various responsibilities in purchasing management and operate with a "best practice" mindset and structure. Seminar 2-4 will be offered during the academic year. The text is provided. Seminar 1: Purchase Management 101 Define the Supply Chain Purchasing Management Responsibilities Overview Raising the Bar in Purchasing Management Foreign Sourcing versus Domestic Purchasing Overview Challenges in managing Risk and Costs in Supply Chain Insurance Considerations in Procurement 
-0.0
-
-XBM161
-
-Foreign sourcing in Detal Near sourcing options Developing landed Cost Models Issues in Importing Regulations and Managing US Customs (CBP) PO Management Opportunities Developing Imp SOP's Managing Import Customhouse Brokers and Carriers 
-0.0
-
-XBM180
-
-Learn the skills necessary to develop a professional resume to highlight your skills and experience. You will also learn how to tailor your resume to specific employment opportunities. 
-0.0
-
-XBM190
-
-Production Planning and Control Course topics: • Principles of Operation and productivity • Operation strategy for competitive advantage • Forecasting demand • Process strategy and capacity planning • Material Handling • Supply chain management • Materials management: inventory management and problems • Production Planning: Just-in-time systems, lean manufacturing. • Master Production Planning and Materials requirement planning • Production Planning: Line balancing methods (Heuristic and Stochastic) • Production Planning: Aggregate scheduling, shop loading, sequencing 
 0.0
 
 XBM208
@@ -5686,66 +5456,6 @@ Learn how to construct an effective operating budget and stick to it! Major expe
 XBM216
 Grant Writing
 Learn the "how tos" for researching and responding to requests for Proposals (RFP). Typical funding sources and resources will be covered, along with the components of a strong proposal. 
-0.0
-
-XBM222
-
-I. Definition II. Understanding and Supporting Different Cultural Diversities III. Communicating with people of Different Cultures 
-0.0
-
-XBM225
-
- 1. Improving Efficiency and Productivity 2. Six Sigma • History of Six Sigma • Seminal Cases 3. Lean Manufacturing and its History • Just In Time • Continuous Quality Improvement and its History 4. Time and Motion Studies • Fredrick Taylor and Frank and Lillian Gilbreth • Seminal Cases 5. Tracking and monitoring • Use of statistical data to track and evaluate 1. Data collection 2. Data recording 3. Data presentation (graphing) 6. Applying concepts to specific organizational goals 
-0.0
-
-XBM235
-
-Production Planning and Control Course topics: • Principles of Operation and productivity • Operation strategy for competitive advantage • Forecasting demand • Process strategy and capacity planning • Material Handling • Supply chain management • Materials management: inventory management and problems • Production Planning: Just-in-time systems, lean manufacturing. • Master Production Planning and Materials requirement planning • Production Planning: Line balancing methods (Heuristic and Stochastic) • Production Planning: Aggregate scheduling, shop loading, sequencing 
-0.0
-
-XBM240
-
-Root Cause Analysis Training · Continuous improvement · Understanding processes · Process flow · Measurements, trends, and facts · Root cause analysis · Why analysis · Fishbone diagram · Problem solving · Corrective and preventive action · Failure mode and effects analysis – (FEMA) 
-0.0
-
-XBM250
-
-US Export Controls/Export Regulations Training Course Topics: • Export Administration Regulations (EAR). • Information exporters need to know to comply with U.S. export control requirements on commercial goods. • Focuses on what items and activities are subject to the EAR • Steps to take to determine the export licensing requirements for your item • How to determine your export control classification number (ECCN) • When you can export or re-export without applying for a license • Export clearance procedures and record keeping requirements • Export Management System (EMS) concepts. 
-0.0
-
-XBM300
-
-Creating a Culture that Emphasizes and Reinforce Staff Worth, (1.5 hrs.) Transforming an Organizational Culture begins with a conversation about what a culture of value might look like. What would be different? What would be retained? A culture that emphasizes the value of its staff is both a top down process that needs endorsement from the Executive level as well as an alluring new organizational vision. This new vision should invite and inspire heartfelt 'buy in' from a critical mass off employees who will spread their enthusiasm. The goal involves communication and support as every employee is involved in a cultural transition that must reconcile the delicate balance between staff accountability and employee worth both as valued staff -and as individuals. 
-0.0
-
-XBM301
-
-Recognizing Your Staff (1.5 hrs.) Recognition is one of the most motivating actions that someone can offer. Yet this ostensibly simple skill is more instinctive for some than others. Learn how to recognize your diverse staff through small but powerful actions. Look for ‘teachable moment’ Simple words of praise, listening to others and including them in events and meetings are actions of recognition that take a little bit of time, but go a long way. Learn ways to recognize your staff with the resources that you have. All employees must rightfully believe that their ideas matter. While not everyone can sit at the decision table, all employees should know that their suggestion have been heard, carefully considered and represented. Effective communication is imperative as everyone in the organization will need to share accurately the news about the improved culture. This program will discuss the importance of a paradigm shift involving everyone as they consider and reconsider expectations within this new culture and reflect upon existing organizational structure and work systems. 
-0.0
-
-XBM310
-
-This course consists of four seminars. This course will outline the challenges of managing your responsibilities in importing and exporting in a global supply chain. Operations, logistics, sales, purchasing, legal, supply chain, financial and trade compliance areas will all be addressed. You will walk away with a fundamental overview of what it takes to work in a global supply chain and understand the basic skill set requirements. You will be able to perform the various responsiblities in importaing and exporting and navigate the challenges and risks inherent in global supply chain. Students are requiredto attend all four seminars in order to receive their certificate of completion. Seminars 2-4 will be offered during the academic year. The text is provided. Seminar 1: Overview of Global Trade Challenges Driving Risk and Spend Out of the Supply Chain Options in Gaining Competitive Advantage Global sourcing Issue Documentation, Operations, and Procedures in Global Trade 
-0.0
-
-XBM311
-
-Importing Review Import Regulations C-TPAT Program Lowering Import Costs PO Management HTSUS ACE 
-0.0
-
-XBM340
-
-This course will cover the basic principles of Professional Selling Skills. You will learn the techniques for building comfort, rapport and trust when meeting with prospects. You will also learn how to use proven questioning skills to uncover the buyers' wants and needs, and how to position your offering as a solution to these wants and needs. Finally, you will learn how to overcome last minute objections and how to effectively closethe deal. At the end of this course you will be proficient at selling solutions to your customers that provide real value, both to the customer and to your business. 
-0.0
-
-XBM350
-
-Lean Six Sigma Yellow Belt Training • Lean and Six Sigma? • The DMAIC process and the yellow belt • The SIPOC diagram • Cost of poor quality (COPQ) • Basic statistics • Lean concepts • Process mapping and value stream mapping • CandE Matrix • Failure modes and effects analysis • Prioritizing with data (Pareto Chart) • Standardized work • Error proofing (or Poka Yoke) • TWI overview • The Control Plan 
-0.0
-
-XBM500
-
-Module 5 of the DDI Leadership Academy
 0.0
 
 XBO100
@@ -5863,11 +5573,6 @@ Vegetable Plants from Seed
 You will start your own tomato, pepper and eggplants from seed in the first session, transplant them the second session and then bring home a flat of mixed plants for your garden at the end of the third session. 
 0.0
 
-XBO126
-
-You will start your own impatiens, marigolds and petunias from seed in the first session, transplant them the second session and then bring home a flat of mixed blooming plants for your flower bed at the end of the third session. 
-0.0
-
 XBS050
 GED Module I
 County Community College now offers a 30-hour literacy (GED) and college preparation course on all campuses. This course is designed for students 18 years of age and over. The Grant Campus in Brentwood and the Ammerman campus in Selden offer both day and evening classes. The Eastern Campus, in Riverhead offers evening classes. Classes are also offered at the Sayville Center. For additional information and room locations, call (631) 451-4114. Campus locations vary by semester. 
@@ -5881,21 +5586,6 @@ County Community College now offers a 30-hour literacy (GED) and college prepara
 XBS064
 GED Test
 GED Test
-0.0
-
-XBS065
-
-Save time and money by registering once for the full academic year, (fall, wintersession, spring, and summer). This complete program provides the student with individualized assessment, 180 hours of instruction, computer lab time, practice tests and a guaranteed seat for the GED exam when you are ready. 
-0.0
-
-XBS066
-
-Suffolk County Community College now offers a 90-hour literacy (GED) and college preparation course on all campuses. Students must pay a $150.00 tuition charge to participate. This fee entitles the student to 90 hours of instruction and lab time. 
-0.0
-
-XBS067
-
-Begin preparing for the Test Assessing Secondary Completion (TASC) so that you can earn your High School Equivalency (HSE) faster. This course will prepare you for the full preparation course offered during the fall semester. This 18-hour head start course will include diagnostic tests, basic math practice, and reading comprehension skill development through non-fiction reading. 
 0.0
 
 XBS103
@@ -6187,11 +5877,6 @@ XCG108
 Intro to Abode Illustrator
 Illustrator is one of the most popular and widely used software applications for illustration and technical drawing. Through demonstration and hands-on exercises, students will learn to navigate the tool box, control Bezier curves and use type and color. Document layout and importing and exporting images will allow the students to create varied pieces of graphic art. (5 meetings). Campus locations vary by semester. 
 1.5
-
-XCG116
-
-Learn about basic work flow of Lightroom. Creating catalogs, importing images, compiling collections, retouching and exporting will be covered. We will also discuss RAW vs. JPG files. Students will need to bring a thumb drive with their photos and heave matered basic computer skills. (4 meetings) 
-0.0
 
 XCG200
 Quark Express Intermediate
@@ -7226,26 +6911,6 @@ Developed by the US Green Building Council (USGBC), the LEED (Leadership in Ener
 XSC119
 Energy Rater
 This training will cover the basic principles of building science, efficacy of building and insulating materials and energy efficiency. Hands-on efficiency testing experiences will be provided. 
-0.0
-
-XSC120
-
-Solar Power for the POWER Program
-0.0
-
-XSC126
-
-This course is designed for students registered for BIO132, Anatomy and Physiology, (AandP) II and need to review the essentials of BIO 130, AandP I,. This course will cover a basic review of anatomy, including major tissue types, body cavities, body membranes, skeletal uscle physiology, cellular respiration, and relevant histology. 
-0.0
-
-XSC130
-
-This course is designed to provide college STEM students the basics of organic chemistry. Topics to be covered include organic acid/base chemistry, functinoal groups, molecular orbital theory, Lewis structures, valence shell electron pair repulsion theory (VSPER), hybridzation theory, resonance, and organic nomenclature. These topics will provide students witha basic understanding of molecular structure, and challenge them to develop the critical abstract thinking skills needed for this discipline. Prerequisite: high school chemistry. Students are required to purchase the textbook, Organic Chemistry Prep., by Veljko Dragojlovic. (ISBN 978-1478287612) (5 meetings) 
-0.0
-
-XSC350
-
-Through this dual certification energy auditor and envelope shell class, learn the basic principles of building science, the efficacy of building improvements, how to quantify building performance and prescribe improvements to help tighten the building envelope (shell). Also learn how to stop uncontrolled air leakage and optimize comfort and durability through insulation and HV/AC performance. Hands-on field efficiency testing experiences will be provided. The tuition includes all required materials. This course is aligned with the content covered by Building Performance Institute’s (BPI) nationally recognized exams. 
 0.0
 
 XSH108

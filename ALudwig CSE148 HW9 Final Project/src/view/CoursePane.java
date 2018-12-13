@@ -127,8 +127,8 @@ public class CoursePane {
 
 	private void buildPane() {
 		coursePane.add(courseTitleShortField, 0, 0);
-		coursePane.add(courseTitleLongField, 1, 0);
-		coursePane.add(courseDescriptionField, 0, 1);
+		coursePane.add(courseTitleLongField, 0, 1);
+		coursePane.add(courseDescriptionField, 1, 0);
 		coursePane.add(facultyIDField, 0, 2);
 		coursePane.add(textbookISBNField, 1, 1);
 		coursePane.add(classroomField, 1, 2);
@@ -145,16 +145,16 @@ public class CoursePane {
 		return courseTitleShortField;
 	}
 
-	public void setCourseTitleShortField(TextField courseTitleShortField) {
-		this.courseTitleShortField = courseTitleShortField;
+	public void setCourseTitleShortField(String title) {
+		this.courseTitleShortField.setText(title);
 	}
 
 	public TextField getCourseTitleLongField() {
 		return courseTitleLongField;
 	}
 
-	public void setCourseTitleLongField(TextField courseTitleLongField) {
-		this.courseTitleLongField = courseTitleLongField;
+	public void setCourseTitleLongField(String title) {
+		this.courseTitleLongField.setText(title);
 	}
 
 	public TextField getCourseDescriptionField() {
@@ -165,30 +165,38 @@ public class CoursePane {
 		return facultyIDField;
 	}
 
-	public void setCourseDescriptionField(TextField courseDescriptionField) {
-		this.courseDescriptionField = courseDescriptionField;
+	public void setCourseDescriptionField(String desc) {
+		this.courseDescriptionField.setText(desc);
 	}
 
-	public void setFacultyIDField(TextField facultyIDField) {
-		this.facultyIDField = facultyIDField;
+	public void setFacultyIDField(String id) {
+		this.facultyIDField.setText(id);
 	}
 
 	public TextField getPriceField() {
 		return textbookISBNField;
 	}
 
-	public void setTextbookISBNField(TextField textbookISBNField) {
-		this.textbookISBNField = textbookISBNField;
+	public void setTextbookISBNField(String isbn) {
+		this.textbookISBNField.setText(isbn);
 	}
 
 	public TextField getClassroomField() {
 		return classroomField;
 	}
 
-	public void setClassroomField(TextField classroomField) {
-		this.classroomField = classroomField;
+	public void setClassroomField(String classroom) {
+		this.classroomField.setText(classroom);
+	}
+	
+	public void setNumberOfCredits(String credits) {
+		this.credits.setText(credits);
 	}
 
+	public void setBuildingBox(String building) {
+		buildingBox.setValue(building);
+	}
+	
 	public void clearAllFields() {
 		courseTitleShortField.clear();
 		courseTitleLongField.clear();
@@ -196,6 +204,8 @@ public class CoursePane {
 		facultyIDField.clear();
 		textbookISBNField.clear();
 		classroomField.clear();
+		credits.clear();
+		buildingBox.setValue("Building Name");
 	}
 
 	public double getCredits() {

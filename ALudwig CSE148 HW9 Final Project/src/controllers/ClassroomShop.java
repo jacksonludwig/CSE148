@@ -64,9 +64,12 @@ public class ClassroomShop {
 			} catch (Exception e1) {
 				roomNumber = "X" + classroomPane.getRoomNumber();
 			}
-			if (classroomBag.findByRoom(roomNumber) != null) {
+			Classroom classroom = classroomBag.findByRoom(roomNumber);
+			if (classroom != null) {
 				if (Alerts.showItemFound()) {
-					classroomPane.clearAllFields();
+					classroomPane.setNumberOfComputers(String.valueOf(classroom.getNumberOfComputers()));
+					classroomPane.setNumberOfSeats(String.valueOf(classroom.getNumberOfSeats()));
+					classroomPane.setProjectorOrNotField(String.valueOf(classroom.isProjectorOrNot()));
 				}
 			} else {
 				if (Alerts.showItemNotFound()) {
@@ -115,9 +118,11 @@ public class ClassroomShop {
 				roomNumber = "X" + classroomPane.getRoomNumber();
 			}
 			if (classroomBag.findByRoom(roomNumber) != null) {
-				classroomBag.deleteByRoom(roomNumber);
+				Classroom classroom = classroomBag.deleteByRoom(roomNumber);
 				if (Alerts.showItemDeleted()) {
-					classroomPane.clearAllFields();
+					classroomPane.setNumberOfComputers(String.valueOf(classroom.getNumberOfComputers()));
+					classroomPane.setNumberOfSeats(String.valueOf(classroom.getNumberOfSeats()));
+					classroomPane.setProjectorOrNotField(String.valueOf(classroom.isProjectorOrNot()));
 				}
 			} else {
 				if (Alerts.showItemNotDeleted()) {

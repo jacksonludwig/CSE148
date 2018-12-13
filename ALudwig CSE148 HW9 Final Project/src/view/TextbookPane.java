@@ -119,16 +119,16 @@ public class TextbookPane {
 		return titleField;
 	}
 
-	public void setTitleField(TextField titleField) {
-		this.titleField = titleField;
+	public void setTitleField(String title) {
+		this.titleField.setText(title);
 	}
 
 	public TextField getIsbnField() {
 		return isbnField;
 	}
 
-	public void setIsbnField(TextField isbnField) {
-		this.isbnField = isbnField;
+	public void setIsbnField(String isbn) {
+		this.isbnField.setText(isbn);
 	}
 
 	public TextField getFirstName() {
@@ -139,20 +139,20 @@ public class TextbookPane {
 		return authorLastField;
 	}
 
-	public void setAuthorFirst(TextField authorFirstField) {
-		this.authorFirstField = authorFirstField;
+	public void setAuthorFirst(String name) {
+		this.authorFirstField.setText(name);
 	}
 	
-	public void setAuthorLast(TextField authorLastField) {
-		this.authorLastField = authorLastField;
+	public void setAuthorLast(String name) {
+		this.authorLastField.setText(name);
 	}
 
 	public TextField getPriceField() {
 		return priceField;
 	}
 
-	public void setPriceField(TextField priceField) {
-		this.priceField = priceField;
+	public void setPriceField(String price) {
+		this.priceField.setText(price);
 	}
 
 	public void clearAllFields() {

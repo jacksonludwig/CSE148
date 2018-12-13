@@ -11,7 +11,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 
-
 public class ClassroomPane {
 	private static final int BUTTON_WIDTH = 120;
 	private static final int BUTTON_HEIGHT = 40;
@@ -76,11 +75,7 @@ public class ClassroomPane {
 	}
 
 	public String getRoomNumber() {
-		try {
-			return getBuildingName().charAt(0) + roomNumberField.getText();
-		} catch (Exception e) {
-			return "X" + roomNumberField.getText();
-		}
+		return roomNumberField.getText();
 	}
 
 	public String getNumberOfSeats() {
@@ -126,7 +121,7 @@ public class ClassroomPane {
 	public HBox getButtonBox() {
 		return buttonBox1;
 	}
-	
+
 	public HBox getButtonBox2() {
 		return buttonBox2;
 	}
@@ -142,8 +137,8 @@ public class ClassroomPane {
 		classroomPane.add(numberOfSeatsField, 0, 1);
 		classroomPane.add(numberOfComputersField, 0, 2);
 		classroomPane.add(projectorOrNotField, 1, 1);
-     	classroomPane.add(buttonBox1, 0, 3, 3, 2);
-     	classroomPane.add(buttonBox2, 0, 5, 3, 2);
+		classroomPane.add(buttonBox1, 0, 3, 3, 2);
+		classroomPane.add(buttonBox2, 0, 5, 3, 2);
 	}
 
 	public Pane getClassroomPane() {
@@ -154,8 +149,8 @@ public class ClassroomPane {
 		return roomNumberField;
 	}
 
-	public void setRoomNumberField(TextField roomNumberField) {
-		this.roomNumberField = roomNumberField;
+	public void setRoomNumberField(String room) {
+		this.roomNumberField.setText(room);
 	}
 
 	public TextField getSeats() {
@@ -166,20 +161,20 @@ public class ClassroomPane {
 		return numberOfComputersField;
 	}
 
-	public void setNumberOfSeats(TextField numberOfSeatsField) {
-		this.numberOfSeatsField = numberOfSeatsField;
+	public void setNumberOfSeats(String numSeat) {
+		this.numberOfSeatsField.setText(numSeat);
 	}
 
-	public void setNumberOfComputers(TextField numberOfComputersField) {
-		this.numberOfComputersField = numberOfComputersField;
+	public void setNumberOfComputers(String numComp) {
+		this.numberOfComputersField.setText(numComp);
 	}
 
 	public TextField getProjector() {
 		return projectorOrNotField;
 	}
 
-	public void setProjectorOrNotField(TextField projectorOrNotField) {
-		this.projectorOrNotField = projectorOrNotField;
+	public void setProjectorOrNotField(String text) {
+		this.projectorOrNotField.setText(text);
 	}
 
 	public void clearAllFields() {
@@ -187,6 +182,7 @@ public class ClassroomPane {
 		numberOfSeatsField.clear();
 		numberOfComputersField.clear();
 		projectorOrNotField.clear();
+		buildingBox.setValue("Building Name");
 	}
 
 }

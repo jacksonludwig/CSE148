@@ -2,6 +2,7 @@ package controllers;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.NoSuchElementException;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -197,22 +198,140 @@ public class StudentShop {
 		});
 
 		studentPane.getSearchBtn().setOnAction(e -> {
-			String id = Alerts.searchForPerson();
-			Student searchedStudent = null;
+			String id;
 			try {
-				searchedStudent = (Student) studentBag.findById(id);
-			} catch (ClassCastException e1) {
-				Alerts.showWrongPerson();
+				id = Alerts.searchForPerson();
+			} catch (NoSuchElementException e2) {
+				id = null;
+			}
+			if (id != null) {
+				Student searchedStudent = null;
+				try {
+					searchedStudent = (Student) studentBag.findById(id);
+				} catch (ClassCastException e1) {
+					Alerts.showWrongPerson();
+				}
 
+				if (searchedStudent != null) {
+					coursesToTakeList.clear();
+					coursesTakingList.clear();
+					coursesTakenList.clear();
+					if (Alerts.showPersonFound()) {
+						studentPane.clearAllFields();
+					} else {
+						studentPane.setFirstNameField(searchedStudent.getFirstName());
+						studentPane.setLastNameField(searchedStudent.getLastName());
+						studentPane.setPhoneNumberField(searchedStudent.getPhoneNumber());
+						studentPane.setIdField(searchedStudent.getId());
+						studentPane.setMajorBox(searchedStudent.getMajor());
+
+						for (int i = 0; i < searchedStudent.getCoursesToTake().size(); i++) {
+							String course = searchedStudent.getCoursesToTake().get(i);
+							allCoursesList.remove(course);
+							coursesToTakeList.add(course);
+						}
+						for (int i = 0; i < searchedStudent.getCoursesTaking().size(); i++) {
+							String course = searchedStudent.getCoursesTaking().get(i);
+							coursesTakingList.add(course);
+						}
+						int failedCourseCount = 0;
+						for (int i = 0; i < searchedStudent.getCoursesTaken().size(); i++) {
+							String course = searchedStudent.getCoursesTaken().get(i);
+							if (course.substring(7).equals("F")) {
+								coursesToTakeList.add(course.substring(0, 6));
+								failedCourseCount++;
+							} else {
+								coursesTakenList.add(course);
+							}
+
+						}
+						adjustGpa(coursesTakenList);
+						if (failedCourseCount > 0) {
+							Alerts.showFailedCourseAutoMoved(failedCourseCount);
+						}
+						sortLists();
+					}
+				} else {
+					Alerts.showPersonNotFound();
+				}
 			}
 
-			if (searchedStudent != null) {
-				coursesToTakeList.clear();
-				coursesTakingList.clear();
-				coursesTakenList.clear();
-				if (Alerts.showPersonFound()) {
+		});
+
+		studentPane.getUpdateBtn().setOnAction(e -> {
+			String first = studentPane.getFirst();
+			String last = studentPane.getLast();
+			String phoneNumber = studentPane.getPhoneNumber();
+			String major = studentPane.getMajor();
+
+			String id;
+			try {
+				id = Alerts.searchForPersonUpdate();
+			} catch (NoSuchElementException e2) {
+				id = null;
+			}
+			if (id != null && studentBag.findById(id) != null) {
+				Student student = (Student) studentBag.deleteById(id);
+
+				if (!(first.equals(""))) {
+					student.setFirstName(first);
+				}
+				if (!(last.equals(""))) {
+					student.setLastName(last);
+				}
+				if (!(phoneNumber.equals(""))) {
+					student.setPhoneNumber(phoneNumber);
+				}
+				if (major != "" || major != null) {
+					student.setMajor(major);
+				}
+				if (coursesToTakeList.size() > 0) {
+					ArrayList<String> coursesToTake = new ArrayList<>();
+					for (int i = 0; i < coursesToTakeList.size(); i++) {
+						coursesToTake.add(coursesToTakeList.get(i));
+					}
+					student.setCoursesToTake(coursesToTake);
+				}
+				if (coursesTakingList.size() > 0) {
+					ArrayList<String> coursesTaking = new ArrayList<>();
+					for (int i = 0; i < coursesTakingList.size(); i++) {
+						coursesTaking.add(coursesTakingList.get(i));
+					}
+					student.setCoursesTaking(coursesTaking);
+				}
+				if (coursesTakenList.size() > 0) {
+					ArrayList<String> coursesTaken = new ArrayList<>();
+					for (int i = 0; i < coursesTakenList.size(); i++) {
+						coursesTaken.add(coursesTakenList.get(i));
+					}
+					student.setCoursesTaken(coursesTaken);
+				}
+				studentBag.insert(student);
+				if (Alerts.showPersonUpdatedWithID(student.getId())) {
 					studentPane.clearAllFields();
-				} else {
+				}
+			} 
+		});
+
+		studentPane.getDeleteBtn().setOnAction(e -> {
+			String id;
+			try {
+				id = Alerts.searchForPersonDelete();
+			} catch (NoSuchElementException e2) {
+				id = null;
+			}
+			if (id != null) {
+				Student searchedStudent = null;
+				try {
+					searchedStudent = (Student) studentBag.deleteById(id);
+				} catch (ClassCastException e1) {
+					Alerts.showWrongPerson();
+				}
+
+				if (searchedStudent != null && Alerts.keepDeletedDataOrNot()) {
+					coursesToTakeList.clear();
+					coursesTakingList.clear();
+					coursesTakenList.clear();
 					studentPane.setFirstNameField(searchedStudent.getFirstName());
 					studentPane.setLastNameField(searchedStudent.getLastName());
 					studentPane.setPhoneNumberField(searchedStudent.getPhoneNumber());
@@ -244,46 +363,10 @@ public class StudentShop {
 						Alerts.showFailedCourseAutoMoved(failedCourseCount);
 					}
 					sortLists();
+				} else {
+					Alerts.showPersonNotFound();
 				}
-			} else {
-				Alerts.showPersonNotFound();
-			}
-		});
-
-		studentPane.getUpdateBtn().setOnAction(e -> {
-//			String title = studentPane.getTitle();
-//			String isbn = studentPane.getIsbn();
-//			String authorFirst = studentPane.getAuthorFirst();
-//			String authorLast = studentPane.getAuthorLast();
-//			double price = studentPane.getPrice();
-//			Student student = new Student(title, isbn, authorFirst, authorLast, price);
-//
-//			Student temp = studentBag.findByTitle(title);
-//			if (temp != null) {
-//				studentBag.deleteByTitle(temp.getTitle());
-//				studentBag.insert(student);
-//				if (Alerts.showItemUpdated()) {
-//					studentPane.clearAllFields();
-//				}
-//			} else {
-//				if (Alerts.showItemNotUpdated()) {
-//					studentPane.clearAllFields();
-//				}
-//			}
-		});
-
-		studentPane.getDeleteBtn().setOnAction(e -> {
-//			String title = studentPane.getTitle();
-//			if (studentBag.findByTitle(title) != null) {
-//				studentBag.deleteByTitle(title);
-//				if (Alerts.showItemDeleted()) {
-//					studentPane.clearAllFields();
-//				}
-//			} else {
-//				if (Alerts.showItemNotDeleted()) {
-//					studentPane.clearAllFields();
-//				}
-//			}
+			} 
 		});
 	}
 
@@ -298,38 +381,44 @@ public class StudentShop {
 			} catch (NullPointerException e) {
 				classCredits = 0;
 			}
-			if (courseAndGrade.substring(7).equals("A")) {
-				totalPoints += (4.0 * classCredits);
-				totalCredits += classCredits;
-			} else if (courseAndGrade.substring(7).equals("B+")) {
-				totalPoints += (3.5 * classCredits);
-				totalCredits += classCredits;
-			} else if (courseAndGrade.substring(7).equals("B")) {
-				totalPoints += (3.0 * classCredits);
-				totalCredits += classCredits;
-			} else if (courseAndGrade.substring(7).equals("C+")) {
-				totalPoints += (2.5 * classCredits);
-				totalCredits += classCredits;
-			} else if (courseAndGrade.substring(7).equals("C")) {
-				totalPoints += (2.0 * classCredits);
-				totalCredits += classCredits;
-			} else if (courseAndGrade.substring(7).equals("D+")) {
-				totalPoints += (1.5 * classCredits);
-				totalCredits += classCredits;
-			} else if (courseAndGrade.substring(7).equals("D")) {
-				totalPoints += (1.0 * classCredits);
-				totalCredits += classCredits;
-			} else {
-				totalPoints += (0.0 * classCredits);
-				totalCredits += classCredits;
+
+			if (classCredits != 0) {
+				if (courseAndGrade.substring(7).equals("A")) {
+					totalPoints += (4.0 * classCredits);
+					totalCredits += classCredits;
+				} else if (courseAndGrade.substring(7).equals("B+")) {
+					totalPoints += (3.5 * classCredits);
+					totalCredits += classCredits;
+				} else if (courseAndGrade.substring(7).equals("B")) {
+					totalPoints += (3.0 * classCredits);
+					totalCredits += classCredits;
+				} else if (courseAndGrade.substring(7).equals("C+")) {
+					totalPoints += (2.5 * classCredits);
+					totalCredits += classCredits;
+				} else if (courseAndGrade.substring(7).equals("C")) {
+					totalPoints += (2.0 * classCredits);
+					totalCredits += classCredits;
+				} else if (courseAndGrade.substring(7).equals("D+")) {
+					totalPoints += (1.5 * classCredits);
+					totalCredits += classCredits;
+				} else if (courseAndGrade.substring(7).equals("D")) {
+					totalPoints += (1.0 * classCredits);
+					totalCredits += classCredits;
+				} else {
+					totalPoints += (0.0 * classCredits);
+					totalCredits += classCredits;
+				}
 			}
+
 		}
-		weightedGpa = (totalPoints / totalCredits);
-		String gpa = String.format("%.2f", weightedGpa);
-		studentPane.setDynamicGpa(Double.parseDouble(gpa));
 		if (totalCredits <= 0 || totalPoints <= 0) {
 			studentPane.setDynamicGpa(0.0);
+		} else {
+			weightedGpa = (totalPoints / totalCredits);
+			String gpa = String.format("%.2f", weightedGpa);
+			studentPane.setDynamicGpa(Double.parseDouble(gpa));
 		}
+
 	}
 
 	public void sortLists() {
