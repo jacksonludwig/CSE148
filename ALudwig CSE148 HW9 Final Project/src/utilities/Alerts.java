@@ -317,12 +317,4 @@ public class Alerts {
 		}
 		return false;
 	}
-	
-//	public static void showPersonFound() {
-//		Alert alert = new Alert(AlertType.INFORMATION);
-//		alert.setTitle("Person search completed");
-//		alert.setContentText("The person's information will now be loaded");
-//		alert.setHeaderText("A Person With This ID Was Found");
-//		alert.showAndWait();
-//	}
 }
