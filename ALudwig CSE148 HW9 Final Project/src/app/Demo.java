@@ -6,6 +6,7 @@ import java.net.URL;
 
 import controllers.ClassroomShop;
 import controllers.CourseShop;
+import controllers.FacultyShop;
 import controllers.MenuBarShop;
 import controllers.StudentShop;
 import controllers.TextbookShop;
@@ -17,6 +18,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import model.College;
 import model.FileSaver;
+import utilities.Alerts;
 
 public class Demo extends Application {
 	private ImageView welcomeImage;
@@ -28,17 +30,13 @@ public class Demo extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		// model
 		College college = new College();
 
-		// view
 		root = new BorderPane();
 
-		// MenuBar shop
 		MenuBarShop menuBarShop = new MenuBarShop(college, root);
 		setWelcomeScreen();
 
-		// textbook shop
 		TextbookShop textbookShop = new TextbookShop(college.getTextbookBag(), menuBarShop, root);
 		
 		ClassroomShop classroomShop = new ClassroomShop(college.getClassroomBag(), menuBarShop, root);
@@ -46,13 +44,17 @@ public class Demo extends Application {
 		CourseShop courseShop = new CourseShop(college.getCourseBag(), menuBarShop, root);
 		
 		StudentShop studentShop = new StudentShop(college.getPersonBag(), college.getCourseBag(), menuBarShop, root);
+		
+		FacultyShop facultyShop = new FacultyShop(college.getPersonBag(), college.getCourseBag(), menuBarShop, root);
 
 		Scene scene = new Scene(root, 1080, 580);
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		primaryStage.setOnCloseRequest(e -> { // this can be used to save the files as well, or alerts, etc.
-			FileSaver.saveAllBags(college.getPersonBag(), college.getClassroomBag(), college.getTextbookBag(),
-					college.getCourseBag(), "savedFiles/allBags.dat");
+			if(Alerts.closeCheck()) {
+				FileSaver.saveAllBags(college.getPersonBag(), college.getClassroomBag(), college.getTextbookBag(),
+						college.getCourseBag(), "savedFiles/allBags.dat");
+			}
 			System.out.println("Closed");
 		});
 	}

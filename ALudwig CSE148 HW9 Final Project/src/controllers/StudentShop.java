@@ -8,7 +8,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
-import model.Course;
 import model.CourseBag;
 import model.PersonBag;
 import model.Student;
@@ -26,11 +25,9 @@ public class StudentShop {
 	private ObservableList<String> coursesTakingList;
 	private ObservableList<String> coursesTakenList;
 	private double weightedGpa;
-	private int credits;
 
 	public StudentShop(PersonBag studentBag, CourseBag courseBag, MenuBarShop menuBarShop, BorderPane root) {
 		weightedGpa = 0;
-		credits = 0;
 		HashSet<String> allCourses = new HashSet<String>();
 		HashSet<String> coursesToTake = new HashSet<String>();
 		HashSet<String> coursesTaking = new HashSet<String>();
@@ -277,7 +274,9 @@ public class StudentShop {
 				if (Alerts.showPersonUpdatedWithID(student.getId())) {
 					studentPane.clearAllFields();
 				}
-			} 
+			} else {
+				Alerts.showPersonNotFound();
+			}
 		});
 
 		studentPane.getDeleteBtn().setOnAction(e -> {
@@ -334,7 +333,18 @@ public class StudentShop {
 					Alerts.showPersonNotFound();
 				}
 			} 
+			
 		});
+		
+		studentPane.getFilterInput().textProperty().addListener(e ->{
+	        String filter = studentPane.getFilterInput().getText();
+	        if(filter == null || filter.length() == 0) {
+	            studentPane.getCoursesList().setPredicate(l -> true);
+	        }
+	        else {
+	            studentPane.getCoursesList().setPredicate(l -> l.contains(filter));
+	        }
+	    });
 	}
 
 	public void adjustGpa(ObservableList<String> coursesWithGrades) {

@@ -306,7 +306,7 @@ public class Alerts {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
 		alert.setTitle("Person Update Complete");
 		alert.setHeaderText("ID " + id + " Has Been Updated.");
-		alert.setContentText("The database has been successfuly updated");
+		alert.setContentText("Press OK to clear textfields or Cancel to keep your data.");
 		Optional<ButtonType> result = alert.showAndWait();
 		if (!result.isPresent()) {
 			return false;
@@ -316,5 +316,37 @@ public class Alerts {
 			return false;
 		}
 		return false;
+	}
+	
+	public static boolean closeCheck() {
+		Alert alert = new Alert(AlertType.CONFIRMATION);
+		alert.setTitle("Program quit initiated");
+		alert.setHeaderText("Would You Like To Save Your Changes?");
+		alert.setContentText("Click OK to save or Cancel to keep the binary files unchanged.");
+		Optional<ButtonType> result = alert.showAndWait();
+		if (!result.isPresent()) {
+			return false;
+		} else if (result.get() == ButtonType.OK) {
+			return true;
+		} else if (result.get() == ButtonType.CANCEL) {
+			return false;
+		}
+		return false;
+	}
+	
+	public static void showPersonNotFoundFaculty() {
+		Alert alert = new Alert(AlertType.ERROR);
+		alert.setTitle("Data search complete");
+		alert.setHeaderText("There Was a Problem Finding Your Item.");
+		alert.setContentText("The ID either does not exist or is from a student.");
+		alert.showAndWait();
+	}
+	
+	public static void showWrongPersonFaculty() {
+		Alert alert = new Alert(AlertType.ERROR);
+		alert.setTitle("Person search completed");
+		alert.setContentText("This ID was found, but it was not applicable for a faculty.");
+		alert.setHeaderText("Please Use the Student Tab to Search For This Person");
+		alert.showAndWait();
 	}
 }
