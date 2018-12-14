@@ -1,4 +1,4 @@
-A100*Ammerman*16*17*false*
+﻿A100*Ammerman*16*17*false*
 S101*Smithtown*24*20*false*
 K102*Kreiling*23*18*false*
 S103*Smithtown*17*12*true*

@@ -94,7 +94,7 @@ public class Classroom implements Serializable{
 		int sectionCount = 0;
 		int count = 0;
 		String projector = "";
-		while (sectionCount < 3) {
+		while (sectionCount < 4) {
 			if (line.charAt(count) == '*') {
 				sectionCount++;
 			}

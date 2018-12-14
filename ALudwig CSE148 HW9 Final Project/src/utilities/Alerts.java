@@ -225,7 +225,7 @@ public class Alerts {
 		Optional<String> result = dialog.showAndWait();
 		return result.get();
 	}
-	
+
 	public static void showPersonNotFound() {
 		Alert alert = new Alert(AlertType.ERROR);
 		alert.setTitle("Data search complete");
@@ -249,7 +249,7 @@ public class Alerts {
 		}
 		return false;
 	}
-	
+
 	public static void showWrongPerson() {
 		Alert alert = new Alert(AlertType.ERROR);
 		alert.setTitle("Person search completed");
@@ -257,7 +257,7 @@ public class Alerts {
 		alert.setHeaderText("Please Use the Faculty Tab to Search For This Person");
 		alert.showAndWait();
 	}
-	
+
 	public static void showFailedCourseAutoMoved(int coursesFailed) {
 		Alert alert = new Alert(AlertType.INFORMATION);
 		alert.setTitle("This student did not pass all of his/her classes");
@@ -265,25 +265,27 @@ public class Alerts {
 		alert.setHeaderText("Failed Classes: " + coursesFailed);
 		alert.showAndWait();
 	}
-	
+
 	public static String searchForPersonUpdate() {
 		TextInputDialog dialog = new TextInputDialog();
 		dialog.setTitle("Person Update Window");
-		dialog.setHeaderText("Use Identification Number to Search Here.\nAny Filled Data Fields Will Be Used In Place Of The Original Data.");
+		dialog.setHeaderText(
+				"Use Identification Number to Search Here.\nAny Filled Data Fields Will Be Used In Place Of The Original Data.");
 		dialog.setContentText("Replace information of person with ID: ");
 		Optional<String> result = dialog.showAndWait();
 		return result.get();
 	}
-	
+
 	public static String searchForPersonDelete() {
 		TextInputDialog dialog = new TextInputDialog();
 		dialog.setTitle("Person Delete Window");
-		dialog.setHeaderText("Use Identification Number to Search Here.\nIf a Person Is Found, He/She Will Be Deleted.");
+		dialog.setHeaderText(
+				"Use Identification Number to Search Here.\nIf a Person Is Found, He/She Will Be Deleted.");
 		dialog.setContentText("Delete person with ID: ");
 		Optional<String> result = dialog.showAndWait();
 		return result.get();
 	}
-	
+
 	public static boolean keepDeletedDataOrNot() {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
 		alert.setTitle("Data delete complete");
@@ -299,7 +301,7 @@ public class Alerts {
 		}
 		return false;
 	}
-	
+
 	public static boolean showPersonUpdatedWithID(String id) {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
 		alert.setTitle("Person Update Complete");
@@ -315,7 +317,7 @@ public class Alerts {
 		}
 		return false;
 	}
-	
+
 	public static boolean closeCheck() {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
 		alert.setTitle("Program quit initiated");
@@ -331,7 +333,7 @@ public class Alerts {
 		}
 		return false;
 	}
-	
+
 	public static void showPersonNotFoundFaculty() {
 		Alert alert = new Alert(AlertType.ERROR);
 		alert.setTitle("Person search complete");
@@ -339,7 +341,7 @@ public class Alerts {
 		alert.setContentText("The ID either does not exist or is from a student.");
 		alert.showAndWait();
 	}
-	
+
 	public static void showWrongPersonFaculty() {
 		Alert alert = new Alert(AlertType.ERROR);
 		alert.setTitle("Person search completed");
@@ -347,7 +349,7 @@ public class Alerts {
 		alert.setHeaderText("Please Use the Student Tab to Search For This Person");
 		alert.showAndWait();
 	}
-	
+
 	public static void showAllSaved() {
 		Alert alert = new Alert(AlertType.INFORMATION);
 		alert.setTitle("File Save Completed");
@@ -355,12 +357,29 @@ public class Alerts {
 		alert.setHeaderText("The Binary Files Have Been Updated");
 		alert.showAndWait();
 	}
-	
+
 	public static void showAllLoaded() {
 		Alert alert = new Alert(AlertType.INFORMATION);
 		alert.setTitle("File Load Completed");
-		alert.setContentText("Your changes have been loaded.");
+		alert.setContentText("Your changes have been loaded into the program.");
 		alert.setHeaderText("The Binary Files Have Been Updated");
 		alert.showAndWait();
+	}
+
+	public static boolean updateOrReplaceCheck() {
+		Alert alert = new Alert(AlertType.CONFIRMATION);
+		alert.setTitle("Data Import initiated");
+		alert.setHeaderText("Would You Like To Replace The Data?");
+		alert.setContentText(
+				"Click OK to replace the current data files or Cancel to keep data and add any new items from the file");
+		Optional<ButtonType> result = alert.showAndWait();
+		if (!result.isPresent()) {
+			return false;
+		} else if (result.get() == ButtonType.OK) {
+			return true;
+		} else if (result.get() == ButtonType.CANCEL) {
+			return false;
+		}
+		return false;
 	}
 }

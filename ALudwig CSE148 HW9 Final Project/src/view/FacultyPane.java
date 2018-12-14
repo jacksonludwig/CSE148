@@ -14,6 +14,7 @@ import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.RowConstraints;
 import javafx.scene.layout.VBox;
 
 public class FacultyPane {
@@ -23,6 +24,8 @@ public class FacultyPane {
 	private TextField idField;
 	private TextField firstNameField;
 	private TextField lastNameField;
+	private TextField phoneNumberField;
+	private TextField salaryField;
 	private TextField filterInput;
 
 	private ObservableList<String> majors;
@@ -39,6 +42,8 @@ public class FacultyPane {
 	private Button searchBtn;
 	private Button updateBtn;
 	private Button deleteBtn;
+	
+	private Button resetListsBtn;
 
 	private Label allCoursesLbl;
 	private Label coursesTakingLbl;
@@ -46,6 +51,7 @@ public class FacultyPane {
 	private GridPane coursesPane;
 
 	private HBox buttonBox;
+	HBox majorAndClassResetBox;
 	private VBox courseNearButtonBox;
 
 	public FacultyPane(ObservableList<String> allCoursesList, ObservableList<String> coursesTakingList) {
@@ -54,12 +60,17 @@ public class FacultyPane {
 		firstNameField.setPromptText("First Name");
 		lastNameField = new TextField();
 		lastNameField.setPromptText("Last Name");
+		phoneNumberField = new TextField();
+		phoneNumberField.setPromptText("Phone Number");
+		salaryField = new TextField();
+		salaryField.setPromptText("Salary");
 
 		majors = FXCollections.observableArrayList("CSE", "CST", "MAT", "ENG", "ELT", "ECO", "PHI", "COM", "HIS", "PHY",
 				"CHE", "BIO", "AST", "GEO", "ART", "NUS");
 		majorBox = new ComboBox<>();
 		majorBox.setItems(majors);
 		majorBox.setPromptText("Department");
+		majorBox.setPrefSize(110, 20);
 
 		idField = new TextField();
 		idField.setPromptText("ID");
@@ -71,7 +82,7 @@ public class FacultyPane {
 		this.coursesTakingList = coursesTakingList;
 		coursesListView = new ListView<>(coursesList);
 		coursesTakingListView = new ListView<>(coursesTakingList);
-		
+
 		moveClassNearRightButton = new Button("->");
 		moveClassNearRightButton.setPrefSize(30, 30);
 		moveClassNearLeftButton = new Button("<-");
@@ -88,12 +99,15 @@ public class FacultyPane {
 
 		coursesPane = new GridPane();
 		coursesPane.setAlignment(Pos.CENTER);
-		coursesPane.setPadding(new Insets(0, 0, 0, 20));
+		coursesPane.setPadding(new Insets(20, 0, 0, 20));
 		coursesPane.setVgap(20);
 		coursesPane.setHgap(20);
 		courseNearButtonBox = new VBox(20);
 		courseNearButtonBox.setAlignment(Pos.CENTER);
 		courseNearButtonBox.getChildren().addAll(moveClassNearRightButton, moveClassNearLeftButton);
+		
+		resetListsBtn = new Button("Reset Courses");
+		resetListsBtn.setPrefSize(110, 20);
 
 		filterInput = new TextField();
 		filterInput.setPromptText("Filter Course");
@@ -103,6 +117,9 @@ public class FacultyPane {
 		facultyPane.setPadding(new Insets(20));
 		facultyPane.setVgap(20);
 		facultyPane.setHgap(20);
+		majorAndClassResetBox = new HBox(10);
+		majorAndClassResetBox.setAlignment(Pos.TOP_LEFT);
+		majorAndClassResetBox.getChildren().addAll(majorBox, resetListsBtn);
 		buttonBox = new HBox(40);
 		buttonBox.setAlignment(Pos.CENTER);
 		buttonBox.getChildren().addAll(insertBtn, searchBtn, updateBtn, deleteBtn);
@@ -147,16 +164,22 @@ public class FacultyPane {
 		ColumnConstraints column2 = new ColumnConstraints(50);
 		ColumnConstraints column3 = new ColumnConstraints(150, 150, Double.MAX_VALUE);
 		ColumnConstraints column4 = new ColumnConstraints(50);
-		ColumnConstraints column5 = new ColumnConstraints(150, 150, Double.MAX_VALUE);
-		ColumnConstraints column6 = new ColumnConstraints(50);
-		ColumnConstraints column7 = new ColumnConstraints(150, 150, Double.MAX_VALUE);
+
+		RowConstraints row1 = new RowConstraints(20);
+		RowConstraints row2 = new RowConstraints(20);
+		RowConstraints row3 = new RowConstraints(20);
+		RowConstraints row4 = new RowConstraints(20);
+		RowConstraints row5 = new RowConstraints(280);
+
+		facultyPane.getRowConstraints().addAll(row1, row2, row3, row4, row5);
 
 		coursesListView.setMinSize(150, 150);
 		coursesTakingListView.setMinSize(150, 150);
 
-		facultyPane.add(majorBox, 0, 2);
+		facultyPane.add(majorAndClassResetBox, 0, 3, 2, 1);
 		facultyPane.add(firstNameField, 0, 0);
 		facultyPane.add(lastNameField, 0, 1);
+		facultyPane.add(phoneNumberField, 0, 2);
 
 		coursesPane.add(allCoursesLbl, 0, 2);
 		coursesPane.add(coursesListView, 0, 3);
@@ -166,10 +189,11 @@ public class FacultyPane {
 		coursesPane.add(coursesTakingListView, 2, 3);
 
 		coursesPane.add(filterInput, 0, 4);
-		coursesPane.setPadding(new Insets(20, 20, 20, 90));
+		coursesPane.add(salaryField, 2, 4);
+		coursesPane.setPadding(new Insets(0, 20, 60, 90));
 
 		coursesPane.getColumnConstraints().addAll(column1, column2, column3, column4);
-		facultyPane.add(coursesPane, 0, 3);
+		facultyPane.add(coursesPane, 0, 4);
 		facultyPane.add(buttonBox, 0, 5, 1, 2);
 	}
 
@@ -281,11 +305,37 @@ public class FacultyPane {
 		this.filterInput.setText(filter);
 	}
 
+	public TextField getSalaryField() {
+		return salaryField;
+	}
+
+	public void setSalaryField(TextField salaryField) {
+		this.salaryField = salaryField;
+	}
+
+	public TextField getPhoneNumberField() {
+		return phoneNumberField;
+	}
+
+	public void setPhoneNumberField(TextField phoneNumberField) {
+		this.phoneNumberField = phoneNumberField;
+	}
+	
+	public Button getResetListsBtn() {
+		return resetListsBtn;
+	}
+
+	public void setResetListsBtn(Button resetListsBtn) {
+		this.resetListsBtn = resetListsBtn;
+	}
+
 	public void clearAllFields() {
 		majorBox.setValue("Department");
 		firstNameField.clear();
 		lastNameField.clear();
 		filterInput.clear();
+		salaryField.clear();
+		phoneNumberField.clear();
 	}
 
 }

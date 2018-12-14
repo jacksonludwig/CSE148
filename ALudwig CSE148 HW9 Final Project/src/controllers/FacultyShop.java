@@ -71,8 +71,10 @@ public class FacultyShop {
 			String first = facultyPane.getFirst();
 			String last = facultyPane.getLast();
 			String major = facultyPane.getDepartment();
+			String phoneNumber = facultyPane.getPhoneNumberField().getText();
+			String salary = facultyPane.getSalaryField().getText();
 
-			if (first.equals("") || last.equals("")) {
+			if (first.equals("") || last.equals("") || salary.equals("")) {
 				Alerts.showFillAllFields();
 			} else if (major == null) {
 				Alerts.showMajorNotChosen();
@@ -83,7 +85,7 @@ public class FacultyShop {
 				}
 				Faculty faculty = null;
 				do {
-					faculty = new Faculty(first, last, major, coursesTaking);
+					faculty = new Faculty(first, last, major, phoneNumber, coursesTaking, salary);
 				} while (facultyBag.findById(faculty.getId()) != null);
 
 				facultyBag.insert(faculty);
@@ -119,6 +121,8 @@ public class FacultyShop {
 						facultyPane.setLastNameField(searchedFaculty.getLastName());
 						facultyPane.setIdField(searchedFaculty.getId());
 						facultyPane.setDepartmentBox(searchedFaculty.getDepartment());
+						facultyPane.getPhoneNumberField().setText(searchedFaculty.getPhoneNumber());
+						facultyPane.getSalaryField().setText(String.valueOf(searchedFaculty.getSalary()));
 
 						for (int i = 0; i < searchedFaculty.getCoursesTeaching().size(); i++) {
 							String course = searchedFaculty.getCoursesTeaching().get(i);
@@ -137,7 +141,9 @@ public class FacultyShop {
 		facultyPane.getUpdateBtn().setOnAction(e -> {
 			String first = facultyPane.getFirst();
 			String last = facultyPane.getLast();
+			String phoneNumber = facultyPane.getPhoneNumberField().getText();
 			String major = facultyPane.getDepartment();
+			String salary = facultyPane.getSalaryField().getText();
 
 			String id;
 			try {
@@ -154,6 +160,9 @@ public class FacultyShop {
 				if (!(last.equals(""))) {
 					faculty.setLastName(last);
 				}
+				if (!(phoneNumber.equals(""))) {
+					faculty.setPhoneNumber(phoneNumber);
+				}
 				if (major != "" || major != null) {
 					faculty.setDepartment(major);
 				}
@@ -163,6 +172,9 @@ public class FacultyShop {
 						coursesTaking.add(coursesTakingList.get(i));
 					}
 					faculty.setCoursesTeaching(coursesTaking);
+				}
+				if (!(salary.equals(""))) {
+					faculty.setSalary(Double.parseDouble(salary));
 				}
 				facultyBag.insert(faculty);
 				if (Alerts.showPersonUpdatedWithID(faculty.getId())) {
@@ -192,7 +204,9 @@ public class FacultyShop {
 					facultyPane.setFirstNameField(searchedFaculty.getFirstName());
 					facultyPane.setLastNameField(searchedFaculty.getLastName());
 					facultyPane.setIdField(searchedFaculty.getId());
+					facultyPane.getPhoneNumberField().setText(searchedFaculty.getPhoneNumber());
 					facultyPane.setDepartmentBox(searchedFaculty.getDepartment());
+					facultyPane.getSalaryField().setText(String.valueOf(searchedFaculty.getSalary()));
 
 					for (int i = 0; i < searchedFaculty.getCoursesTeaching().size(); i++) {
 						String course = searchedFaculty.getCoursesTeaching().get(i);
@@ -215,11 +229,16 @@ public class FacultyShop {
 				facultyPane.getCoursesList().setPredicate(l -> l.contains(filter));
 			}
 		});
+		
+		facultyPane.getResetListsBtn().setOnAction(e -> {
+			resetCourseLists();
+			sortLists();
+		});
 	}
-	
+
 	public void resetCourseLists() {
 		if (coursesTakingList.size() > 0) {
-			for(int i = 0; i < coursesTakingList.size(); i++) {
+			for (int i = 0; i < coursesTakingList.size(); i++) {
 				allCoursesList.add(coursesTakingList.get(i));
 				coursesTakingList.remove(i);
 				i--;

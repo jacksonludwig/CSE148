@@ -19,27 +19,27 @@ public class Demo {
 		System.out.println(c1);
 		System.out.println(b1);
 		System.out.println(t1);
-		
+
 		PersonBag people = new PersonBag(4000);
 		CourseBag courseImport = new CourseBag(4000);
-		ClassroomBag classImport = new ClassroomBag(500);
-		TextbookBag textImport = new TextbookBag(500); 
-		
-		DataImporter.importStudents(people);
-		DataImporter.importFaculty(people);
-		DataImporter.importCourses(courseImport);
-		DataImporter.importClassrooms(classImport);
-		DataImporter.importTextbooks(textImport);
-		
+		ClassroomBag classImport = new ClassroomBag(2000);
+		TextbookBag textImport = new TextbookBag(2000);
+
+		DataImporter.importStudents(people, "outputData/Students.txt");
+		DataImporter.importFaculty(people, "outputData/Faculty.txt");
+		DataImporter.importCourses(courseImport, "outputData/Courses.txt");
+		DataImporter.importClassrooms(classImport, "outputData/Classroom.txt");
+		DataImporter.importTextbooks(textImport, "outputData/Textbooks.txt");
+
 		College college = new College(people, classImport, textImport, courseImport);
-		
+
 		FileSaver.saveClassrooms(classImport, "savedFiles/classrooms.dat");
 		FileSaver.saveCourses(courseImport, "savedFiles/courses.dat");
 		FileSaver.saveTextbooks(textImport, "savedFiles/textbooks.dat");
 		FileSaver.savePersons(people, "savedFiles/persons.dat");
 		FileSaver.saveCollege(college, "savedFiles/college.dat");
-		
-		FileSaver.saveAllBags(people, classImport, textImport, courseImport, "savedFiles/allBags.dat"); 
+
+		FileSaver.saveAllBags(people, classImport, textImport, courseImport, "savedFiles/allBags.dat");
 	}
 
 }

@@ -92,7 +92,7 @@ public class FileFactory {
 //		}
 //		pw.close();
 //	}
-	
+
 	public static void completeCourseFile(String outputFilename) {
 		String building;
 		char buildingLetter;
@@ -102,11 +102,11 @@ public class FileFactory {
 //		File file = new File(FORMATTED_COURSE_FILE, "UTF-8");
 		Scanner scanner = null;
 		try {
-			scanner = new Scanner(new File(FORMATTED_COURSE_FILE),"UTF-8");
+			scanner = new Scanner(new File(FORMATTED_COURSE_FILE), "UTF-8");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		while(scanner.hasNextLine()) {
+		while (scanner.hasNextLine()) {
 			building = spew(Categories.BUILDING_NAME);
 			buildingLetter = building.charAt(0);
 			String dataLine = scanner.nextLine();
@@ -138,7 +138,7 @@ public class FileFactory {
 	public static void makeFacultyFile(int numberOfItems, String outputFileName) {
 		PrintWriter pw = openFile(outputFileName);
 		for (int i = 0; i < numberOfItems; i++) {
-			pw.println(spew(Categories.FIRST, Categories.LAST, Categories.ID, Categories.MAJOR,
+			pw.println(spew(Categories.FIRST, Categories.LAST, Categories.ID, Categories.PHONE, Categories.MAJOR,
 					Categories.COURSES_TAUGHT, Categories.SALARY));
 			// pw.println(String.valueOf(generateDoubleInRange(10000.00, 100000.00)) + "*");
 

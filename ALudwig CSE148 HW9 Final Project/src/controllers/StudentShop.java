@@ -347,6 +347,11 @@ public class StudentShop {
 				studentPane.getCoursesList().setPredicate(l -> l.contains(filter));
 			}
 		});
+		
+		studentPane.getResetListsBtn().setOnAction(e -> {
+			resetCourseLists();
+			studentPane.setDynamicGpa(0.0);
+		});
 	}
 
 	public void adjustGpa(ObservableList<String> coursesWithGrades) {
@@ -396,6 +401,7 @@ public class StudentShop {
 			weightedGpa = (totalPoints / totalCredits);
 			String gpa = String.format("%.2f", weightedGpa);
 			studentPane.setDynamicGpa(Double.parseDouble(gpa));
+			sortLists();
 		}
 
 	}

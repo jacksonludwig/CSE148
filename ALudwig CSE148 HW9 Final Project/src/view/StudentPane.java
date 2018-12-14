@@ -14,6 +14,7 @@ import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.RowConstraints;
 import javafx.scene.layout.VBox;
 
 public class StudentPane {
@@ -48,6 +49,7 @@ public class StudentPane {
 	private Button searchBtn;
 	private Button updateBtn;
 	private Button deleteBtn;
+	private Button resetListsBtn;
 
 	private Label allCoursesLbl;
 	private Label coursesToTakeLbl;
@@ -78,6 +80,7 @@ public class StudentPane {
 		majorBox = new ComboBox<>();
 		majorBox.setItems(majors);
 		majorBox.setPromptText("Major");
+		majorBox.setPrefSize(95, 20);
 
 		idField = new TextField();
 		idField.setPromptText("ID");
@@ -119,6 +122,9 @@ public class StudentPane {
 		deleteBtn = new Button("DELETE");
 		deleteBtn.setPrefSize(BUTTON_WIDTH, BUTTON_HEIGHT);
 
+		resetListsBtn = new Button("Reset Courses");
+		resetListsBtn.setPrefSize(95, 20);
+
 		coursesPane = new GridPane();
 		coursesPane.setAlignment(Pos.CENTER);
 		coursesPane.setPadding(new Insets(20, 20, 0, 20));
@@ -136,7 +142,7 @@ public class StudentPane {
 
 		filterInput = new TextField();
 		filterInput.setPromptText("Filter Course");
-		
+
 		studentPane = new GridPane();
 		studentPane.setAlignment(Pos.CENTER);
 		studentPane.setPadding(new Insets(20));
@@ -213,7 +219,15 @@ public class StudentPane {
 		ColumnConstraints column5 = new ColumnConstraints(150, 150, Double.MAX_VALUE);
 		ColumnConstraints column6 = new ColumnConstraints(50);
 		ColumnConstraints column7 = new ColumnConstraints(150, 150, Double.MAX_VALUE);
-		
+
+		RowConstraints row1 = new RowConstraints(20);
+		RowConstraints row2 = new RowConstraints(20);
+		RowConstraints row3 = new RowConstraints(20);
+		RowConstraints row4 = new RowConstraints(280);
+		RowConstraints row5 = new RowConstraints(280);
+
+		studentPane.getRowConstraints().addAll(row1, row2, row3, row4);
+
 		coursesListView.setMinSize(150, 150);
 		coursesToTakeListView.setMinSize(150, 150);
 		coursesTakingListView.setMinSize(150, 150);
@@ -224,6 +238,7 @@ public class StudentPane {
 		studentPane.add(dynamicGpa, 1, 3);
 		studentPane.add(firstNameField, 0, 0);
 		studentPane.add(lastNameField, 0, 1);
+		studentPane.add(resetListsBtn, 1, 1);
 
 		coursesPane.add(allCoursesLbl, 0, 3);
 		coursesPane.add(coursesListView, 0, 4);
@@ -239,9 +254,10 @@ public class StudentPane {
 
 		coursesPane.add(coursesTakenLbl, 6, 3);
 		coursesPane.add(coursesTakenListView, 6, 4);
-		
+
 		coursesPane.add(filterInput, 0, 5);
-		
+		coursesPane.setPadding(new Insets(0, 0, 40, 0));
+
 		coursesPane.getColumnConstraints().addAll(column1, column2, column3, column4, column5, column6, column7);
 		studentPane.add(coursesPane, 0, 3);
 		studentPane.add(buttonBox, 0, 5, 1, 2);
@@ -429,6 +445,14 @@ public class StudentPane {
 
 	public void setFilterInput(String filter) {
 		this.filterInput.setText(filter);
+	}
+
+	public Button getResetListsBtn() {
+		return resetListsBtn;
+	}
+
+	public void setResetListsBtn(Button resetListsBtn) {
+		this.resetListsBtn = resetListsBtn;
 	}
 
 	public void clearAllFields() {

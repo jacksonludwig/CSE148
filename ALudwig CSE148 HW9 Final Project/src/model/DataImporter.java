@@ -6,8 +6,8 @@ import java.io.Serializable;
 import java.util.Scanner;
 
 public class DataImporter implements Serializable{
-	public static void importStudents(PersonBag bag) {
-		File file = new File("outputData/Students.txt");
+	public static void importStudents(PersonBag bag, String filename) {
+		File file = new File(filename);
 		Scanner scanner = null;
 		try {
 			scanner = new Scanner(file);
@@ -21,8 +21,8 @@ public class DataImporter implements Serializable{
 		}
 	}
 	
-	public static void importFaculty(PersonBag bag) {
-		File file = new File("outputData/Faculty.txt");
+	public static void importFaculty(PersonBag bag, String filename) {
+		File file = new File(filename);
 		Scanner scanner = null;
 		try {
 			scanner = new Scanner(file);
@@ -36,8 +36,8 @@ public class DataImporter implements Serializable{
 		}
 	}
 	
-	public static void importCourses(CourseBag bag) {
-		File file = new File("outputData/Courses.txt");
+	public static void importCourses(CourseBag bag, String filename) {
+		File file = new File(filename);
 		Scanner scanner = null;
 		try {
 			scanner = new Scanner(file);
@@ -51,8 +51,8 @@ public class DataImporter implements Serializable{
 		}
 	}
 	
-	public static void importTextbooks(TextbookBag bag) {
-		File file = new File("outputData/Textbooks.txt");
+	public static void importTextbooks(TextbookBag bag, String filename) {
+		File file = new File(filename);
 		Scanner scanner = null;
 		try {
 			scanner = new Scanner(file);
@@ -66,8 +66,8 @@ public class DataImporter implements Serializable{
 		}
 	}
 	
-	public static void importClassrooms(ClassroomBag bag) {
-		File file = new File("outputData/Classroom.txt");
+	public static void importClassrooms(ClassroomBag bag, String filename) {
+		File file = new File(filename);
 		Scanner scanner = null;
 		try {
 			scanner = new Scanner(file);
