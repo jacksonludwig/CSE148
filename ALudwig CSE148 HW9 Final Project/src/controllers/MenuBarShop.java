@@ -31,7 +31,9 @@ public class MenuBarShop {
 	private Menu fileMenu;
 	private MenuItem exitMenuItem;
 	private MenuItem saveMenuItem;
+	private MenuItem saveAsMenuItem;
 	private MenuItem loadMenuItem;
+	private MenuItem loadFromMenuItem;
 	private Menu importMenu;
 	private MenuItem importTextbooks;
 	private MenuItem importClassrooms;
@@ -84,7 +86,9 @@ public class MenuBarShop {
 		fileMenu = new Menu("FILE");
 		exitMenuItem = new MenuItem("EXIT");
 		saveMenuItem = new MenuItem("Save");
+		saveAsMenuItem = new MenuItem("Save as...");
 		loadMenuItem = new MenuItem("Load");
+		loadFromMenuItem = new MenuItem("Load from...");
 		importMenu = new Menu("Import...");
 		importTextbooks = new MenuItem("Textbooks");
 		importClassrooms = new MenuItem("Classrooms");
@@ -99,7 +103,8 @@ public class MenuBarShop {
 		exportStudents = new MenuItem("Students");
 		importMenu.getItems().addAll(importTextbooks, importClassrooms, importCourses, importStudents, importFaculty);
 		exportMenu.getItems().addAll(exportTextbooks, exportClassrooms, exportCourses, exportStudents, exportFaculty);
-		fileMenu.getItems().addAll(saveMenuItem, loadMenuItem, importMenu, exportMenu, exitMenuItem);
+		fileMenu.getItems().addAll(saveMenuItem, saveAsMenuItem, loadMenuItem, loadFromMenuItem, importMenu, exportMenu,
+				exitMenuItem);
 	}
 
 	private void buildStudentMenu() {
@@ -167,9 +172,38 @@ public class MenuBarShop {
 			Alerts.showAllSaved();
 		});
 
+		saveAsMenuItem.setOnAction(e -> {
+			final FileChooser fileChooser = new FileChooser();
+			fileChooser.setTitle("Save Binary File");
+			File initialDir = new File("savedFiles");
+			fileChooser.setInitialDirectory(initialDir);
+			FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Binary Files (*.dat)", "*.dat");
+			fileChooser.getExtensionFilters().add(extFilter);
+			File file = fileChooser.showSaveDialog(null);
+			if (file != null) {
+				FileSaver.saveAllBags(college.getPersonBag(), college.getClassroomBag(), college.getTextbookBag(),
+						college.getCourseBag(), file.getAbsolutePath());
+				Alerts.showNewSaved();
+			}
+		});
+
 		loadMenuItem.setOnAction(e -> {
-			Utilities.load(college);
+			Utilities.load(college, "savedFiles/allBags.dat");
 			Alerts.showAllLoaded();
+		});
+		
+		loadFromMenuItem.setOnAction(e -> {
+			final FileChooser fileChooser = new FileChooser();
+			fileChooser.setTitle("Load Binary File");
+			File initialDir = new File("savedFiles");
+			fileChooser.setInitialDirectory(initialDir);
+			FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Binary Files (*.dat)", "*.dat");
+			fileChooser.getExtensionFilters().add(extFilter);
+			File file = fileChooser.showOpenDialog(null);
+			if (file != null) {
+				Utilities.load(college, file.getAbsolutePath());
+				Alerts.showNewLoaded();
+			}
 		});
 
 		importTextbooks.setOnAction(e -> {
@@ -192,6 +226,7 @@ public class MenuBarShop {
 						}
 					}
 				}
+				Alerts.showFileImported();
 			}
 		});
 
@@ -218,6 +253,7 @@ public class MenuBarShop {
 							+ college.getTextbookBag().getArr()[i].getPrice() + "*");
 				}
 				pw.close();
+				Alerts.showFileExported();
 			}
 		});
 
@@ -241,6 +277,7 @@ public class MenuBarShop {
 						}
 					}
 				}
+				Alerts.showFileImported();
 			}
 		});
 
@@ -267,6 +304,7 @@ public class MenuBarShop {
 							+ college.getClassroomBag().getArr()[i].isProjectorOrNot() + "*");
 				}
 				pw.close();
+				Alerts.showFileExported();
 			}
 		});
 
@@ -291,6 +329,7 @@ public class MenuBarShop {
 						}
 					}
 				}
+				Alerts.showFileImported();
 			}
 		});
 
@@ -310,15 +349,16 @@ public class MenuBarShop {
 					e1.printStackTrace();
 				}
 				for (int i = 0; i < college.getCourseBag().getnElems(); i++) {
-					pw.println(college.getCourseBag().getArr()[i].getCourseTitleShort() + "*"
-							+ college.getCourseBag().getArr()[i].getCourseTitleLong() + "*"
-							+ college.getCourseBag().getArr()[i].getCourseDescription() + "*"
-							+ college.getCourseBag().getArr()[i].getNumberOfCredits() + "*"
-							+ college.getCourseBag().getArr()[i].getFacultyID() + "*"
-							+ college.getCourseBag().getArr()[i].getClassroom() + "*"
-							+ college.getCourseBag().getArr()[i].getTextbookISBN() + "*");
+					pw.println(college.getCourseBag().getArr()[i].getCourseTitleShort() + "* "
+							+ college.getCourseBag().getArr()[i].getCourseTitleLong() + "* "
+							+ college.getCourseBag().getArr()[i].getCourseDescription() + "* "
+							+ college.getCourseBag().getArr()[i].getNumberOfCredits() + "* "
+							+ college.getCourseBag().getArr()[i].getFacultyID() + "* "
+							+ college.getCourseBag().getArr()[i].getClassroom() + "* "
+							+ college.getCourseBag().getArr()[i].getTextbookISBN() + "* ");
 				}
 				pw.close();
+				Alerts.showFileExported();
 			}
 		});
 
@@ -357,6 +397,7 @@ public class MenuBarShop {
 						}
 					}
 				}
+				Alerts.showFileImported();
 			}
 		});
 
@@ -391,10 +432,12 @@ public class MenuBarShop {
 							coursesTeaching += faculty.getCoursesTeaching().get(j) + ",";
 						}
 						pw.println(faculty.getFirstName() + "*" + faculty.getLastName() + "*" + faculty.getId() + "*"
-								+ faculty.getPhoneNumber() + "*" + faculty.getDepartment() + "*" + coursesTeaching + "*" + faculty.getSalary() + "*");
+								+ faculty.getPhoneNumber() + "*" + faculty.getDepartment() + "*" + coursesTeaching + "*"
+								+ faculty.getSalary() + "*");
 					}
 				}
 				pw.close();
+				Alerts.showFileExported();
 			}
 		});
 
@@ -433,6 +476,7 @@ public class MenuBarShop {
 						}
 					}
 				}
+				Alerts.showFileImported();
 			}
 		});
 
@@ -480,16 +524,26 @@ public class MenuBarShop {
 					}
 				}
 				pw.close();
+				Alerts.showFileExported();
 			}
 		});
 
 		exitMenuItem.setOnAction(e -> {
 			if (Alerts.closeCheck()) {
-				FileSaver.saveAllBags(college.getPersonBag(), college.getClassroomBag(), college.getTextbookBag(),
-						college.getCourseBag(), "savedFiles/allBags.dat");
+				final FileChooser fileChooser = new FileChooser();
+				fileChooser.setTitle("Save Binary File");
+				File initialDir = new File("savedFiles");
+				fileChooser.setInitialDirectory(initialDir);
+				FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Binary Files (*.dat)", "*.dat");
+				fileChooser.getExtensionFilters().add(extFilter);
+				File file = fileChooser.showSaveDialog(null);
+				if (file != null) {
+					FileSaver.saveAllBags(college.getPersonBag(), college.getClassroomBag(), college.getTextbookBag(),
+							college.getCourseBag(), file.getAbsolutePath());
+					Alerts.showNewSaved();
+				}
 			}
 			Platform.exit();
-			System.out.println("Closed");
 		});
 	}
 

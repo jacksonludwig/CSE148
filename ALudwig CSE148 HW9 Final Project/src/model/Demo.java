@@ -2,6 +2,8 @@ package model;
 
 import utilities.Utilities;
 
+// Test/initial generation file
+
 public class Demo {
 
 	public static void main(String[] args) {
@@ -31,13 +33,13 @@ public class Demo {
 		DataImporter.importClassrooms(classImport, "outputData/Classroom.txt");
 		DataImporter.importTextbooks(textImport, "outputData/Textbooks.txt");
 
-		College college = new College(people, classImport, textImport, courseImport);
+//		College college = new College(people, classImport, textImport, courseImport);
 
-		FileSaver.saveClassrooms(classImport, "savedFiles/classrooms.dat");
-		FileSaver.saveCourses(courseImport, "savedFiles/courses.dat");
-		FileSaver.saveTextbooks(textImport, "savedFiles/textbooks.dat");
-		FileSaver.savePersons(people, "savedFiles/persons.dat");
-		FileSaver.saveCollege(college, "savedFiles/college.dat");
+//		FileSaver.saveClassrooms(classImport, "savedFiles/classrooms.dat");
+//		FileSaver.saveCourses(courseImport, "savedFiles/courses.dat");
+//		FileSaver.saveTextbooks(textImport, "savedFiles/textbooks.dat");
+//		FileSaver.savePersons(people, "savedFiles/persons.dat");
+//		FileSaver.saveCollege(college, "savedFiles/college.dat");
 
 		FileSaver.saveAllBags(people, classImport, textImport, courseImport, "savedFiles/allBags.dat");
 	}

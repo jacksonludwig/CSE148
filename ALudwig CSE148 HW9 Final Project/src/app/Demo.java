@@ -15,6 +15,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import model.College;
 import model.FileSaver;
@@ -52,11 +53,20 @@ public class Demo extends Application {
 		primaryStage.show();
 		
 		primaryStage.setOnCloseRequest(e -> {
-			if(Alerts.closeCheck()) {
-				FileSaver.saveAllBags(college.getPersonBag(), college.getClassroomBag(), college.getTextbookBag(),
-						college.getCourseBag(), "savedFiles/allBags.dat");
+			if (Alerts.closeCheck()) {
+				final FileChooser fileChooser = new FileChooser();
+				fileChooser.setTitle("Save Binary File");
+				File initialDir = new File("savedFiles");
+				fileChooser.setInitialDirectory(initialDir);
+				FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Binary Files (*.dat)", "*.dat");
+				fileChooser.getExtensionFilters().add(extFilter);
+				File file = fileChooser.showSaveDialog(null);
+				if (file != null) {
+					FileSaver.saveAllBags(college.getPersonBag(), college.getClassroomBag(), college.getTextbookBag(),
+							college.getCourseBag(), file.getAbsolutePath());
+					Alerts.showNewSaved();
+				}
 			}
-			System.out.println("Closed");
 		});
 	}
 

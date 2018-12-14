@@ -68,10 +68,10 @@ public class Utilities {
 		return last;
 	}
 
-	public static void load(College college) {
+	public static void load(College college, String filename) {
 		ObjectInputStream ois = null;
 		try {
-			FileInputStream fis = new FileInputStream("savedFiles/allBags.dat");
+			FileInputStream fis = new FileInputStream(filename);
 			ois = new ObjectInputStream(fis);
 		} catch (IOException e) {
 			e.printStackTrace();
