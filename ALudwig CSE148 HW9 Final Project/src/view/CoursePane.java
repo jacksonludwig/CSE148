@@ -35,7 +35,8 @@ public class CoursePane {
 
 	public CoursePane() {
 		courseTitleShortField = new TextField();
-		courseTitleShortField.setPromptText("Course Number");
+		courseTitleShortField.setPromptText("Course Title (search index)");
+		courseTitleShortField.setMinSize(200, 20);
 		courseTitleLongField = new TextField();
 		courseTitleLongField.setPromptText("Full Course Title");
 		courseDescriptionField = new TextField();

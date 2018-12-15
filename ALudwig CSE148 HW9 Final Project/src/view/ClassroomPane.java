@@ -32,11 +32,14 @@ public class ClassroomPane {
 
 	public ClassroomPane() {
 		roomNumberField = new TextField();
-		roomNumberField.setPromptText("Room Number");
+		roomNumberField.setPromptText("Room Number (search index)");
+		roomNumberField.setMinSize(170, 20);
 		numberOfSeatsField = new TextField();
 		numberOfSeatsField.setPromptText("Number Of Seats");
+		numberOfSeatsField.setMinSize(170, 20);
 		numberOfComputersField = new TextField();
 		numberOfComputersField.setPromptText("Number Of Computers");
+		numberOfComputersField.setMinSize(170, 20);
 		projectorOrNotField = new TextField();
 		projectorOrNotField.setPromptText("Projector Or Not");
 

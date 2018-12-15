@@ -51,6 +51,7 @@ public class Demo extends Application {
 		Scene scene = new Scene(root, 1080, 580);
 		primaryStage.setScene(scene);
 		primaryStage.show();
+		Alerts.showAllLoaded();
 		
 		primaryStage.setOnCloseRequest(e -> {
 			if (Alerts.closeCheck()) {

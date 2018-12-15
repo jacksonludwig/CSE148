@@ -27,7 +27,7 @@ public class TextbookPane {
 
 	public TextbookPane() {
 		titleField = new TextField();
-		titleField.setPromptText("Title");
+		titleField.setPromptText("Title (search index)");
 		isbnField = new TextField();
 		isbnField.setPromptText("ISBN");
 		authorFirstField = new TextField();
