@@ -1,0 +1,57 @@
+Any data type that isn't a primitive data type, such as String, are known as "Reference Variables."
+Therefore, they're always 8 bytes because they reference memory addresses (which are always 8 bytes).
+
+int, float = 4 bytes
+double, long = 8 bytes
+char = 1 or 2 bytes
+boolean = 1 byte
+short = 2 bytes
+^ all primitive types hold the value of the variable directly, not addresses like reference variables.
+
+------
+
+each section of memory is 1 byte (8 bits long; this is where actual data is), 
+but has a EIGHT (8) bytes (64 bits) long address:
+^ This is called "Byte Addressing."
+
+--------
+
+"Heap" = segment on memory where an object is stored. Special location stored specially for objects, so that java can
+easily locate objects not in use anymore.
+
+------
+
+"Object Composition" = classes within classes (objects within objects). "_____ has a _____" relationships.
+
+Child classes of Superclasses inherit resources (that are NON PRIVATE).
+The superclass's constructor must ALWAYS be run before the child classes constructor (hence the "super();" at the start of each constructor.
+
+------
+Polymorphism:
+
+a reference variable can reference different objects i.e. A superclass reference variable can point to those of its type and those in its sublcass
+such as in arrays.
+
+--
+
+<object> instanceof <object>; <-- tests "is a" relationships between classes (returns true or false).
+Useful for printing/calculating/etc specific information based on the data type the variable is referencing.
+
+------
+String --> integer conversion:
+Integer.parseInt(<String>); [returns the int].
+
+ex: "80" in 2d array of Strings; int n = Integer.parseInt("80");
+
+--------
+Text file 	vs. 		Binary file
+-ASCII (subset of unicode)	-Unicode
+-e.g. A1 = 41,31		-
+
+----
+
+
+HW: methods only do 1 thing: 1 for firstname, 1 for lastname, etc.
+enum for available classes
+pick random names, random words for course descriptions, etc.
+
